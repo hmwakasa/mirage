@@ -1,0 +1,547 @@
+\documentclass[line_length=22zw,number_of_lines=45,twocolumn]{jlreq}
+
+\ltjdefcharrange{23}{"F0000-"FFFFF}
+\ltjsetparameter{jacharrange={-2,+23}}%ギリシア文字、キリル文字を AL Char に。
+\usepackage[no-math,match,deluxe,fontspec,jfm_yoko=jlreq,jfm_tate=jlreqv]{luatexja-preset}
+
+\usepackage[unicode,colorlinks]{hyperref}
+\hypersetup{linkcolor=blue,urlcolor=teal,citecolor=olive}
+% \hypersetup{linkcolor=black,urlcolor=black,citecolor=black}
+
+\usepackage{pxrubrica}
+\usepackage{autobreak}
+\usepackage{tikz,pgfplots,tcolorbox}
+
+\usepackage{yhmath,amsmath,mathtools,amssymb,mathrsfs,rsfso,mleftright}
+\usepackage[T1]{fontenc}
+\usepackage[math]{kurier}
+\usepackage[euler-digits]{eulervm}
+\mleftright
+\setmainfont{Exo 2}
+\setsansfont{Exo 2}
+\setmainjfont{FOT-MatissePro-DB}[
+	AltFont={
+		{
+			Range={
+				"4E00-"9FFF, % CJK 統合漢字
+				"3400-"4DFF, % CJK 統合漢字拡張 A
+				"20000-"2EBE0, % CJK 統合漢字拡張 B-F
+				"2460-"24FF, % 囲み英数字
+				"3200-"32FF, % 囲み CJK 文字・月
+				"1F100-"1F2FF % 囲み英数字補助、漢字補助
+			},
+			Font=FOT-RodinNTLGPro-DB,
+		},
+	},
+	BoldFeatures={
+		Font=FOT-MatissePro-EB,
+		AltFont={
+			{
+				Range={
+					"4E00-"9FFF, % CJK 統合漢字
+					"3400-"4DFF, % CJK 統合漢字拡張 A
+					"20000-"2EBE0, % CJK 統合漢字拡張 B-F
+					"2460-"24FF, % 囲み英数字
+					"3200-"32FF, % 囲み CJK 文字・月
+					"1F100-"1F2FF % 囲み英数字補助、漢字補助
+				},
+				Font=FOT-RodinNTLGPro-EB,
+			},
+		},
+	},
+	YokoFeatures={JFM=jlreq},   % jlreqのJFMを維持する
+	TateFeatures={JFM=jlreqv},  % https://qiita.com/zr_tex8r/items/91ae1dcc9c3afce7fa8c
+]
+\setsansjfont{FOT-RodinNTLGPro-DB}[
+	AltFont={
+		{
+			Range={
+				"4E00-"9FFF, % CJK 統合漢字
+				"3400-"4DFF, % CJK 統合漢字拡張 A
+				"20000-"2EBE0, % CJK 統合漢字拡張 B-F
+				"2460-"24FF, % 囲み英数字
+				"3200-"32FF, % 囲み CJK 文字・月
+				"1F100-"1F2FF % 囲み英数字補助、漢字補助
+			},
+			Font=FOT-RodinNTLGPro-DB,
+		},
+	},
+	BoldFeatures={
+		Font=FOT-MatissePro-EB,
+		AltFont={
+			{
+				Range={
+					"4E00-"9FFF, % CJK 統合漢字
+					"3400-"4DFF, % CJK 統合漢字拡張 A
+					"20000-"2EBE0, % CJK 統合漢字拡張 B-F
+					"2460-"24FF, % 囲み英数字
+					"3200-"32FF, % 囲み CJK 文字・月
+					"1F100-"1F2FF % 囲み英数字補助、漢字補助
+				},
+				Font=FOT-RodinNTLGPro-EB,
+			},
+		},
+	},
+	YokoFeatures={JFM=jlreq},   % jlreqのJFMを維持する
+	TateFeatures={JFM=jlreqv},  % https://qiita.com/zr_tex8r/items/91ae1dcc9c3afce7fa8c
+]\setmonofont[
+	Ligatures=TeX,
+	Scale=0.89,
+]{HackGen}
+\setmonojfont[
+	Ligatures=TeX,
+	Scale=0.89,
+]{HackGen}
+
+\DeclareMathAlphabet{\mathit}{T1}{zplx}{m}{it}
+\DeclareMathAlphabet{\mathtt}{T1}{fvm}{m}{n}
+\DeclareMathAlphabet{\mathsf}{T1}{uop}{m}{n}
+\allowdisplaybreaks[4]
+\ltjenableadjust[lineend=extended,priority=true,profile=true,linestep=true]
+
+\newcommand{\hmicoA}{{\color{violet}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"0262F}}
+\newcommand{\hmicoB}{{\color{orange}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F3DA}}
+\newcommand{\hmicoC}{{\color{magenta}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F571}}
+\newcommand{\hmicoD}{{\color{olive}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"026F0}}
+\newcommand{\hmicoE}{{\color{green}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F407}}
+\newcommand{\hmicoF}{{\color{lime}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F3A9}}
+\newcommand{\hmicoG}{{\color{red}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F3F0}}
+\newcommand{\hmicoH}{{\color{teal}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F408}}
+\newcommand{\hmicoI}{{\color{cyan}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F326}}
+\newcommand{\hmicoJ}{{\color{yellow}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F318}}
+\newcommand{\hmicoK}{{\color{gray}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F47B}}
+\newcommand{\hmicoL}{{\color{darkgray}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F3E2}}
+\newcommand{\hmicot}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F5E1}}
+\newcommand{\hmicoo}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F300}}
+\newcommand{\hmicoa}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"0272C}}
+\newcommand{\hmicov}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"0292D}}
+\newcommand{\hmicoi}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"026C8}}
+\newcommand{\hmicom}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F570}}
+\newcommand{\hmicoc}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F3AD}}
+\newcommand{\hmicoe}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"02694}}
+\newcommand{\hmicow}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F342}}
+\newcommand{\hmicos}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F54B}}
+\newcommand{\hmicox}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"0254D}}
+
+\title{新作東方カードゲーム（タイトル未定）開発メモ}
+\author{ひとみさん}
+
+\begin{document}
+\maketitle
+\section{ゲーム全体に関わるメモ}
+キャラクター対照表などは以下のリンクから。
+\href{https://docs.google.com/spreadsheets/d/1Xvfd_cxvjWhhCuCNO1QzFNhQatAIqc_tgx4WkqzcoCo/edit?usp=sharing}
+{Google ドライブ}
+
+\begin{itemize}
+	\item 統率者戦みたいなことしたいよね。ということで、カードごとに「場所」を設定して、
+		統率者と同じ場所のカードで 100 枚ハイランダーすれば統率者戦になるね。
+		\begin{itemize}
+			\item 「場所」の一覧
+				\begin{itemize}
+					\item \makebox[1\zw]{\hmicoA} \makebox[1em]{A} 博麗神社・八雲邸
+					\item \makebox[1\zw]{\hmicoB} \makebox[1em]{B} 人間の里・命蓮寺
+					\item \makebox[1\zw]{\hmicoC} \makebox[1em]{C} 魔界
+					\item \makebox[1\zw]{\hmicoD} \makebox[1em]{D} 妖怪の山
+					\item \makebox[1\zw]{\hmicoE} \makebox[1em]{E} 迷いの竹林・永遠亭
+					\item \makebox[1\zw]{\hmicoF} \makebox[1em]{F} 魔法の森・その他・旧作
+					\item \makebox[1\zw]{\hmicoG} \makebox[1em]{G} 霧の湖・紅魔館・廃洋館
+					\item \makebox[1\zw]{\hmicoH} \makebox[1em]{H} 旧地獄
+					\item \makebox[1\zw]{\hmicoI} \makebox[1em]{I} 仙界・天界
+					\item \makebox[1\zw]{\hmicoJ} \makebox[1em]{J} 月・夢の世界
+					\item \makebox[1\zw]{\hmicoK} \makebox[1em]{K} 彼岸・冥界・地獄・畜生界・霊長園
+					\item \makebox[1\zw]{\hmicoL} \makebox[1em]{L} 外の世界
+				\end{itemize}
+		\end{itemize}
+		夢美さんみたいな、場所が明確な旧作勢はそこに分類して（→外の世界、魔界、地獄）、
+		里香みたいな、よくわからん人たちは魔法の森に押し込む。
+	\item MtG の次元カード的に、異変カードを導入しよう（ルールとしてはカジュアル選択ルール）。
+		カードの内容やルールは Danmaku!!\ と同様。
+	\item 様々なアイコン
+		\begin{itemize}
+			\item \makebox[1\zw]{\hmicot} \makebox[1em]{t} 十字
+			\item \makebox[1\zw]{\hmicoo} \makebox[1em]{o} ぐるぐる
+			\item \makebox[1\zw]{\hmicoa} \makebox[1em]{a} 星
+			\item \makebox[1\zw]{\hmicov} \makebox[1em]{v} 複数
+			\item \makebox[1\zw]{\hmicoi} \makebox[1em]{i}  瞬間
+			\item \makebox[1\zw]{\hmicom} \makebox[1em]{m} 持続
+			\item \makebox[1\zw]{\hmicoc} \makebox[1em]{c} 呪符
+			\item \makebox[1\zw]{\hmicoe} \makebox[1em]{e} 装備
+			\item \makebox[1\zw]{\hmicow} \makebox[1em]{w} 世界呪符
+			\item \makebox[1\zw]{\hmicos} \makebox[1em]{s} 装備/場
+			\item \makebox[1\zw]{\hmicox} \makebox[1em]{x} その他
+		\end{itemize}
+\end{itemize}
+
+\section{ミーティングメモ}
+\subsection{2020-06-25}
+\begin{itemize}
+	\item 冴月麟の能力、絵をどうするか（梅霖の妖精にしたほうが無難）
+	\item エニグマティクドール（蓬莱人形）
+	\item 人間プリズムリバーの必要性
+	\item 蜃↔酒虫（案）
+	\item 蓮子とメリーを Extra スターターに
+	\item 玉兎を永夜抄か紺珠伝に（易者→玉兎）
+	\item 神霊廟スターター: 座敷わらし→神霊
+	\item 星蓮船スターターに UFO
+	\item 深山の大天狗→ソクラテス
+	\item ソクラテス→アリス・マーガトロイド（魔界人）
+	\item タイトル案
+		\begin{itemize}
+			\item incarnation
+			\item mirage land
+		\end{itemize}
+\end{itemize}
+
+
+\section{スターターセットの内容}
+どのスターターセットも、50 枚ハイランダー。
+\clearpage\small
+\subsection{紅魔郷スターター}
+Ch: 20, SC: 20, Cm: 10
+\begin{itemize}
+	\item 博麗霊夢
+	\item 霧雨魔理沙
+	\item 冴月麟
+	\item ルーミア
+	\item 大妖精
+	\item チルノ
+	\item 紅美鈴
+	\item 小悪魔
+	\item パチュリー・ノーレッジ
+	\item 十六夜咲夜
+	\item レミリア・スカーレット
+	\item フランドール・スカーレット
+	\item 森近霖之助
+	\item ホフゴブリン
+	\item チュパカブラ
+	\item 梅霖の妖精
+	\item 妖精メイド
+	\item ジャケットのあの子
+	\item レーベルのあの子
+	\item 朱鷺色の妖怪
+\end{itemize}
+\pagebreak
+
+\subsection{妖々夢スターター}
+Ch: 20, SC: 20, Cm: 10
+\begin{itemize}
+	\item レティ・ホワイトロック
+	\item 橙
+	\item アリス・マーガトロイド
+	\item リリーホワイト
+	\item リリーブラック
+	\item ルナサ・プリズムリバー
+	\item メルラン・プリズムリバー
+	\item リリカ・プリズムリバー
+	\item レイラ・プリズムリバー
+	\item プリズムリバー伯爵
+	\item 魂魄妖夢
+	\item 魂魄妖忌
+	\item 西行寺幽々子
+	\item 八雲藍
+	\item 八雲紫
+	\item 上海人形
+	\item 蓬莱人形
+	\item 西行妖
+	\item 死蝶霊
+	\item 半幽霊
+\end{itemize}
+\pagebreak
+
+\subsection{花映塚+幻想郷スターター}
+Ch: 20, SC: 20, Cm: 10
+\begin{itemize}
+	\item 妖蓮華
+	\item オレンジ
+	\item くるみ
+	\item 闇鏡
+	\item エリー
+	\item 光子
+	\item 夢月
+	\item 幻月
+	\item メディスン・メランコリー
+	\item 風見幽香
+	\item 小野塚小町
+	\item 四季映姫・ヤマザナドゥ
+	\item サニーミルク
+	\item ルナチャイルド
+	\item スターサファイア
+	\item 酒虫
+	\item 山犬
+	\item ルナサ・プリズムリバー（人間）
+	\item リリカ・プリズムリバー（人間）
+	\item メルラン・プリズムリバー（人間）
+\end{itemize}
+\pagebreak
+
+\subsection{永夜抄スターター}
+Ch: 20, SC: 20, Cm: 10
+\begin{itemize}
+	\item 霧雨魔理沙
+	\item リグル・ナイトバグ
+	\item ミスティア・ローレライ
+	\item 上白沢慧音
+	\item 因幡てゐ
+	\item 鈴仙・優曇華院・イナバ
+	\item 八意永琳
+	\item 蓬莱山輝夜
+	\item 藤原妹紅
+	\item 綿月豊姫
+	\item 綿月依姫
+	\item レイセン
+	\item 前鬼
+	\item 後鬼
+	\item 月夜見
+	\item 嫦娥
+	\item 瑞江浦嶋子
+	\item 木花咲耶姫
+	\item 岩笠
+	\item 玉兎
+\end{itemize}
+\pagebreak
+
+\subsection{風神録+地霊殿スターター}
+Ch: 20, SC: 20, Cm: 10
+\begin{itemize}
+	\item 射命丸文
+	\item 秋静葉
+	\item 秋穣子
+	\item 鍵山雛
+	\item 河城にとり
+	\item 犬走椛
+	\item 東風谷早苗
+	\item 八坂神奈子
+	\item 洩矢諏訪子
+	\item キスメ
+	\item 黒谷ヤマメ
+	\item 水橋パルスィ
+	\item 星熊勇儀
+	\item 古明地さとり
+	\item 火焔猫燐
+	\item 霊烏路空
+	\item 古明地こいし
+	\item 姫海棠はたて
+	\item 黒猫
+	\item 呪精
+\end{itemize}
+\pagebreak
+
+\subsection{星蓮船+神霊廟スターター}
+Ch: 20, SC: 20, Cm: 10
+\begin{itemize}
+	\item ナズーリン
+	\item 多々良小傘
+	\item 雲居一輪
+	\item 雲山
+	\item 村紗水蜜
+	\item 寅丸星
+	\item 聖白蓮
+	\item 聖命蓮
+	\item 封獣ぬえ
+	\item 幽谷響子
+	\item 宮古芳香
+	\item 霍青娥
+	\item 蘇我屠自古
+	\item 物部布都
+	\item 豊聡耳神子
+	\item 二ツ岩マミゾウ
+	\item 水鬼鬼神長
+	\item 野鉄砲
+	\item 白山修験
+	\item 神霊
+\end{itemize}
+\pagebreak
+
+\subsection{Extra スターター}
+Ch: 20, SC: 20, Cm: 10
+\begin{itemize}
+	\item 伊吹萃香
+	\item 永江衣玖
+	\item 比那名居天子
+	\item 大ナマズ
+	\item 秦こころ
+	\item 宇佐見菫子
+	\item 依神女苑
+	\item 依神紫苑
+	\item 茨木華扇
+	\item 宇佐見蓮子
+	\item マエリベリー・ハーン
+	\item 非想天則
+	\item 黄帝
+	\item 久米
+	\item 務光
+	\item 竿打
+	\item 彭祖
+	\item 万歳楽
+	\item 龍神
+	\item 蜃
+\end{itemize}
+\pagebreak
+
+\subsection{輝針城+紺珠伝スターター}
+Ch: 20, SC: 20, Cm: 10
+\begin{itemize}
+	\item わかさぎ姫
+	\item 赤蛮奇
+	\item 今泉影狼
+	\item 九十九弁々
+	\item 九十九八橋
+	\item 鬼人正邪
+	\item 少名針妙丸
+	\item 堀川雷鼓
+	\item 清蘭
+	\item 鈴瑚
+	\item ドレミー・スイート
+	\item 稀神サグメ
+	\item クラウンピース
+	\item 純狐
+	\item ヘカーティア・ラピスラズリ
+	\item 稗田阿求
+	\item 本居小鈴
+	\item 管狐
+	\item 運松
+	\item 易者
+\end{itemize}
+\pagebreak
+
+\subsection{天空璋+鬼形獣スターター}
+Ch: 20, SC: 20, Cm: 10
+\begin{itemize}
+	\item 魂魄妖夢
+	\item エタニティルラバ
+	\item 坂田ネムノ
+	\item 高麗野あうん
+	\item 矢田寺成美
+	\item 丁礼田舞
+	\item 爾子田里乃
+	\item 摩多羅隠岐奈
+	\item 戎 瓔花
+	\item 牛崎 潤美
+	\item 庭渡 久侘歌
+	\item 吉弔 八千慧
+	\item 杖刀偶 磨弓
+	\item 埴安神 袿姫
+	\item 驪駒 早鬼
+	\item オオカミ霊
+	\item カワウソ霊
+	\item オオワシ霊
+	\item 饕餮
+	\item 日焼けしたチルノ
+\end{itemize}
+\pagebreak
+
+\subsection{封魔録+夢時空スターター}
+Ch: 25, SC: 10, Cm: 15
+\begin{itemize}
+	\item レミリア・スカーレット
+	\item フランドール・スカーレット
+	\item 玄爺
+	\item 神社戦車
+	\item ふらわ〜戦車
+	\item 里香
+	\item 呪い子
+	\item 明羅
+	\item 幻夢盤
+	\item 砲台
+	\item 魔天使
+	\item 飛行戦車イビルアイΣ
+	\item エレン
+	\item 小兎姫
+	\item カナ・アナベラル
+	\item 朝倉理香子
+	\item 北白河ちゆり
+	\item 岡崎夢美
+	\item ま○ち
+	\item る〜こと
+	\item ミミちゃん
+	\item 槌の子
+	\item 煙々羅
+	\item ソクラテス
+	\item 先代巫女
+\end{itemize}
+\pagebreak
+
+\subsection{靈異伝+怪綺談スターター}
+Ch: 25, SC: 10, Cm: 15
+\begin{itemize}
+	\item 古明地さとり
+	\item 古明地こいし
+	\item アリス・マーガトロイド
+	\item 博麗霊夢
+	\item 神玉
+	\item 幽幻魔眼
+	\item 魅魔
+	\item エリス
+	\item キクリ
+	\item サリエル
+	\item 金伽羅
+	\item 輪妖精
+	\item サラ
+	\item 神鏡
+	\item ルイズ
+	\item ルシア
+	\item ユキ
+	\item マイ
+	\item 妖奈
+	\item 夢子
+	\item 神綺
+	\item トランプキング
+	\item 邪龍
+	\item 沓面
+	\item 蟒蛇
+\end{itemize}
+\pagebreak
+
+\subsection{未割り当て}
+エキスパンションなどで収録予定
+\begin{itemize}
+	\item ゴリアテ人形
+	\item 座敷わらし
+	\item ケセランパサラン
+	\item 塩屋敷の旦那
+	\item 京人形
+	\item 露西亜人形
+	\item 西藏人形
+	\item オルレアン人形
+	\item 仏蘭西人形
+	\item 倫敦人形
+	\item 和蘭人形
+	\item 藁人形
+	\item ティターニア
+	\item 人間霊
+	\item 埴輪
+	\item サーヴァントフライヤー
+	\item 宇治橋の怨霊
+	\item 山童
+	\item 天魔
+	\item マミ
+	\item 陰陽師
+	\item いぬさくや
+	\item れみにゃ
+	\item ふにゃん
+	\item メイベル
+	\item アリオーシュ
+	\item 小狐
+	\item 囲碁少女
+	\item お掃除メイド
+	\item 神道国幻想
+	\item 月光の反魂
+	\item 未来世紀
+	\item 蓮花の魔法使い
+	\item Lotus Dream 霊夢
+	\item 博麗霊夢の休日
+	\item 霊夢のお茶会
+	\item 最も好奇心の高い僕
+	\item 最も美しいボク
+	\item 最も幼い僕
+	\item 最も臆病な僕
+	\item 最も聡明な僕
+	\item 最も大人びた僕
+	\item 最も警戒心の強い僕
+	\item 最も早起きな僕
+	\item ビール子
+	\item 仏少女
+	\item トップ絵の少女
+\end{itemize}
+\end{document}
