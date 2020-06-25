@@ -11,6 +11,7 @@
 \usepackage{pxrubrica}
 \usepackage{autobreak}
 \usepackage{tikz,pgfplots,tcolorbox}
+\usepackage[type=CC,modifier=by-nc,version=4.0,lang=japanese]{doclicense}
 
 \usepackage{yhmath,amsmath,mathtools,amssymb,mathrsfs,rsfso,mleftright}
 \usepackage[T1]{fontenc}
@@ -123,6 +124,8 @@
 \newcommand{\hmicos}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F54B}}
 \newcommand{\hmicox}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"0254D}}
 
+\newcommand{\hmemph}[1]{\textbf{#1}}
+
 \title{新作東方カードゲーム（タイトル未定）開発メモ}
 \author{ひとみさん}
 
@@ -134,6 +137,13 @@
 {Google ドライブ}
 
 \begin{itemize}
+	\item VISION と変える点は以下。
+		\begin{itemize}
+			\item 「霊力」を導入する。術者がいるとスペルカードのコストを無視できるのではなく、
+				術者の霊力の合計だけ必要ノードとコストを軽減する。
+			\item 他のルール変更は、総合ルールレベルでの変更に留めるつもり。
+			\item リーダーやラストワードといった特殊効果については、効果を要検討。
+		\end{itemize}
 	\item 統率者戦みたいなことしたいよね。ということで、カードごとに「場所」を設定して、
 		統率者と同じ場所のカードで 100 枚ハイランダーすれば統率者戦になるね。
 		\begin{itemize}
@@ -149,7 +159,7 @@
 					\item \makebox[1\zw]{\hmicoH} \makebox[1em]{H} 旧地獄
 					\item \makebox[1\zw]{\hmicoI} \makebox[1em]{I} 仙界・天界
 					\item \makebox[1\zw]{\hmicoJ} \makebox[1em]{J} 月・夢の世界
-					\item \makebox[1\zw]{\hmicoK} \makebox[1em]{K} 彼岸・冥界・地獄・畜生界・霊長園
+					\item \makebox[1\zw]{\hmicoK} \makebox[1em]{K} 彼岸・冥界・地獄・畜生界
 					\item \makebox[1\zw]{\hmicoL} \makebox[1em]{L} 外の世界
 				\end{itemize}
 		\end{itemize}
@@ -175,6 +185,7 @@
 
 \section{ミーティングメモ}
 \subsection{2020-06-25}
+参加者: ひとみ、W・F
 \begin{itemize}
 	\item 冴月麟の能力、絵をどうするか（梅霖の妖精にしたほうが無難）
 	\item エニグマティクドール（蓬莱人形）
@@ -189,8 +200,18 @@
 	\item タイトル案
 		\begin{itemize}
 			\item incarnation
-			\item mirage land
+			\item mirage land （有力）
 		\end{itemize}
+\end{itemize}
+
+\subsubsection*{ミーティング後の動き}
+\begin{itemize}
+	\item Git リポジトリとしてリソースを公開。
+	\item とりあえず、ミーティングで出た内容を参考にスターターのキャラクターを入れ替えた。
+		（どこを入れ替えたか覚えていない。履歴をとるべきだった）
+	\item 紅魔郷、天空璋+鬼形獣のキャラクターについては、6 月中に場所と種族の割当を完了
+		する予定。
+	\item そういえば場所のアイコンが適切かどうか聞くの忘れてたなぁ。
 \end{itemize}
 
 
@@ -544,4 +565,27 @@ Ch: 25, SC: 10, Cm: 15
 	\item 仏少女
 	\item トップ絵の少女
 \end{itemize}
+
+\onecolumn
+\section{クレジット}
+\begin{tabbing}
+	\hspace{15\zw}\=\hspace{10\zw}\=\kill\\
+	Total Design\>さーくる⑨\\
+	Planning\>ひとみさん（さーくる⑨)\\
+	Game Design\>ひとみさん（さーくる⑨）\\
+	Adjusting Adviser\>SHU\\
+	\>さんろ\\
+	Design Adviser\>W・F（さーくる⑨）\\
+	\>SHU\\
+	Visual Assistant\>湯島\\
+	\TeX nical Assistant\>Why Hitomisan use \TeX\ to develop this game?\\
+	Illustrator\>\hmemph{募集中}\\
+	\hmemph{さーくる⑨ Member}\>ひとみさん（代表）\\
+	\>W・F\\
+	\>Ocean@海P\\
+	\>kalna\\
+	\>NEO\\
+\end{tabbing}
+
+\doclicenseThis
 \end{document}
