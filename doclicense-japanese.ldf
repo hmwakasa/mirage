@@ -1,0 +1,23 @@
+\ProvidesFile{doclicense-japanese.ldf}
+
+\@namedef{doclicense@lang@thisDoc}{この作品は}%
+\@namedef{doclicense@lang@word@license}{の下に提供されています}%
+
+\@namedef{doclicense@lang@lic@CC@code}{ja}%
+%% Using: https://en.wikipedia.org/wiki/ISO_639-1
+
+\@namedef{doclicense@lang@lic@CC@zero@1.0}{CC0 1.0 Universal}%
+
+\@namedef{doclicense@lang@lic@CC@by@3.0}{表示 3.0 非移植 ライセンス}%
+\@namedef{doclicense@lang@lic@CC@by-sa@3.0}{表示 - 継承3.0 非移植 ライセンス}%
+\@namedef{doclicense@lang@lic@CC@by-nd@3.0}{表示 - 改変禁止 3.0 非移植 ライセンス}%
+\@namedef{doclicense@lang@lic@CC@by-nc@3.0}{表示 - 非営利 3.0 非移植 ライセンス}%
+\@namedef{doclicense@lang@lic@CC@by-nc-sa@3.0}{表示 - 非営利 - 継承 3.0 非移植 ライセンス}%
+\@namedef{doclicense@lang@lic@CC@by-nc-nd@3.0}{表示 - 非営利 - 改変禁止 3.0 非移植 ライセンス}%
+
+\@namedef{doclicense@lang@lic@CC@by@4.0}{表示 4.0 国際 ライセンス}%
+\@namedef{doclicense@lang@lic@CC@by-sa@4.0}{表示 - 継承 4.0 国際 ライセンス}%
+\@namedef{doclicense@lang@lic@CC@by-nd@4.0}{表示 - 改変禁止 4.0 国際 ライセンス}%
+\@namedef{doclicense@lang@lic@CC@by-nc@4.0}{表示 - 非営利 4.0 国際 ライセンス}%
+\@namedef{doclicense@lang@lic@CC@by-nc-sa@4.0}{表示 - 非営利 - 継承 4.0 国際 ライセンス}%
+\@namedef{doclicense@lang@lic@CC@by-nc-nd@4.0}{表示 - 非営利 - 改変禁止 4.0 国際 ライセンス}%
