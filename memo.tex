@@ -18,9 +18,17 @@
 \usepackage[math]{kurier}
 \usepackage[euler-digits]{eulervm}
 \mleftright
-\setmainfont{Exo 2}
-\setsansfont{Exo 2}
-\setmainjfont{FOT-MatissePro-DB}[
+\setmainfont{Hall Fetica Decompose}[
+	BoldFont=Hall Fetica,
+	ItalicFont=Hall Fetica Decompose Italic,
+	BoldItalicFont=Hall Fetica Italic
+]
+\setsansfont{Hall Fetica Decompose}[
+	BoldFont=Hall Fetica,
+	ItalicFont=Hall Fetica Decompose Italic,
+	BoldItalicFont=Hall Fetica Italic
+]
+\setmainjfont{FOT-MatissePro-M}[
 	AltFont={
 		{
 			Range={
@@ -31,7 +39,7 @@
 				"3200-"32FF, % 囲み CJK 文字・月
 				"1F100-"1F2FF % 囲み英数字補助、漢字補助
 			},
-			Font=FOT-RodinNTLGPro-DB,
+			Font=FOT-RodinNTLGPro-M,
 		},
 	},
 	BoldFeatures={
@@ -53,7 +61,7 @@
 	YokoFeatures={JFM=jlreq},   % jlreqのJFMを維持する
 	TateFeatures={JFM=jlreqv},  % https://qiita.com/zr_tex8r/items/91ae1dcc9c3afce7fa8c
 ]
-\setsansjfont{FOT-RodinNTLGPro-DB}[
+\setsansjfont{FOT-RodinNTLGPro-M}[
 	AltFont={
 		{
 			Range={
@@ -64,7 +72,7 @@
 				"3200-"32FF, % 囲み CJK 文字・月
 				"1F100-"1F2FF % 囲み英数字補助、漢字補助
 			},
-			Font=FOT-RodinNTLGPro-DB,
+			Font=FOT-RodinNTLGPro-M,
 		},
 	},
 	BoldFeatures={
@@ -85,14 +93,15 @@
 	},
 	YokoFeatures={JFM=jlreq},   % jlreqのJFMを維持する
 	TateFeatures={JFM=jlreqv},  % https://qiita.com/zr_tex8r/items/91ae1dcc9c3afce7fa8c
-]\setmonofont[
+]
+\setmonofont{HackGen}[
 	Ligatures=TeX,
 	Scale=0.89,
-]{HackGen}
-\setmonojfont[
+]
+\setmonojfont{HackGen}[
 	Ligatures=TeX,
 	Scale=0.89,
-]{HackGen}
+]
 
 \DeclareMathAlphabet{\mathit}{T1}{zplx}{m}{it}
 \DeclareMathAlphabet{\mathtt}{T1}{fvm}{m}{n}
@@ -569,9 +578,9 @@ Ch: 25, SC: 10, Cm: 15
 \onecolumn
 \section{クレジット}
 \begin{tabbing}
-	\hspace{15\zw}\=\hspace{10\zw}\=\kill\\
+	\hspace{15\zw}\=\hspace{15\zw}\=\kill\\
 	Total Design\>さーくる⑨\\
-	Planning\>ひとみさん（さーくる⑨)\\
+	Planning\>ひとみさん（さーくる⑨）\\
 	Game Design\>ひとみさん（さーくる⑨）\\
 	Adjusting Adviser\>SHU\\
 	\>さんろ\\
@@ -579,12 +588,19 @@ Ch: 25, SC: 10, Cm: 15
 	\>SHU\\
 	Visual Assistant\>湯島\\
 	\TeX nical Assistant\>Why Hitomisan use \TeX\ to develop this game?\\
-	Illustrator\>\hmemph{募集中}\\
 	\hmemph{さーくる⑨ Member}\>ひとみさん（代表）\\
 	\>W・F\\
 	\>Ocean@海P\\
 	\>kalna\\
 	\>NEO\\
+	\hmemph{Illustrator}\>\hmemph{募集中}\\
+	湯島\\
+	\hmemph{Fonts}\\
+	NKD04 Playing Card's Index\>\url{http://hwm3.gyao.ne.jp/shiroi-niwatori/nishiki-teki.htm}\\
+	にしき的フォント（絵文字）\>〃\\
+	LETS Fonts\>\url{https://lets-site.jp/}\\
+	kawoszeh\>\url{http://www.glukfonts.pl/font.php?font=Kawoszeh}\\
+	Hall Fetica\>\url{http://moorstation.org/typoasis/designers/gemnew/home.htm}
 \end{tabbing}
 
 \doclicenseThis
