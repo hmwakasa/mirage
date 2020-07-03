@@ -96,11 +96,11 @@
 ]
 \setmonofont{HackGen}[
 	Ligatures=TeX,
-	Scale=0.89,
+	Scale=0.94
 ]
 \setmonojfont{HackGen}[
 	Ligatures=TeX,
-	Scale=0.89,
+	Scale=0.94
 ]
 
 \DeclareMathAlphabet{\mathit}{T1}{zplx}{m}{it}
@@ -109,29 +109,55 @@
 \allowdisplaybreaks[4]
 \ltjenableadjust[lineend=extended,priority=true,profile=true,linestep=true]
 
-\newcommand{\hmicoA}{{\color{violet}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"0262F}}
-\newcommand{\hmicoB}{{\color{orange}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F3DA}}
-\newcommand{\hmicoC}{{\color{magenta}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F571}}
-\newcommand{\hmicoD}{{\color{olive}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"026F0}}
-\newcommand{\hmicoE}{{\color{green}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F407}}
-\newcommand{\hmicoF}{{\color{lime}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F3A9}}
-\newcommand{\hmicoG}{{\color{red}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F3F0}}
-\newcommand{\hmicoH}{{\color{teal}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F408}}
-\newcommand{\hmicoI}{{\color{cyan}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F326}}
-\newcommand{\hmicoJ}{{\color{yellow}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F318}}
-\newcommand{\hmicoK}{{\color{gray}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F47B}}
-\newcommand{\hmicoL}{{\color{darkgray}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F3E2}}
-\newcommand{\hmicot}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F5E1}}
-\newcommand{\hmicoo}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F300}}
-\newcommand{\hmicoa}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"0272C}}
-\newcommand{\hmicov}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"0292D}}
-\newcommand{\hmicoi}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"026C8}}
-\newcommand{\hmicom}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F570}}
-\newcommand{\hmicoc}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F3AD}}
-\newcommand{\hmicoe}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"02694}}
-\newcommand{\hmicow}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F342}}
-\newcommand{\hmicos}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F54B}}
-\newcommand{\hmicox}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"0254D}}
+\colorlet{nodecolor}{violet!90!blue}
+\colorlet{costcolor}{olive!30!black}
+\colorlet{spiritcolor}{red!70!black}
+\colorlet{grazecolor}{yellow!70!black}
+\colorlet{rangebcolor}{black!90}
+\colorlet{rangecolor}{black!10}
+\colorlet{characolor}{teal!60}
+\colorlet{spellcolor}{orange!60}
+\colorlet{commandcolor}{gray!60}
+\colorlet{incidentcolor}{magenta!70!black}
+\colorlet{gridcolor}{cyan!60}
+\definecolor{richblack}{cmyk}{.2,.2,.2,1}
+
+\colorlet{Aicocolor}{violet}
+\colorlet{Bicocolor}{orange}
+\colorlet{Cicocolor}{magenta}
+\colorlet{Dicocolor}{olive}
+\colorlet{Eicocolor}{green}
+\colorlet{Ficocolor}{lime}
+\colorlet{Gicocolor}{red}
+\colorlet{Hicocolor}{teal}
+\colorlet{Iicocolor}{cyan}
+\colorlet{Licocolor}{yellow}
+\colorlet{Jicocolor}{gray}
+\colorlet{Licocolor}{darkgray}
+
+\newcommand{\Ahmico}{{\color{Aicocolor}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"0262F}}
+\newcommand{\Bhmico}{{\color{Bicocolor}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F3DA}}
+\newcommand{\Chmico}{{\color{Cicocolor}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F571}}
+\newcommand{\Dhmico}{{\color{Dicocolor}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"026F0}}
+\newcommand{\Ehmico}{{\color{Eicocolor}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F407}}
+\newcommand{\Fhmico}{{\color{Ficocolor}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F3A9}}
+\newcommand{\Ghmico}{{\color{Gicocolor}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F3F0}}
+\newcommand{\Hhmico}{{\color{Hicocolor}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F408}}
+\newcommand{\Ihmico}{{\color{Iicocolor}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F326}}
+\newcommand{\Jhmico}{{\color{Licocolor}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F318}}
+\newcommand{\Khmico}{{\color{Jicocolor}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F47B}}
+\newcommand{\Lhmico}{{\color{Licocolor}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F3E2}}
+\newcommand{\thmico}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F5E1}}
+\newcommand{\ohmico}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F300}}
+\newcommand{\ahmico}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"0272C}}
+\newcommand{\vhmico}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"0292D}}
+\newcommand{\ihmico}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"026C8}}
+\newcommand{\mhmico}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F570}}
+\newcommand{\chmico}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F3AD}}
+\newcommand{\ehmico}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"02694}}
+\newcommand{\whmico}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F342}}
+\newcommand{\shmico}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F54B}}
+\newcommand{\xhmico}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"0254D}}
 
 \newcommand{\hmemph}[1]{\textbf{#1}}
 
@@ -158,18 +184,18 @@
 		\begin{itemize}
 			\item 「場所」の一覧
 				\begin{itemize}
-					\item \makebox[1\zw]{\hmicoA} \makebox[1em]{A} 博麗神社・八雲邸
-					\item \makebox[1\zw]{\hmicoB} \makebox[1em]{B} 人間の里・命蓮寺
-					\item \makebox[1\zw]{\hmicoC} \makebox[1em]{C} 魔界
-					\item \makebox[1\zw]{\hmicoD} \makebox[1em]{D} 妖怪の山
-					\item \makebox[1\zw]{\hmicoE} \makebox[1em]{E} 迷いの竹林・永遠亭
-					\item \makebox[1\zw]{\hmicoF} \makebox[1em]{F} 魔法の森・その他・旧作
-					\item \makebox[1\zw]{\hmicoG} \makebox[1em]{G} 霧の湖・紅魔館・廃洋館
-					\item \makebox[1\zw]{\hmicoH} \makebox[1em]{H} 旧地獄
-					\item \makebox[1\zw]{\hmicoI} \makebox[1em]{I} 仙界・天界
-					\item \makebox[1\zw]{\hmicoJ} \makebox[1em]{J} 月・夢の世界
-					\item \makebox[1\zw]{\hmicoK} \makebox[1em]{K} 彼岸・冥界・地獄・畜生界
-					\item \makebox[1\zw]{\hmicoL} \makebox[1em]{L} 外の世界
+					\item \makebox[1\zw]{\Ahmico} \makebox[1em]{A} 博麗神社・八雲邸
+					\item \makebox[1\zw]{\Bhmico} \makebox[1em]{B} 人間の里・命蓮寺
+					\item \makebox[1\zw]{\Chmico} \makebox[1em]{C} 魔界
+					\item \makebox[1\zw]{\Dhmico} \makebox[1em]{D} 妖怪の山
+					\item \makebox[1\zw]{\Ehmico} \makebox[1em]{E} 迷いの竹林・永遠亭
+					\item \makebox[1\zw]{\Fhmico} \makebox[1em]{F} 魔法の森・その他・旧作
+					\item \makebox[1\zw]{\Ghmico} \makebox[1em]{G} 霧の湖・紅魔館・廃洋館
+					\item \makebox[1\zw]{\Hhmico} \makebox[1em]{H} 旧地獄
+					\item \makebox[1\zw]{\Ihmico} \makebox[1em]{I} 仙界・天界
+					\item \makebox[1\zw]{\Jhmico} \makebox[1em]{J} 月・夢の世界
+					\item \makebox[1\zw]{\Khmico} \makebox[1em]{K} 彼岸・冥界・地獄・畜生界
+					\item \makebox[1\zw]{\Lhmico} \makebox[1em]{L} 外の世界
 				\end{itemize}
 		\end{itemize}
 		夢美さんみたいな、場所が明確な旧作勢はそこに分類して（→外の世界、魔界、地獄）、
@@ -178,19 +204,67 @@
 		カードの内容やルールは Danmaku!!\ と同様。
 	\item 様々なアイコン
 		\begin{itemize}
-			\item \makebox[1\zw]{\hmicot} \makebox[1em]{t} 十字
-			\item \makebox[1\zw]{\hmicoo} \makebox[1em]{o} ぐるぐる
-			\item \makebox[1\zw]{\hmicoa} \makebox[1em]{a} 星
-			\item \makebox[1\zw]{\hmicov} \makebox[1em]{v} 複数
-			\item \makebox[1\zw]{\hmicoi} \makebox[1em]{i}  瞬間
-			\item \makebox[1\zw]{\hmicom} \makebox[1em]{m} 持続
-			\item \makebox[1\zw]{\hmicoc} \makebox[1em]{c} 呪符
-			\item \makebox[1\zw]{\hmicoe} \makebox[1em]{e} 装備
-			\item \makebox[1\zw]{\hmicow} \makebox[1em]{w} 世界呪符
-			\item \makebox[1\zw]{\hmicos} \makebox[1em]{s} 装備/場
-			\item \makebox[1\zw]{\hmicox} \makebox[1em]{x} その他
+			\item \makebox[1\zw]{\thmico} \makebox[1em]{t} 十字
+			\item \makebox[1\zw]{\ohmico} \makebox[1em]{o} ぐるぐる
+			\item \makebox[1\zw]{\ahmico} \makebox[1em]{a} 星
+			\item \makebox[1\zw]{\vhmico} \makebox[1em]{v} 複数
+			\item \makebox[1\zw]{\ihmico} \makebox[1em]{i}  瞬間
+			\item \makebox[1\zw]{\mhmico} \makebox[1em]{m} 持続
+			\item \makebox[1\zw]{\chmico} \makebox[1em]{c} 呪符
+			\item \makebox[1\zw]{\ehmico} \makebox[1em]{e} 装備
+			\item \makebox[1\zw]{\whmico} \makebox[1em]{w} 世界呪符
+			\item \makebox[1\zw]{\shmico} \makebox[1em]{s} 装備/場
+			\item \makebox[1\zw]{\xhmico} \makebox[1em]{x} その他
 		\end{itemize}
 \end{itemize}
+
+\section{印刷・出版に関するメモ}
+\subsection{印刷}
+\begin{itemize}
+	\item 萬印堂 \url{https://www.mnd.co.jp} に頼む?
+\end{itemize}
+
+\section{カード画像の自動生成に関するメモ}
+\subsection{自動生成の方法}
+\begin{enumerate}
+	\item カードの情報を記したファイルを作成する
+	\item \texttt{./make.sh fillname} を実行する
+	\item PDF が自動で生成される
+\end{enumerate}
+
+\subsection{\jruby[g]{制御綴}{コントロールシークエンス}一覧}
+\begin{tabbing}
+	\hspace{.4\linewidth}\=\kill
+	\verb+\hmmimg+\>イラスト\\
+	\verb+\hmmfullimg+\>フルアートのイラスト\\
+	\verb+\hmmname+\>カード名\\
+	\verb+\hmmnamer+\>カード名のルビ\\
+	\verb+\hmmtype+\>カードの種類 [Ch, SC, Cm, In]\\
+	\verb+\hmmnode+\>必要ノード\\
+	\verb+\hmmcost+\>コスト\\
+	\verb+\hmmspellist+\>術者\\
+	\verb+\hmmgraze+\>グレイズ\\
+	\verb+\hmmsprit+\>霊力\\
+	\verb+\hmmrangea+\>発動範囲 [toavx]\\
+	\verb+\hmmranget+\>発動期間 [imcewsx]\\
+	\verb+\hmmrace+\>種族\\
+	\verb+\hmmplace+\>場所（複数には未対応）[A--L]\\
+	\verb+\hmmtext+\>テキスト\\
+	\verb+\hmmp+\>攻撃力\\
+	\verb+\hmmt+\>耐久力\\
+	\verb+\hmmflavor+\>フレーバーテキスト\\
+	\verb+\hmmcname+\>変身状態（名称）\\
+	\verb+\hmmcrace+\>変身状態（種族）\\
+	\verb+\hmmcsprit+\>変身状態（霊力）\\
+	\verb+\hmmcgraze+\>変身状態（グレイズ）\\
+	\verb+\hmmcp+\>変身状態（攻撃力）\\
+	\verb+\hmmct+\>変身状態（耐久力）\\
+	\verb+\hmmctext+\>変身状態（テキスト）\\
+	\verb+\hmmnumtype+\>カード番号の接頭辞\\
+	\verb+\hmmnum+\>カード番号\\
+	\verb+\hmmexpantion+\>エキスパンションマーク\\
+	\verb+\hmmill+\>イラストレーター\\
+\end{tabbing}
 
 \section{ミーティングメモ}
 \subsection{2020-06-25}
@@ -600,7 +674,7 @@ Ch: 25, SC: 10, Cm: 15
 	にしき的フォント（絵文字）\>〃\\
 	LETS Fonts\>\url{https://lets-site.jp/}\\
 	kawoszeh\>\url{http://www.glukfonts.pl/font.php?font=Kawoszeh}\\
-	Hall Fetica\>\url{http://moorstation.org/typoasis/designers/gemnew/home.htm}
+	Hall Fetica Familly\>\url{http://moorstation.org/typoasis/designers/gemnew/home.htm}
 \end{tabbing}
 
 \doclicenseThis

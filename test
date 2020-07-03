@@ -1,0 +1,29 @@
+\newcommand{\hmmimg}{}
+\newcommand{\hmmfullimg}{}
+\newcommand{\hmmname}{宇佐見　菫子}
+\newcommand{\hmmnamer}{うさみ すみれこ}
+\newcommand{\hmmtype}{Ch}
+\newcommand{\hmmnode}{3}
+\newcommand{\hmmcost}{1}
+\newcommand{\hmmspellist}{}
+\newcommand{\hmmsprit}{}
+\newcommand{\hmmgraze}{}
+\newcommand{\hmmrangea}{a}
+\newcommand{\hmmranget}{m}
+\newcommand{\hmmrace}{人間}
+\newcommand{\hmmplace}{H}
+\newcommand{\hmmtext}{}
+\newcommand{\hmmp}{4}
+\newcommand{\hmmt}{3}
+\newcommand{\hmmflavor}{「ゆりえっち」}
+\newcommand{\hmmcname}{}
+\newcommand{\hmmcrace}{}
+\newcommand{\hmmcsprit}{}
+\newcommand{\hmmcgraze}{}
+\newcommand{\hmmcp}{}
+\newcommand{\hmmct}{}
+\newcommand{\hmmctext}{}
+\newcommand{\hmmnumtype}{No.}
+\newcommand{\hmmnum}{0099}
+\newcommand{\hmmexpantion}{<S>}
+\newcommand{\hmmill}{湯島}

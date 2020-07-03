@@ -1,0 +1,28 @@
+\ifthenelse{\equal{\hmmtype}{Ch}}{
+	\colorlet{hmmtypecol}{characolor}
+	\newcommand{\hmmback}{ch_back.pdf}
+}{\ifthenelse{\equal{\hmmtype}{SC}}{
+	\colorlet{hmtypecol}{spellcolor}
+	\newcommand{\hmmback}{sc_back.pdf}
+}{\ifthenelse{\equal{\hmmtype}{Cm}}{
+	\colorlet{hmmtypecol}{commandcolor}
+	\newcommand{\hmmback}{cm_back.pdf}
+}{\ifthenelse{\equal{\hmmtype}{In}}{
+	\colorlet{hmmtypecol}{incidentcolor}
+	\newcommand{\hmmback}{in_back.pdf}
+}{}}}}
+
+\edef\hmmmplace{\expandafter\noexpand\expandafter\csname\hmmplace hmico\endcsname}
+\edef\hmmplacecol{\hmmplace icocolor}
+\colorlet{hmmplacecol}{\hmmplacecol}
+
+\edef\hmmmranget{\expandafter\noexpand\expandafter\csname\hmmrangea hmico\endcsname}
+\edef\hmmmrangea{\expandafter\noexpand\expandafter\csname\hmmranget hmico\endcsname}
+
+\newif\ifhmfill
+\newif\ifhmgr
+\newif\ifhmctxt
+\ifthenelse{\NOT\equal{\hmmgraze}{}}{\hmgrtrue}{\hmgrfalse}
+\ifthenelse{\NOT\equal{\hmmcname}{}}{\hmctxttrue}{\hmctxtfalse}
+\ifthenelse{\NOT\equal{\hmmfullimg}{}}{\hmfilltrue\edef\hmmimg{\hmmfullimg}}{\hmfillfalse}
+\ifthenelse{\NOT\equal{\hmmimg}{}}{}{\def\hmmimg{uni.pdf}}
