@@ -19,6 +19,7 @@
 \edef\hmmmranget{\expandafter\noexpand\expandafter\csname\hmmrangea hmico\endcsname}
 \edef\hmmmrangea{\expandafter\noexpand\expandafter\csname\hmmranget hmico\endcsname}
 
+\newif\ifhmin
 \newif\ifhmfill
 \newif\ifhmgr
 \newif\ifhmctxt
@@ -26,3 +27,4 @@
 \ifthenelse{\NOT\equal{\hmmcname}{}}{\hmctxttrue}{\hmctxtfalse}
 \ifthenelse{\NOT\equal{\hmmfullimg}{}}{\hmfilltrue\edef\hmmimg{\hmmfullimg}}{\hmfillfalse}
 \ifthenelse{\NOT\equal{\hmmimg}{}}{}{\def\hmmimg{uni.pdf}}
+\ifthenelse{\equal{\hmmtype}{In}}{\hmintrue}{\hminfalse}

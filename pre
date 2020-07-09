@@ -76,6 +76,7 @@
 \colorlet{costcolor}{olive!30!black}
 \colorlet{spiritcolor}{red!70!black}
 \colorlet{grazecolor}{yellow!70!black}
+\colorlet{collectcolor}{gray!90}
 \colorlet{rangebcolor}{black!90}
 \colorlet{rangecolor}{black!10}
 \colorlet{characolor}{teal!60}

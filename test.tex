@@ -76,6 +76,7 @@
 \colorlet{costcolor}{olive!30!black}
 \colorlet{spiritcolor}{red!70!black}
 \colorlet{grazecolor}{yellow!70!black}
+\colorlet{collectcolor}{gray!90}
 \colorlet{rangebcolor}{black!90}
 \colorlet{rangecolor}{black!10}
 \colorlet{characolor}{teal!60}
@@ -121,23 +122,29 @@
 \newcommand{\whmico}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F342}}
 \newcommand{\shmico}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F54B}}
 \newcommand{\xhmico}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"0254D}}
+
 \newcommand{\hmmimg}{}
 \newcommand{\hmmfullimg}{}
-\newcommand{\hmmname}{宇佐見　菫子}
-\newcommand{\hmmnamer}{うさみ すみれこ}
-\newcommand{\hmmtype}{Ch}
-\newcommand{\hmmnode}{3}
-\newcommand{\hmmcost}{1}
+\newcommand{\hmmname}{紅霧異変}
+\newcommand{\hmmnamer}{こうむいへん}
+\newcommand{\hmmtype}{In}
+\newcommand{\hmmnode}{-}
+\newcommand{\hmmcost}{-}
 \newcommand{\hmmspellist}{}
 \newcommand{\hmmsprit}{}
 \newcommand{\hmmgraze}{}
-\newcommand{\hmmrangea}{a}
-\newcommand{\hmmranget}{m}
+\newcommand{\hmmcollect}{3}
+\newcommand{\hmmrangea}{}
+\newcommand{\hmmranget}{}
 \newcommand{\hmmrace}{人間}
-\newcommand{\hmmplace}{H}
-\newcommand{\hmmtext}{}
-\newcommand{\hmmp}{4}
-\newcommand{\hmmt}{3}
+\newcommand{\hmmplace}{G}
+\newcommand{\hmmtext}{%
+	（自動α）〔全てのキャラクター〕は「戦闘修正 -1/-1」を得る。
+	
+	（収集）〔全てのキャラクター〕は決死状態になった場合、収集される。
+}
+\newcommand{\hmmp}{-}
+\newcommand{\hmmt}{-}
 \newcommand{\hmmflavor}{「ゆりえっち」}
 \newcommand{\hmmcname}{}
 \newcommand{\hmmcrace}{}
@@ -150,6 +157,7 @@
 \newcommand{\hmmnum}{0099}
 \newcommand{\hmmexpantion}{<S>}
 \newcommand{\hmmill}{湯島}
+
 \ifthenelse{\equal{\hmmtype}{Ch}}{
 	\colorlet{hmmtypecol}{characolor}
 	\newcommand{\hmmback}{ch_back.pdf}
@@ -171,6 +179,7 @@
 \edef\hmmmranget{\expandafter\noexpand\expandafter\csname\hmmrangea hmico\endcsname}
 \edef\hmmmrangea{\expandafter\noexpand\expandafter\csname\hmmranget hmico\endcsname}
 
+\newif\ifhmin
 \newif\ifhmfill
 \newif\ifhmgr
 \newif\ifhmctxt
@@ -178,6 +187,8 @@
 \ifthenelse{\NOT\equal{\hmmcname}{}}{\hmctxttrue}{\hmctxtfalse}
 \ifthenelse{\NOT\equal{\hmmfullimg}{}}{\hmfilltrue\edef\hmmimg{\hmmfullimg}}{\hmfillfalse}
 \ifthenelse{\NOT\equal{\hmmimg}{}}{}{\def\hmmimg{uni.pdf}}
+\ifthenelse{\equal{\hmmtype}{In}}{\hmintrue}{\hminfalse}
+
 \begin{document}
 \begin{tikzpicture}[x=1mm,y=1mm]
 	% 座標
@@ -229,12 +240,12 @@
 		($(C1)!.5!(C2)$)--($(C2)!.5!(C3)$)--($(C3)!.5!(C4)$)--($(C4)!.5!(C1)$)--cycle
 		(C1)-|(C3)|-cycle;
 	\path(C1)|-(C3)node[near end,above,outer ysep=0,font=\hmcfont\small]{COST};
-	\path(C1)--(C3)node[midway,font=\hmcfont\Huge]{\hmfukuro{\hmmcost}};
+	\path(C1)--(C3)node[midway,font=\hmcfont\Huge]{\hmfukuro{\strut\hmmcost}};
 	% ノード
 	\filldraw[fill=nodecolor!30,draw=nodecolor,thick](N1)rectangle(N3);
 	\fill[fill=nodecolor!70](N1)--(N3)--(N4)--(N2)--cycle;
 	\path(N1)-|(N3)node[near start,below,outer ysep=0,font=\hmcfont\small]{NODE};
-	\path(N1)--(N3)node[midway,font=\hmcfont\Huge]{\hmfukuro{\hmmnode}};
+	\path(N1)--(N3)node[midway,font=\hmcfont\Huge]{\hmfukuro{\strut\hmmnode}};
 	\ifhmgr
 	% 霊力
 	\filldraw[fill=spiritcolor!40,draw=spiritcolor,thick](SC)circle[radius=3];
@@ -254,6 +265,15 @@
 	% 効果範囲
 	\filldraw[fill=rangebcolor,draw=rangebcolor!80,thick](GC2)circle[radius=2.5];
 	\path(GC2)node[rangecolor,font=\LARGE]{\hmmmrangea};
+	\fi
+	\ifhmin
+	% 収集条件
+	\fill[fill=collectcolor!70](GC)circle[radius=4.5];
+	\fill[fill=collectcolor!30]
+		($(GC)+(60:4.5)$)arc(60:120:4.5)--($(GC)+(-120:4.5)$)arc(-120:-60:4.5)--cycle;
+	\draw[draw=collectcolor,thick](GC)circle[radius=4.5];
+	\path(GC)--++(0,3.5)node{\small\hmgcfont\hmfukuro{\strut Collect}};
+	\path(GC)node[font=\Huge\hmgfont]{\hmmcollect};
 	\fi
 	% 種族
 	\path(I3)-|(I1)node[midway,above left,font=\large\hmsfont]{\hmfukuro{\hmmrace}};

@@ -1,20 +1,25 @@
 \newcommand{\hmmimg}{}
 \newcommand{\hmmfullimg}{}
-\newcommand{\hmmname}{宇佐見　菫子}
-\newcommand{\hmmnamer}{うさみ すみれこ}
-\newcommand{\hmmtype}{Ch}
-\newcommand{\hmmnode}{3}
-\newcommand{\hmmcost}{1}
+\newcommand{\hmmname}{紅霧異変}
+\newcommand{\hmmnamer}{こうむいへん}
+\newcommand{\hmmtype}{In}
+\newcommand{\hmmnode}{-}
+\newcommand{\hmmcost}{-}
 \newcommand{\hmmspellist}{}
 \newcommand{\hmmsprit}{}
 \newcommand{\hmmgraze}{}
-\newcommand{\hmmrangea}{a}
-\newcommand{\hmmranget}{m}
+\newcommand{\hmmcollect}{3}
+\newcommand{\hmmrangea}{}
+\newcommand{\hmmranget}{}
 \newcommand{\hmmrace}{人間}
-\newcommand{\hmmplace}{H}
-\newcommand{\hmmtext}{}
-\newcommand{\hmmp}{4}
-\newcommand{\hmmt}{3}
+\newcommand{\hmmplace}{G}
+\newcommand{\hmmtext}{%
+	（自動α）〔全てのキャラクター〕は「戦闘修正 -1/-1」を得る。
+	
+	（収集）〔全てのキャラクター〕は決死状態になった場合、収集される。
+}
+\newcommand{\hmmp}{-}
+\newcommand{\hmmt}{-}
 \newcommand{\hmmflavor}{「ゆりえっち」}
 \newcommand{\hmmcname}{}
 \newcommand{\hmmcrace}{}

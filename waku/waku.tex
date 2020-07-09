@@ -58,6 +58,7 @@
 \colorlet{costcolor}{olive!30!black}
 \colorlet{spiritcolor}{red!70!black}
 \colorlet{grazecolor}{yellow!70!black}
+\colorlet{collectcolor}{gray!90}
 \colorlet{rangebcolor}{black!90}
 \colorlet{rangecolor}{black!10}
 \colorlet{characolor}{teal!60}
@@ -593,6 +594,13 @@
 	% % 効果範囲
 	% \filldraw[fill=rangebcolor,draw=rangebcolor!80,thick](GC2)circle[radius=2.5];
 	% \path(GC2)node[rangecolor]{\LARGE\strut\hmicot};
+	% 収集条件
+	\fill[fill=collectcolor!70](GC)circle[radius=4.5];
+	\fill[fill=collectcolor!30]
+		($(GC)+(60:4.5)$)arc(60:120:4.5)--($(GC)+(-120:4.5)$)arc(-120:-60:4.5)--cycle;
+	\draw[draw=collectcolor,thick](GC)circle[radius=4.5];
+	\path(GC)--++(0,3.5)node{\small\hmgcfont\hmfukuro{\strut Collect}};
+	\path(GC)node{\Huge\hmgfont 7};
 	% 種族
 	\path(I3)-|(I1)node[midway,above left]{\large\hmsfont\hmfukuro{}};
 	% テキスト
@@ -621,8 +629,7 @@
 		midway,below right,outer sep=0,inner sep=1mm,text width=53mm,text justified,font=\small\sffamily]{
 			（自動α）〔全てのキャラクター〕は「変身」を持ち、このカードの変身状態を変身状態として持つ。
 			
-			（解決）〔全てのキャラクター〕は、決死状態になった場合収集される。
-			カードが 7 枚以上セットされている場合、この異変は解決される。
+			（収集）〔全てのキャラクター〕は、決死状態になった場合収集される。
 		};
 	%% 戦闘力
 	\path($(B1)-(7,0)$)|-(B3*)node
