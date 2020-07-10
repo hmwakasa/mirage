@@ -3,6 +3,7 @@
 \newcommand{\hmmname}{紅霧異変}
 \newcommand{\hmmnamer}{こうむいへん}
 \newcommand{\hmmtype}{In}
+\newcommand{\hmmback}{}
 \newcommand{\hmmnode}{-}
 \newcommand{\hmmcost}{-}
 \newcommand{\hmmspellist}{}

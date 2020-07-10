@@ -128,6 +128,7 @@
 \newcommand{\hmmname}{紅霧異変}
 \newcommand{\hmmnamer}{こうむいへん}
 \newcommand{\hmmtype}{In}
+\newcommand{\hmmback}{In}
 \newcommand{\hmmnode}{-}
 \newcommand{\hmmcost}{-}
 \newcommand{\hmmspellist}{}
@@ -158,18 +159,19 @@
 \newcommand{\hmmexpantion}{<S>}
 \newcommand{\hmmill}{湯島}
 
+\ifthenelse{\equal{\hmmback}{}}{\makeatletter\let\hmmback\@undefined}{}
 \ifthenelse{\equal{\hmmtype}{Ch}}{
 	\colorlet{hmmtypecol}{characolor}
-	\newcommand{\hmmback}{ch_back.pdf}
+	\providecommand{\hmmback}{ch_back.pdf}
 }{\ifthenelse{\equal{\hmmtype}{SC}}{
 	\colorlet{hmtypecol}{spellcolor}
-	\newcommand{\hmmback}{sc_back.pdf}
+	\providecommand{\hmmback}{sc_back.pdf}
 }{\ifthenelse{\equal{\hmmtype}{Cm}}{
 	\colorlet{hmmtypecol}{commandcolor}
-	\newcommand{\hmmback}{cm_back.pdf}
+	\providecommand{\hmmback}{cm_back.pdf}
 }{\ifthenelse{\equal{\hmmtype}{In}}{
 	\colorlet{hmmtypecol}{incidentcolor}
-	\newcommand{\hmmback}{in_back.pdf}
+	\providecommand{\hmmback}{in_back.pdf}
 }{}}}}
 
 \edef\hmmmplace{\expandafter\noexpand\expandafter\csname\hmmplace hmico\endcsname}
