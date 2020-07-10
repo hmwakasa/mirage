@@ -1,7 +1,7 @@
 \documentclass[line_length=22zw,number_of_lines=45,twocolumn]{jlreq}
 
 \ltjdefcharrange{23}{"F0000-"FFFFF}
-\ltjsetparameter{jacharrange={-2,+23}}%ギリシア文字、キリル文字を AL Char に。
+\ltjsetparameter{jacharrange={+23}}
 \usepackage[no-math,match,deluxe,fontspec,jfm_yoko=jlreq,jfm_tate=jlreqv]{luatexja-preset}
 
 \usepackage[unicode,colorlinks]{hyperref}
@@ -228,6 +228,7 @@
 \subsection{自動生成の方法}
 \begin{enumerate}
 	\item カードの情報を記したファイルを作成する
+		（\jruby[g]{制御綴}{コントロールシークエンス}に情報を格納する）
 	\item \texttt{./make.sh fillname} を実行する
 	\item PDF が自動で生成される
 \end{enumerate}
@@ -245,6 +246,7 @@
 	\verb+\hmmspellist+\>術者\\
 	\verb+\hmmgraze+\>グレイズ\\
 	\verb+\hmmsprit+\>霊力\\
+	\verb+\hmmcollect+\>収集条件\\
 	\verb+\hmmrangea+\>発動範囲 [toavx]\\
 	\verb+\hmmranget+\>発動期間 [imcewsx]\\
 	\verb+\hmmrace+\>種族\\
@@ -266,7 +268,7 @@
 	\verb+\hmmill+\>イラストレーター\\
 \end{tabbing}
 
-\section{ミーティングメモ}
+\section{ミーティングメモ・作業記録}
 \subsection{2020-06-25}
 参加者: ひとみ、W・F
 \begin{itemize}
@@ -297,6 +299,12 @@
 	\item そういえば場所のアイコンが適切かどうか聞くの忘れてたなぁ。
 \end{itemize}
 
+\subsection{2020-07-10}
+\begin{itemize}
+	\item スペルカードの割当をした。
+	\item コマンドカードについては、効果考えてから名前充てるのでいいや。
+	\item 靈異伝スターター霊夢と封魔録スターター煙々羅を入れ替えた。
+\end{itemize}
 
 \section{スターターセットの内容}
 どのスターターセットも、50 枚ハイランダー。
@@ -304,296 +312,715 @@
 \subsection{紅魔郷スターター}
 Ch: 20, SC: 20, Cm: 10
 \begin{itemize}
-	\item 博麗霊夢
-	\item 霧雨魔理沙
-	\item 冴月麟
-	\item ルーミア
-	\item 大妖精
-	\item チルノ
-	\item 紅美鈴
-	\item 小悪魔
-	\item パチュリー・ノーレッジ
-	\item 十六夜咲夜
-	\item レミリア・スカーレット
-	\item フランドール・スカーレット
-	\item 森近霖之助
-	\item ホフゴブリン
-	\item チュパカブラ
-	\item 梅霖の妖精
-	\item 妖精メイド
-	\item ジャケットのあの子
-	\item レーベルのあの子
-	\item 朱鷺色の妖怪
+	\item キャラクターカード
+		\begin{enumerate}
+			\item 博麗霊夢
+			\item 霧雨魔理沙
+			\item 冴月麟
+			\item ルーミア
+			\item 大妖精
+			\item チルノ
+			\item 紅美鈴
+			\item 小悪魔
+			\item パチュリー・ノーレッジ
+			\item 十六夜咲夜
+			\item レミリア・スカーレット
+			\item フランドール・スカーレット
+			\item 森近霖之助
+			\item ホフゴブリン
+			\item チュパカブラ
+			\item 梅霖の妖精
+			\item 妖精メイド
+			\item ジャケットのあの子
+			\item レーベルのあの子
+			\item 朱鷺色の妖怪
+		\end{enumerate}
+	\item スペルカード
+		\begin{enumerate}
+			\item 霊符「夢想封印」
+			\item 夢符「封魔陣」
+			\item 魔符「スターダストレヴァリエ」
+			\item 恋符「マスタースパーク」
+			\item 夜符「ナイトバード」
+			\item 闇符「ディマーケイション」
+			\item 氷符「アイシクルフォール」
+			\item 凍符「パーフェクトフリーズ」
+			\item 華符「芳華絢爛」
+			\item 彩符「極彩颱風」
+			\item 木符「シルフィホルン」
+			\item 火符「アグニシャイン」
+			\item 水符「プリンセスウンディネ」
+			\item 奇術「ミスディレクション」
+			\item 幻象「ルナクロック」
+			\item 幻世「ザ・ワールド」
+			\item 天罰「スターオブダビデ」
+			\item 「紅色の幻想郷」
+			\item 秘弾「そして誰もいなくなるか?」
+			\item QED「495 年の波紋」
+		\end{enumerate}
+	\item コマンドカード
+		\begin{enumerate}
+			\item 紅魔館
+			\item 霧の湖
+			\item 博麗神社
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+		\end{enumerate}
 \end{itemize}
 \pagebreak
 
 \subsection{妖々夢スターター}
 Ch: 20, SC: 20, Cm: 10
 \begin{itemize}
-	\item レティ・ホワイトロック
-	\item 橙
-	\item アリス・マーガトロイド
-	\item リリーホワイト
-	\item リリーブラック
-	\item ルナサ・プリズムリバー
-	\item メルラン・プリズムリバー
-	\item リリカ・プリズムリバー
-	\item レイラ・プリズムリバー
-	\item プリズムリバー伯爵
-	\item 魂魄妖夢
-	\item 魂魄妖忌
-	\item 西行寺幽々子
-	\item 八雲藍
-	\item 八雲紫
-	\item 上海人形
-	\item 蓬莱人形
-	\item 西行妖
-	\item 死蝶霊
-	\item 半幽霊
+	\item キャラクターカード
+		\begin{enumerate}
+			\item レティ・ホワイトロック
+			\item 橙
+			\item アリス・マーガトロイド
+			\item リリーホワイト
+			\item リリーブラック
+			\item ルナサ・プリズムリバー
+			\item メルラン・プリズムリバー
+			\item リリカ・プリズムリバー
+			\item レイラ・プリズムリバー
+			\item プリズムリバー伯爵
+			\item 魂魄妖夢
+			\item 魂魄妖忌
+			\item 西行寺幽々子
+			\item 八雲藍
+			\item 八雲紫
+			\item 上海人形
+			\item 蓬莱人形
+			\item 西行妖
+			\item 死蝶霊
+			\item 半幽霊
+		\end{enumerate}
+	\item スペルカード
+		\begin{enumerate}
+			\item 寒符「リンガリングコールド」
+			\item 冬符「フラワーウィザラウェイ」
+			\item 仙符「鳳凰卵」
+			\item 鬼神「飛翔毘沙門天」
+			\item 春符「サプライズスプリング」
+			\item 咒詛「魔彩光の上海人形」
+			\item 咒詛「首吊り蓬莱人形」
+			\item 冥鍵「ファツィオーリ冥奏」
+			\item 神弦「ストラディヴァリウス」
+			\item 管霊「ヒノファンタズム」
+			\item 合葬「プリズムコンチェルト」
+			\item 幽鬼剣「妖童餓鬼の断食」
+			\item 人界剣「悟入幻想」
+			\item 華霊「ゴーストバタフライ」
+			\item 桜符「完全なる墨染の桜 -開花-」
+			\item 式神「橙」
+			\item 式神「仙狐思念」
+			\item 式神「八雲藍」
+			\item 結界「夢と現の呪」
+			\item 紫奥義「弾幕結界」
+		\end{enumerate}
+	\item コマンドカード
+		\begin{enumerate}
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+		\end{enumerate}
 \end{itemize}
 \pagebreak
 
 \subsection{花映塚+幻想郷スターター}
 Ch: 20, SC: 20, Cm: 10
 \begin{itemize}
-	\item 妖蓮華
-	\item オレンジ
-	\item くるみ
-	\item 闇鏡
-	\item エリー
-	\item 光子
-	\item 夢月
-	\item 幻月
-	\item メディスン・メランコリー
-	\item 風見幽香
-	\item 小野塚小町
-	\item 四季映姫・ヤマザナドゥ
-	\item サニーミルク
-	\item ルナチャイルド
-	\item スターサファイア
-	\item 酒虫
-	\item 山犬
-	\item ルナサ・プリズムリバー（人間）
-	\item リリカ・プリズムリバー（人間）
-	\item メルラン・プリズムリバー（人間）
+	\item キャラクターカード
+		\begin{enumerate}
+			\item 妖蓮華
+			\item オレンジ
+			\item くるみ
+			\item 闇鏡
+			\item エリー
+			\item 光子
+			\item 夢月
+			\item 幻月
+			\item メディスン・メランコリー
+			\item 風見幽香
+			\item 小野塚小町
+			\item 四季映姫・ヤマザナドゥ
+			\item サニーミルク
+			\item ルナチャイルド
+			\item スターサファイア
+			\item 酒虫
+			\item 山犬
+			\item ルナサ・プリズムリバー（人間）
+			\item リリカ・プリズムリバー（人間）
+			\item メルラン・プリズムリバー（人間）
+		\end{enumerate}
+	\item スペルカード
+		\begin{enumerate}
+			\item 騒符「リリカ・ソロライブ」
+			\item 騒符「メルラン・ハッピーライブ」
+			\item 騒符「ルナサ・ソロライブ」
+			\item 毒符「神経の毒」
+			\item 毒符「憂鬱の毒」
+			\item 毒符「ポイズンブレス」
+			\item 花符「幻想郷の開花」
+			\item 幻想「花鳥風月、嘯風弄月」
+			\item 投銭「宵越しの銭」
+			\item 死神「ヒガンルトゥール」
+			\item 霊符「古き地縛霊の目覚め」
+			\item 罪符「彷徨える大罪」
+			\item 審判「ラストジャッジメント」
+			\item 審判「十王裁判」
+			\item 陽光「サンシャインブラスト」
+			\item 光精「ダイアモンドリング」
+			\item 月符「ルナティックレイン」
+			\item 障光「ムーンライトウォール」
+			\item 星粒「スターピースシャワー」
+			\item 流星「コメットストリーム」
+		\end{enumerate}
+	\item コマンドカード
+		\begin{enumerate}
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+		\end{enumerate}
 \end{itemize}
 \pagebreak
 
 \subsection{永夜抄スターター}
 Ch: 20, SC: 20, Cm: 10
 \begin{itemize}
-	\item 霧雨魔理沙
-	\item リグル・ナイトバグ
-	\item ミスティア・ローレライ
-	\item 上白沢慧音（変身: 白沢）
-	\item 因幡てゐ
-	\item 鈴仙・優曇華院・イナバ
-	\item 八意永琳
-	\item 蓬莱山輝夜
-	\item 藤原妹紅
-	\item 綿月豊姫
-	\item 綿月依姫
-	\item レイセン
-	\item 前鬼
-	\item 後鬼
-	\item 月夜見
-	\item 嫦娥
-	\item 瑞江浦嶋子
-	\item 木花咲耶姫
-	\item 岩笠
-	\item 玉兎
+	\item キャラクターカード
+		\begin{enumerate}
+			\item 霧雨魔理沙
+			\item リグル・ナイトバグ
+			\item ミスティア・ローレライ
+			\item 上白沢慧音（変身: 白沢）
+			\item 因幡てゐ
+			\item 鈴仙・優曇華院・イナバ
+			\item 八意永琳
+			\item 蓬莱山輝夜
+			\item 藤原妹紅
+			\item 綿月豊姫
+			\item 綿月依姫
+			\item レイセン
+			\item 前鬼
+			\item 後鬼
+			\item 月夜見
+			\item 嫦娥
+			\item 瑞江浦嶋子
+			\item 木花咲耶姫
+			\item 岩笠
+			\item 玉兎
+		\end{enumerate}
+	\item スペルカード
+		\begin{enumerate}
+			\item 魔空「アステロイドベルト」
+			\item 黒魔「イベントホライズン」
+			\item 蛍符「地上の流星」
+			\item 蠢符「リトルバグ」
+			\item 声符「梟の夜鳴声」
+			\item 夜盲「夜雀の歌」
+			\item 産霊「ファーストピラミッド」
+			\item 野符「武烈クライシス」
+			\item 波符「赤眼催眠（マインドシェイカー）」
+			\item 狂符「幻視調律（ビジョナリチューニング）」
+			\item 覚神「神代の記憶」
+			\item 蘇活「生命遊戯 -ライフゲーム-」
+			\item 操神「オモイカネディバイス」
+			\item 難題「仏の御石の鉢 -砕けぬ意思-」
+			\item 難題「火鼠の皮衣 -焦れぬ心-」
+			\item 難題「蓬莱の弾の枝 -虹色の弾幕-」
+			\item 転世「一条戻り橋」
+			\item 時効「月のいはかさの呪い」
+			\item 滅罪「正直者の死」
+			\item 不滅「フェニックスの尾」
+		\end{enumerate}
+	\item コマンドカード
+		\begin{enumerate}
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+		\end{enumerate}
 \end{itemize}
 \pagebreak
 
 \subsection{風神録+地霊殿スターター}
 Ch: 20, SC: 20, Cm: 10
 \begin{itemize}
-	\item 射命丸文
-	\item 秋静葉
-	\item 秋穣子
-	\item 鍵山雛
-	\item 河城にとり
-	\item 犬走椛
-	\item 東風谷早苗
-	\item 八坂神奈子
-	\item 洩矢諏訪子
-	\item キスメ
-	\item 黒谷ヤマメ
-	\item 水橋パルスィ
-	\item 星熊勇儀
-	\item 古明地さとり
-	\item 火焔猫燐
-	\item 霊烏路空
-	\item 古明地こいし
-	\item 姫海棠はたて
-	\item 黒猫
-	\item 呪精
+	\item キャラクターカード
+		\begin{enumerate}
+			\item 射命丸文
+			\item 秋静葉
+			\item 秋穣子
+			\item 鍵山雛
+			\item 河城にとり
+			\item 犬走椛
+			\item 東風谷早苗
+			\item 八坂神奈子
+			\item 洩矢諏訪子
+			\item キスメ
+			\item 黒谷ヤマメ
+			\item 水橋パルスィ
+			\item 星熊勇儀
+			\item 古明地さとり
+			\item 火焔猫燐
+			\item 霊烏路空
+			\item 古明地こいし
+			\item 姫海棠はたて
+			\item 黒猫
+			\item 呪精
+		\end{enumerate}
+	\item スペルカード
+		\begin{enumerate}
+			\item 葉符「狂いの落葉」
+			\item 秋符「オータムスカイ」
+			\item 厄符「バッドフォーチュン」
+			\item 光学「オプティカルカモフラージュ」
+			\item 岐符「天の八衢」
+			\item 秘術「グレイソーマタージ」
+			\item 秘法「九字刺し」
+			\item 神祭「エクスパンデッド・オンバシラ」
+			\item 「マウンテン・オブ・フェイス」
+			\item 開宴「二拝二拍一拝」
+			\item 祟符「ミシャグジさま」
+			\item 怪奇「釣瓶落としの怪」
+			\item 罠符「キャプチャーウェブ」
+			\item 妬符「グリーンアイドモンスター」
+			\item 鬼符「怪力乱神」
+			\item 想起「テリブルスーヴニール」
+			\item 猫符「キャッツウォーク」
+			\item 核熱「ニュークリアフュージョン」
+			\item 表象「夢枕にご先祖総立ち」
+			\item 取材「姫海棠はたての練習取材」
+		\end{enumerate}
+	\item コマンドカード
+		\begin{enumerate}
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+		\end{enumerate}
 \end{itemize}
 \pagebreak
 
 \subsection{星蓮船+神霊廟スターター}
 Ch: 20, SC: 20, Cm: 10
 \begin{itemize}
-	\item ナズーリン
-	\item 多々良小傘
-	\item 雲居一輪
-	\item 雲山
-	\item 村紗水蜜
-	\item 寅丸星
-	\item 聖白蓮
-	\item 聖命蓮
-	\item 封獣ぬえ
-	\item 幽谷響子
-	\item 宮古芳香
-	\item 霍青娥
-	\item 蘇我屠自古
-	\item 物部布都
-	\item 豊聡耳神子
-	\item 二ツ岩マミゾウ
-	\item 水鬼鬼神長
-	\item 野鉄砲
-	\item 白山修験
-	\item 神霊
+	\item キャラクターカード
+		\begin{enumerate}
+			\item ナズーリン
+			\item 多々良小傘
+			\item 雲居一輪
+			\item 雲山
+			\item 村紗水蜜
+			\item 寅丸星
+			\item 聖白蓮
+			\item 聖命蓮
+			\item 封獣ぬえ
+			\item 幽谷響子
+			\item 宮古芳香
+			\item 霍青娥
+			\item 蘇我屠自古
+			\item 物部布都
+			\item 豊聡耳神子
+			\item 二ツ岩マミゾウ
+			\item 水鬼鬼神長
+			\item 野鉄砲
+			\item 白山修験
+			\item 神霊
+		\end{enumerate}
+	\item スペルカード
+		\begin{enumerate}
+			\item 棒符「ビジーロッド」
+			\item 大輪「からかさ後光」
+			\item 驚雨「ゲリラ台風」
+			\item 鉄拳「問答無用の妖怪拳」
+			\item 転覆「道連れアンカー」
+			\item 宝塔「レイディアントトレジャー」
+			\item 魔法「紫雲のオーメン」
+			\item 超人「聖白蓮」
+			\item 妖雲「平安のダーククラウド」
+			\item 正体不明「恐怖の虹色 UFO 襲来」
+			\item 響符「マウンテンエコー」
+			\item 回復「ヒールバイデザイア」
+			\item 邪符「ヤンシャオグイ」
+			\item 雷矢「ガゴウジサイクロン」
+			\item 天符「雨の磐舟」
+			\item 聖童女「大物忌正餐」
+			\item 名誉「十二階の色彩」
+			\item 仙符「日出ずる処の天子」
+			\item 壱番勝負「霊長化弾幕変化」
+			\item 弐番勝負「肉食化弾幕変化」
+		\end{enumerate}
+	\item コマンドカード
+		\begin{enumerate}
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+		\end{enumerate}
 \end{itemize}
 \pagebreak
 
 \subsection{Extra スターター}
 Ch: 20, SC: 20, Cm: 10
 \begin{itemize}
-	\item 伊吹萃香
-	\item 永江衣玖
-	\item 比那名居天子
-	\item 大ナマズ
-	\item 秦こころ
-	\item 宇佐見菫子
-	\item 依神女苑
-	\item 依神紫苑
-	\item 茨木華扇
-	\item 宇佐見蓮子
-	\item マエリベリー・ハーン
-	\item 非想天則
-	\item 黄帝
-	\item 久米
-	\item 務光
-	\item 竿打
-	\item 彭祖
-	\item 万歳楽
-	\item 龍神
-	\item 蜃
+	\item キャラクターカード
+		\begin{enumerate}
+			\item 伊吹萃香
+			\item 永江衣玖
+			\item 比那名居天子
+			\item 大ナマズ
+			\item 秦こころ
+			\item 宇佐見菫子
+			\item 依神女苑
+			\item 依神紫苑
+			\item 茨木華扇
+			\item 宇佐見蓮子
+			\item マエリベリー・ハーン
+			\item 非想天則
+			\item 黄帝
+			\item 久米
+			\item 務光
+			\item 竿打
+			\item 彭祖
+			\item 万歳楽
+			\item 龍神
+			\item 蜃
+		\end{enumerate}
+	\item スペルカード
+		\begin{enumerate}
+			\item 鬼火「超高密度燐禍術」
+			\item 「百万鬼夜行」
+			\item 光珠「龍の光る眼」
+			\item 雷符「エレキテルの龍宮」
+			\item 要石「天空の霊石」
+			\item 乾坤「荒々しくも母なる大地よ」
+			\item ナマズ「ほらほら世界が震えるぞ?」
+			\item ナマズ「液状化現象で大地も泥のようじゃ!」
+			\item ナマズ「発電だって頑張っちゃうぞ?」
+			\item 憂符「憂き世は憂しの小車」
+			\item 憂面「杞人地を憂う」
+			\item 虎符「両門の彭祖」
+			\item 雷符「微速の務光」
+			\item 銃符「3D プリンターガン」
+			\item 念力「サイコキネシスアプリ」
+			\item 念力「テレキネシス 電波塔」
+			\item 不運「ようこそ極貧の世界へ」
+			\item 財禍「プラックピジョン」
+			\item 貧符「ミスチャンススキャッター」
+			\item 「最凶最悪の極貧不幸神」
+		\end{enumerate}
+	\item コマンドカード
+		\begin{enumerate}
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+		\end{enumerate}
 \end{itemize}
 \pagebreak
 
 \subsection{輝針城+紺珠伝スターター}
 Ch: 20, SC: 20, Cm: 10
 \begin{itemize}
-	\item わかさぎ姫
-	\item 赤蛮奇
-	\item 今泉影狼
-	\item 九十九弁々
-	\item 九十九八橋
-	\item 鬼人正邪
-	\item 少名針妙丸
-	\item 堀川雷鼓
-	\item 清蘭
-	\item 鈴瑚
-	\item ドレミー・スイート
-	\item 稀神サグメ
-	\item クラウンピース
-	\item 純狐
-	\item ヘカーティア・ラピスラズリ
-	\item 稗田阿求
-	\item 本居小鈴
-	\item 管狐
-	\item 運松
-	\item 易者
+	\item キャラクターカード
+		\begin{enumerate}
+			\item わかさぎ姫
+			\item 赤蛮奇
+			\item 今泉影狼
+			\item 九十九弁々
+			\item 九十九八橋
+			\item 鬼人正邪
+			\item 少名針妙丸
+			\item 堀川雷鼓
+			\item 清蘭
+			\item 鈴瑚
+			\item ドレミー・スイート
+			\item 稀神サグメ
+			\item クラウンピース
+			\item 純狐
+			\item ヘカーティア・ラピスラズリ
+			\item 稗田阿求
+			\item 本居小鈴
+			\item 管狐
+			\item 運松
+			\item 易者
+		\end{enumerate}
+	\item スペルカード
+		\begin{enumerate}
+			\item 水符「テイルフィンスラップ」
+			\item 飛符「フライングヘッド」
+			\item 牙符「月下の犬歯」
+			\item 平曲「祇園精舎の鐘の音」
+			\item 琴符「諸行無常の琴の音」
+			\item 弦楽「嵐のアンサンブル」
+			\item 欺符「逆針撃」
+			\item 逆符「天下転覆」
+			\item 小弾「小人の道」
+			\item 妖剣「輝針剣」
+			\item 一鼓「暴れ宮太鼓」
+			\item 二鼓「怨霊アヤノツヅミ」
+			\item 凶弾「スピードストライク」
+			\item 兎符「ストロベリーダンゴ」
+			\item 夢符「緋色の悪夢」
+			\item 玉符「烏合の呪」
+			\item 獄符「ヘルエクリプス」
+			\item 「掌の純光」
+			\item 異界「逢魔ガ刻」
+			\item 月「ルナティックインパクト」
+		\end{enumerate}
+	\item コマンドカード
+		\begin{enumerate}
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+		\end{enumerate}
 \end{itemize}
 \pagebreak
 
 \subsection{天空璋+鬼形獣スターター}
 Ch: 20, SC: 20, Cm: 10
 \begin{itemize}
-	\item 魂魄妖夢
-	\item エタニティルラバ
-	\item 坂田ネムノ
-	\item 高麗野あうん
-	\item 矢田寺成美
-	\item 丁礼田舞
-	\item 爾子田里乃
-	\item 摩多羅隠岐奈
-	\item 戎 瓔花
-	\item 牛崎 潤美
-	\item 庭渡 久侘歌
-	\item 吉弔 八千慧
-	\item 杖刀偶 磨弓
-	\item 埴安神 袿姫
-	\item 驪駒 早鬼
-	\item オオカミ霊
-	\item カワウソ霊
-	\item オオワシ霊
-	\item 饕餮
-	\item 日焼けしたチルノ
+	\item キャラクターカード
+		\begin{enumerate}
+			\item 魂魄妖夢
+			\item エタニティルラバ
+			\item 坂田ネムノ
+			\item 高麗野あうん
+			\item 矢田寺成美
+			\item 丁礼田舞
+			\item 爾子田里乃
+			\item 摩多羅隠岐奈
+			\item 戎 瓔花
+			\item 牛崎 潤美
+			\item 庭渡 久侘歌
+			\item 吉弔 八千慧
+			\item 杖刀偶 磨弓
+			\item 埴安神 袿姫
+			\item 驪駒 早鬼
+			\item オオカミ霊
+			\item カワウソ霊
+			\item オオワシ霊
+			\item 饕餮
+			\item 日焼けしたチルノ
+		\end{enumerate}
+	\item スペルカード
+		\begin{enumerate}
+			\item 空観剣「六根清浄斬」
+			\item 蝶符「ミニットスケールス」
+			\item 雨符「囚われの秋雨」
+			\item 犬符「野良犬の散歩」
+			\item 独楽「コマ犬回し」
+			\item 魔符「インスタントボーディ」
+			\item 竹符「バンブースピアダンス」
+			\item 茗荷「フォゲットユアネーム」
+			\item 後符「秘神の後光」
+			\item 「アナーキーバレットヘル」
+			\item 氷符「クールサンフラワー」
+			\item 石符「ストーンウッズ」
+			\item 水符「水配りの試練」
+			\item 亀符「亀甲地獄」
+			\item 埴輪「弓兵埴輪」
+			\item 埴輪「騎馬兵埴輪」
+			\item 方形「方形造形術」
+			\item 方形「スクエアクリーチャー」
+			\item 勁疾技「スリリングショット」
+			\item 「フォロミーアンアフライド」
+		\end{enumerate}
+	\item コマンドカード
+		\begin{enumerate}
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+		\end{enumerate}
 \end{itemize}
 \pagebreak
 
 \subsection{封魔録+夢時空スターター}
 Ch: 25, SC: 10, Cm: 15
 \begin{itemize}
-	\item レミリア・スカーレット
-	\item フランドール・スカーレット
-	\item 玄爺
-	\item 神社戦車
-	\item ふらわ〜戦車
-	\item 里香
-	\item 呪い子
-	\item 明羅
-	\item 幻夢盤
-	\item 砲台
-	\item 魔天使
-	\item 飛行戦車イビルアイΣ
-	\item エレン
-	\item 小兎姫
-	\item カナ・アナベラル
-	\item 朝倉理香子
-	\item 北白河ちゆり
-	\item 岡崎夢美
-	\item ま○ち
-	\item る〜こと
-	\item ミミちゃん
-	\item 槌の子
-	\item 煙々羅
-	\item ソクラテス
-	\item 先代巫女
+	\item キャラクターカード
+		\begin{enumerate}
+			\item レミリア・スカーレット
+			\item フランドール・スカーレット
+			\item 博麗霊夢
+			\item 玄爺
+			\item 神社戦車
+			\item ふらわ〜戦車
+			\item 里香
+			\item 呪い子
+			\item 明羅
+			\item 幻夢盤
+			\item 砲台
+			\item 魔天使
+			\item 飛行戦車イビルアイΣ
+			\item エレン
+			\item 小兎姫
+			\item カナ・アナベラル
+			\item 朝倉理香子
+			\item 北白河ちゆり
+			\item 岡崎夢美
+			\item ま○ち
+			\item る〜こと
+			\item ミミちゃん
+			\item 槌の子
+			\item ソクラテス
+			\item 先代巫女
+		\end{enumerate}
+	\item スペルカード
+		\begin{enumerate}
+			\item 無題「空を飛ぶ不思議な巫女」
+			\item 夢境「二重大結界」
+			\item 境界「二重弾幕結界」
+			\item 宝符「躍る陰陽玉」
+			\item 神術「吸血鬼幻想」
+			\item 神槍「スピア・ザ・グングニル」
+			\item 運命「ミゼラブルフェイト」
+			\item 禁忌「クランベリートラップ」
+			\item 禁忌「レーヴァテイン」
+			\item 禁忌「恋の迷路」
+		\end{enumerate}
+	\item コマンドカード
+		\begin{enumerate}
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+		\end{enumerate}
 \end{itemize}
 \pagebreak
 
 \subsection{靈異伝+怪綺談スターター}
 Ch: 25, SC: 10, Cm: 15
 \begin{itemize}
-	\item 古明地さとり
-	\item 古明地こいし
-	\item アリス・マーガトロイド
-	\item 博麗霊夢
-	\item 神玉
-	\item 幽幻魔眼
-	\item 魅魔
-	\item エリス
-	\item キクリ
-	\item サリエル
-	\item 金伽羅
-	\item 輪妖精
-	\item サラ
-	\item 神鏡
-	\item ルイズ
-	\item ルシア
-	\item ユキ
-	\item マイ
-	\item 妖奈
-	\item 夢子
-	\item 神綺
-	\item トランプキング
-	\item 邪龍
-	\item 沓面
-	\item 蟒蛇
+	\item キャラクターカード
+		\begin{enumerate}
+			\item 古明地さとり
+			\item 古明地こいし
+			\item アリス・マーガトロイド
+			\item 神玉
+			\item 幽幻魔眼
+			\item 魅魔
+			\item エリス
+			\item キクリ
+			\item サリエル
+			\item 金伽羅
+			\item 輪妖精
+			\item サラ
+			\item 神鏡
+			\item ルイズ
+			\item ルシア
+			\item ユキ
+			\item マイ
+			\item 妖奈
+			\item 夢子
+			\item 神綺
+			\item トランプキング
+			\item 邪龍
+			\item 沓面
+			\item 蟒蛇
+			\item 煙々羅
+		\end{enumerate}
+	\item スペルカード
+		\begin{enumerate}
+			\item 犠牲「スーサイドパクト」
+			\item 人形「セミオートマトン」
+			\item 魔符「アーティフルサクリファイス」
+			\item 操符「マリオネットパラル」
+			\item 想起「恐怖催眠術」
+			\item 心花「カメラシャイローズ」
+			\item 想起「うろおぼえの金閣寺」
+			\item 記憶「DNA の瑕」
+			\item 本能「イドの解放」
+			\item 抑制「スーパーエゴ」
+		\end{enumerate}
+	\item コマンドカード
+		\begin{enumerate}
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+		\end{enumerate}
 \end{itemize}
 \pagebreak
 
@@ -670,11 +1097,17 @@ Ch: 25, SC: 10, Cm: 15
 	\hmemph{Illustrator}\>\hmemph{募集中}\\
 	湯島\\
 	\hmemph{Fonts}\\
-	NKD04 Playing Card's Index\>\url{http://hwm3.gyao.ne.jp/shiroi-niwatori/nishiki-teki.htm}\\
-	にしき的フォント（絵文字）\>〃\\
-	LETS Fonts\>\url{https://lets-site.jp/}\\
-	kawoszeh\>\url{http://www.glukfonts.pl/font.php?font=Kawoszeh}\\
-	Hall Fetica Familly\>\url{http://moorstation.org/typoasis/designers/gemnew/home.htm}
+	{\fontspec[Scale=.85]{NKD04_Playing_Cards_Index}NKD04 Playing Card's Index}\>
+		\url{http://hwm3.gyao.ne.jp/shiroi-niwatori/nishiki-teki.htm}\\
+	{\jfontspec{nishiki-teki}にしき的フォント（絵文字）}\>
+		〃\\
+	{\fontspec{FOT-RodinNTLGPro-M}LETS Fonts}\>
+		\url{https://lets-site.jp/}\\
+	{\fontspec{kawoszeh}kawoszeh}\>
+		\url{http://www.glukfonts.pl/font.php?font=Kawoszeh}\\
+	Hall Fetica Familly\>
+		\url{http://moorstation.org/typoasis/designers/gemnew/home.htm}\\
+		
 \end{tabbing}
 
 \doclicenseThis
