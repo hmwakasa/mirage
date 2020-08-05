@@ -1,0 +1,23 @@
+\newcommand{\hmmimg}{}
+\newcommand{\hmmname}{レミリア\・スカーレット}
+\newcommand{\hmmnamer}{れみりあ すかーれっと}
+\newcommand{\hmmtype}{Ch}
+\newcommand{\hmmnode}{6}
+\newcommand{\hmmcost}{3}
+\newcommand{\hmmsprit}{3}
+\newcommand{\hmmgraze}{2}
+\newcommand{\hmmrace}{吸血鬼}
+\newcommand{\hmmplace}{G}
+\newcommand{\hmmtext}{
+	先制
+	
+	（常時）[1]: 目標の〔キャラクター 1 枚〕に 5 ダメージを与える。
+	この効果は 1 ターンに 1 度しか使用できない。
+}
+\newcommand{\hmmp}{7}
+\newcommand{\hmmt}{5}
+\newcommand{\hmmflavor}{}
+\newcommand{\hmmnumtype}{Dr.}
+\newcommand{\hmmnum}{11}
+\newcommand{\hmmexpantion}{<Sk>}
+\newcommand{\hmmill}{}

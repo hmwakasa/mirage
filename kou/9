@@ -1,0 +1,23 @@
+\newcommand{\hmmimg}{}
+\newcommand{\hmmname}{パチュリー\・ノーレッジ}
+\newcommand{\hmmnamer}{ぱちゅりー のーれっじ}
+\newcommand{\hmmtype}{Ch}
+\newcommand{\hmmnode}{5}
+\newcommand{\hmmcost}{3}
+\newcommand{\hmmsprit}{5}
+\newcommand{\hmmgraze}{1}
+\newcommand{\hmmrace}{魔法使い}
+\newcommand{\hmmplace}{G}
+\newcommand{\hmmtext}{
+	マナチャージ(2)
+	
+	（自動β）〔このキャラクター〕がプレイされて場に出た場合、〔あなたのデッキ〕
+	をすべて見て、「小悪魔」1 枚を抜き出し、スリープ状態で場に出しても良い。
+}
+\newcommand{\hmmp}{2}
+\newcommand{\hmmt}{5}
+\newcommand{\hmmflavor}{}
+\newcommand{\hmmnumtype}{Dr.}
+\newcommand{\hmmnum}{09}
+\newcommand{\hmmexpantion}{<Sk>}
+\newcommand{\hmmill}{}

@@ -1,0 +1,61 @@
+\providecommand{\hmmimg}{}
+\providecommand{\hmmfullimg}{}
+\providecommand{\hmmname}{}
+\providecommand{\hmmnamer}{}
+\providecommand{\hmmtype}{}
+\providecommand{\hmmnode}{}
+\providecommand{\hmmcost}{}
+\providecommand{\hmmspellist}{}
+\providecommand{\hmmsprit}{}
+\providecommand{\hmmgraze}{}
+\providecommand{\hmmcollect}{}
+\providecommand{\hmmrangea}{}
+\providecommand{\hmmranget}{}
+\providecommand{\hmmrace}{}
+\providecommand{\hmmplace}{}
+\providecommand{\hmmtext}{}
+\providecommand{\hmmp}{-}
+\providecommand{\hmmt}{-}
+\providecommand{\hmmflavor}{}
+\providecommand{\hmmcname}{}
+\providecommand{\hmmcrace}{}
+\providecommand{\hmmcsprit}{}
+\providecommand{\hmmcgraze}{}
+\providecommand{\hmmcp}{}
+\providecommand{\hmmct}{}
+\providecommand{\hmmctext}{}
+\providecommand{\hmmnumtype}{}
+\providecommand{\hmmnum}{}
+\providecommand{\hmmexpantion}{}
+\providecommand{\hmmill}{}
+
+\ifthenelse{\equal{\hmmtype}{Ch}}{
+	\colorlet{hmmtypecol}{characolor}
+	\providecommand{\hmmback}{ch_back.pdf}
+}{\ifthenelse{\equal{\hmmtype}{SC}}{
+	\colorlet{hmtypecol}{spellcolor}
+	\providecommand{\hmmback}{sc_back.pdf}
+}{\ifthenelse{\equal{\hmmtype}{Cm}}{
+	\colorlet{hmmtypecol}{commandcolor}
+	\providecommand{\hmmback}{cm_back.pdf}
+}{\ifthenelse{\equal{\hmmtype}{In}}{
+	\colorlet{hmmtypecol}{incidentcolor}
+	\providecommand{\hmmback}{in_back.pdf}
+}{}}}}
+
+\edef\hmmmplace{\expandafter\noexpand\expandafter\csname\hmmplace hmico\endcsname}
+\edef\hmmplacecol{\hmmplace icocolor}
+\colorlet{hmmplacecol}{\hmmplacecol}
+
+\edef\hmmmranget{\expandafter\noexpand\expandafter\csname\hmmrangea hmico\endcsname}
+\edef\hmmmrangea{\expandafter\noexpand\expandafter\csname\hmmranget hmico\endcsname}
+
+\newif\ifhmin
+\newif\ifhmfill
+\newif\ifhmgr
+\newif\ifhmctxt
+\ifthenelse{\NOT\equal{\hmmgraze}{}}{\hmgrtrue}{\hmgrfalse}
+\ifthenelse{\NOT\equal{\hmmcname}{}}{\hmctxttrue}{\hmctxtfalse}
+\ifthenelse{\NOT\equal{\hmmfullimg}{}}{\hmfilltrue\edef\hmmimg{\hmmfullimg}}{\hmfillfalse}
+\ifthenelse{\NOT\equal{\hmmimg}{}}{}{\def\hmmimg{uni.pdf}}
+\ifthenelse{\equal{\hmmtype}{In}}{\hmintrue}{\hminfalse}

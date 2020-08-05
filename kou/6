@@ -1,0 +1,21 @@
+\newcommand{\hmmimg}{}
+\newcommand{\hmmname}{チルノ}
+\newcommand{\hmmnamer}{ちるの}
+\newcommand{\hmmtype}{Ch}
+\newcommand{\hmmnode}{3}
+\newcommand{\hmmcost}{1}
+\newcommand{\hmmsprit}{2}
+\newcommand{\hmmgraze}{2}
+\newcommand{\hmmrace}{妖精}
+\newcommand{\hmmplace}{G}
+\newcommand{\hmmtext}{
+	（自動α）あなたの場に「大妖精」がいる場合、〔このキャラクター〕は
+	「戦闘修正 +2/+2」を得る。
+}
+\newcommand{\hmmp}{3}
+\newcommand{\hmmt}{2}
+\newcommand{\hmmflavor}{}
+\newcommand{\hmmnumtype}{Dr.}
+\newcommand{\hmmnum}{06}
+\newcommand{\hmmexpantion}{<Sk>}
+\newcommand{\hmmill}{}

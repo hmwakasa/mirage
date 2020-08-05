@@ -1,0 +1,21 @@
+\newcommand{\hmmimg}{}
+\newcommand{\hmmname}{冴月　麟}
+\newcommand{\hmmnamer}{さつき りん}
+\newcommand{\hmmtype}{Ch}
+\newcommand{\hmmnode}{4}
+\newcommand{\hmmcost}{2}
+\newcommand{\hmmsprit}{0}
+\newcommand{\hmmgraze}{2}
+\newcommand{\hmmrace}{人間}
+\newcommand{\hmmplace}{F}
+\newcommand{\hmmtext}{
+	（常時）[0]: 〔このキャラクター〕をゲームから除外する。
+	この干渉終了時に、〔ゲームから除外されているこのキャラクター〕を
+	本来のプレイヤーの場にスリープ状態で戻す。}
+\newcommand{\hmmp}{5}
+\newcommand{\hmmt}{4}
+\newcommand{\hmmflavor}{}
+\newcommand{\hmmnumtype}{Dr.}
+\newcommand{\hmmnum}{03}
+\newcommand{\hmmexpantion}{<Sk>}
+\newcommand{\hmmill}{}
