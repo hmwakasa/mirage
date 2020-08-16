@@ -2,15 +2,18 @@
 \newcommand{\hmmname}{ジャケットのあの子}
 \newcommand{\hmmnamer}{じゃけっとのあのこ}
 \newcommand{\hmmtype}{Ch}
-\newcommand{\hmmnode}{3}
-\newcommand{\hmmcost}{1}
-\newcommand{\hmmsprit}{3}
+\newcommand{\hmmnode}{5}
+\newcommand{\hmmcost}{3}
+\newcommand{\hmmsprit}{0}
 \newcommand{\hmmgraze}{3}
 \newcommand{\hmmrace}{人間}
 \newcommand{\hmmplace}{F}
-\newcommand{\hmmtext}{}
-\newcommand{\hmmp}{-}
-\newcommand{\hmmt}{-}
+\newcommand{\hmmtext}{
+	（常時）[0]: 〔このキャラクター〕と、〔あなたの場の「レーベルのあの子」〕を決死状態にする。
+	その後、目標の〔キャラクターでないカード 3 枚まで〕を破棄する。
+}
+\newcommand{\hmmp}{5}
+\newcommand{\hmmt}{5}
 \newcommand{\hmmflavor}{}
 \newcommand{\hmmnumtype}{Dr.}
 \newcommand{\hmmnum}{18}

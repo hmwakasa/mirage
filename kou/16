@@ -2,15 +2,17 @@
 \newcommand{\hmmname}{梅霖の妖精}
 \newcommand{\hmmnamer}{ばいりんのようせい}
 \newcommand{\hmmtype}{Ch}
-\newcommand{\hmmnode}{3}
+\newcommand{\hmmnode}{2}
 \newcommand{\hmmcost}{1}
-\newcommand{\hmmsprit}{3}
-\newcommand{\hmmgraze}{3}
+\newcommand{\hmmsprit}{0}
+\newcommand{\hmmgraze}{1}
 \newcommand{\hmmrace}{妖精}
 \newcommand{\hmmplace}{F}
-\newcommand{\hmmtext}{}
-\newcommand{\hmmp}{-}
-\newcommand{\hmmt}{-}
+\newcommand{\hmmtext}{
+	警戒
+}
+\newcommand{\hmmp}{2}
+\newcommand{\hmmt}{3}
 \newcommand{\hmmflavor}{}
 \newcommand{\hmmnumtype}{Dr.}
 \newcommand{\hmmnum}{16}

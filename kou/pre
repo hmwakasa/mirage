@@ -18,6 +18,7 @@
 \usepackage{tikz}
 \usetikzlibrary{calc,fadings,patterns,arrows.meta}
 \setlength{\parskip}{0pt}
+\usepackage[export]{adjustbox}
 
 \NewDocumentCommand\hmfukuro{O{.2pt} +m O{white}}{\textpdfrender{
 	TextRenderingMode=FillStroke,

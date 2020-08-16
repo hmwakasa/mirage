@@ -2,15 +2,18 @@
 \newcommand{\hmmname}{朱鷺色の妖怪}
 \newcommand{\hmmnamer}{ときいろのようかい}
 \newcommand{\hmmtype}{Ch}
-\newcommand{\hmmnode}{3}
+\newcommand{\hmmnode}{2}
 \newcommand{\hmmcost}{1}
-\newcommand{\hmmsprit}{3}
-\newcommand{\hmmgraze}{3}
+\newcommand{\hmmsprit}{0}
+\newcommand{\hmmgraze}{0}
 \newcommand{\hmmrace}{妖怪}
 \newcommand{\hmmplace}{F}
-\newcommand{\hmmtext}{}
-\newcommand{\hmmp}{-}
-\newcommand{\hmmt}{-}
+\newcommand{\hmmtext}{
+	（自動β）〔相手プレイヤー〕がカードの効果でドローした場合、〔手札にあるこのカード〕
+	をあなたの場にアクティブ状態で出してもよい。
+}
+\newcommand{\hmmp}{2}
+\newcommand{\hmmt}{1}
 \newcommand{\hmmflavor}{}
 \newcommand{\hmmnumtype}{Dr.}
 \newcommand{\hmmnum}{20}

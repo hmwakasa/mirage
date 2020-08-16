@@ -18,6 +18,7 @@
 \usepackage{tikz}
 \usetikzlibrary{calc,fadings,patterns,arrows.meta}
 \setlength{\parskip}{0pt}
+\usepackage[export]{adjustbox}
 
 \NewDocumentCommand\hmfukuro{O{.2pt} +m O{white}}{\textpdfrender{
 	TextRenderingMode=FillStroke,
@@ -128,15 +129,19 @@
 \newcommand{\hmmname}{妖精メイド}
 \newcommand{\hmmnamer}{ようせいめいど}
 \newcommand{\hmmtype}{Ch}
-\newcommand{\hmmnode}{3}
+\newcommand{\hmmnode}{1}
 \newcommand{\hmmcost}{1}
-\newcommand{\hmmsprit}{3}
-\newcommand{\hmmgraze}{3}
+\newcommand{\hmmsprit}{0}
+\newcommand{\hmmgraze}{0}
 \newcommand{\hmmrace}{妖精}
 \newcommand{\hmmplace}{G}
-\newcommand{\hmmtext}{}
-\newcommand{\hmmp}{-}
-\newcommand{\hmmt}{-}
+\newcommand{\hmmtext}{
+	（常時）[1]: 〔このキャラクター〕を決死状態にする。その後、〔あなたのデッキ〕を全て見て、
+	コストが 1 以下の「種族: 妖精」を持つキャラクターカード 1 枚を抜き出し、あなたの場に
+	スリープ状態で出しても良い。その後、デッキをシャッフルする。
+}
+\newcommand{\hmmp}{0}
+\newcommand{\hmmt}{1}
 \newcommand{\hmmflavor}{}
 \newcommand{\hmmnumtype}{Dr.}
 \newcommand{\hmmnum}{17}
@@ -178,7 +183,7 @@
 	\colorlet{hmmtypecol}{characolor}
 	\providecommand{\hmmback}{ch_back.pdf}
 }{\ifthenelse{\equal{\hmmtype}{SC}}{
-	\colorlet{hmtypecol}{spellcolor}
+	\colorlet{hmmtypecol}{spellcolor}
 	\providecommand{\hmmback}{sc_back.pdf}
 }{\ifthenelse{\equal{\hmmtype}{Cm}}{
 	\colorlet{hmmtypecol}{commandcolor}
@@ -230,15 +235,17 @@
 	\draw(O1)rectangle(O3);
 	\fill[richblack](OOL1)-|(OOL3)-|cycle (O1)|-(O3)|-cycle;
 	\draw[path picture={\node at (path picture bounding box.center)
-		{\includegraphics[height=88mm]{../../ill/\hmmback}};}](O1)-|(O3)-|cycle;
+		{\includegraphics[height=88mm,clip]{../../ill/\hmmback}};}](O1)-|(O3)-|cycle;
 	\ifhmfill
 	%% フルアート
 	\draw[path picture={\node at (path picture bounding box.center)
-		{\includegraphics[height=92mm]{../../ill/\hmmimg}};}](OOL1)rectangle(OOL3);
+		{\includegraphics[width=66mm,height=94mm,min size={66mm}{94mm},{../../ill/\hmmimg}};}]
+		(OOL1)rectangle(OOL3);
 	\else
 	% イラスト
 	\draw[path picture={\node at (path picture bounding box.center)
-		{\includegraphics[width=49mm]{../../ill/\hmmimg}};}](I1)rectangle(I3);
+		{\includegraphics[width=49mm,height=52mm,keepaspectratio,min size={49mm}{52mm}]{../../ill/\hmmimg}};}]
+		(I1)rectangle(I3);
 	\fi
 	% カード名
 	\fill[black,path fading=west](M1)rectangle(M3);
@@ -365,13 +372,16 @@
 		};
 	\fi
 	% フッター
-	\path(O3)node[above right,text width=10\zw,align=left,inner ysep=0,outer ysep=0]
-		{\hmfukuro{\scriptsize\hmsfont{\©}上海アリス幻樂団\\[-3pt]{\©}さーくる⑨}};
-	\path(O1)|-(O3)node[pos=.75,above left,inner xsep=0,outer xsep=0,font=\hmpfont\small]
+	\path(O3)node[above right,text width=25\zw,align=left,inner ysep=0,outer ysep=0]
+		{\hmsfont\setlength{\baselineskip}{1.2mm}\fontsize{1.2mm}{0pt}\selectfont%
+			\hmfukuro{{\©}上海アリス幻樂団\\
+			{\©}さーくる⑨, 2020, 2020\\[-1mm]
+			CC-BY-NC 4.0}};
+	\path(O1)|-(O3)node[pos=.75,above left,inner xsep=0,outer xsep=0,font=\hmsfont\small]
 		{\hmfukuro{\hmmnumtype~}};
-	\path(O1)|-(O3)node[pos=.75,above right,inner xsep=0,outer xsep=0,font=\hmpfont\small]
+	\path(O1)|-(O3)node[pos=.75,above right,inner xsep=0,outer xsep=0,font=\hmsfont\small]
 		{\hmfukuro{\hmmnum}};
-	\path(O1)|-(O3)node[pos=.68,above,font=\hmpfont\small]{\hmfukuro{\hmmexpantion}};
+	\path(O1)|-(O3)node[pos=.68,above,font=\hmsfont\small]{\hmfukuro{\hmmexpantion}};
 	\path(O1)|-(O3)node[midway,above left,font=\hmsfont\small]{\hmfukuro{Ill. \hmmill}};
 	% % 方眼
 	% \draw[very thin,gridcolor,nearly transparent](OL1)grid[step=1](OL3);

@@ -4,15 +4,15 @@
 \newcommand{\hmmtype}{Ch}
 \newcommand{\hmmnode}{6}
 \newcommand{\hmmcost}{4}
-\newcommand{\hmmsprit}{3}
-\newcommand{\hmmgraze}{4}
+\newcommand{\hmmsprit}{4}
+\newcommand{\hmmgraze}{3}
 \newcommand{\hmmrace}{吸血鬼}
 \newcommand{\hmmplace}{G}
 \newcommand{\hmmtext}{
 	貫通
 	
 	（自動β）このカードが場に出た場合、〔あなたの手札〕1 枚を破棄する。
-	そうした場合、目標の〔場のカード 1 枚〕を破棄する。
+	その後、目標の〔場のカード 1 枚〕を破棄する。
 }
 \newcommand{\hmmp}{9}
 \newcommand{\hmmt}{9}

@@ -2,15 +2,19 @@
 \newcommand{\hmmname}{妖精メイド}
 \newcommand{\hmmnamer}{ようせいめいど}
 \newcommand{\hmmtype}{Ch}
-\newcommand{\hmmnode}{3}
+\newcommand{\hmmnode}{1}
 \newcommand{\hmmcost}{1}
-\newcommand{\hmmsprit}{3}
-\newcommand{\hmmgraze}{3}
+\newcommand{\hmmsprit}{0}
+\newcommand{\hmmgraze}{0}
 \newcommand{\hmmrace}{妖精}
 \newcommand{\hmmplace}{G}
-\newcommand{\hmmtext}{}
-\newcommand{\hmmp}{-}
-\newcommand{\hmmt}{-}
+\newcommand{\hmmtext}{
+	（常時）[1]: 〔このキャラクター〕を決死状態にする。その後、〔あなたのデッキ〕を全て見て、
+	コストが 1 以下の「種族: 妖精」を持つキャラクターカード 1 枚を抜き出し、あなたの場に
+	スリープ状態で出しても良い。その後、デッキをシャッフルする。
+}
+\newcommand{\hmmp}{0}
+\newcommand{\hmmt}{1}
 \newcommand{\hmmflavor}{}
 \newcommand{\hmmnumtype}{Dr.}
 \newcommand{\hmmnum}{17}

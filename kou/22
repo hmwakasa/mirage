@@ -3,12 +3,14 @@
 \newcommand{\hmmnamer}{ふうまじん}
 \newcommand{\hmmtype}{SC}
 \newcommand{\hmmnode}{3}
-\newcommand{\hmmcost}{2}
+\newcommand{\hmmcost}{1}
 \newcommand{\hmmspellist}{博麗霊夢}
 \newcommand{\hmmrangea}{t}
 \newcommand{\hmmranget}{i}
-\newcommand{\hmmplace}{}
-\newcommand{\hmmtext}{}
+\newcommand{\hmmplace}{A}
+\newcommand{\hmmtext}{
+	目標の〔「種族: 妖怪」を持つキャラクターカード 2 枚〕を決死状態にする。
+}
 \newcommand{\hmmp}{-}
 \newcommand{\hmmt}{-}
 \newcommand{\hmmflavor}{}

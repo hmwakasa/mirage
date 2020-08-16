@@ -5,7 +5,7 @@
 \newcommand{\hmmnode}{3}
 \newcommand{\hmmcost}{1}
 \newcommand{\hmmsprit}{2}
-\newcommand{\hmmgraze}{2}
+\newcommand{\hmmgraze}{1}
 \newcommand{\hmmrace}{人間}
 \newcommand{\hmmplace}{G}
 \newcommand{\hmmtext}{

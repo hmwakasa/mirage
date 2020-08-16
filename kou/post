@@ -33,7 +33,7 @@
 	\colorlet{hmmtypecol}{characolor}
 	\providecommand{\hmmback}{ch_back.pdf}
 }{\ifthenelse{\equal{\hmmtype}{SC}}{
-	\colorlet{hmtypecol}{spellcolor}
+	\colorlet{hmmtypecol}{spellcolor}
 	\providecommand{\hmmback}{sc_back.pdf}
 }{\ifthenelse{\equal{\hmmtype}{Cm}}{
 	\colorlet{hmmtypecol}{commandcolor}

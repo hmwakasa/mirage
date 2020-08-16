@@ -2,15 +2,20 @@
 \newcommand{\hmmname}{ホフゴブリン}
 \newcommand{\hmmnamer}{ほふごぶりん}
 \newcommand{\hmmtype}{Ch}
-\newcommand{\hmmnode}{3}
-\newcommand{\hmmcost}{1}
-\newcommand{\hmmsprit}{3}
-\newcommand{\hmmgraze}{3}
+\newcommand{\hmmnode}{1}
+\newcommand{\hmmcost}{0}
+\newcommand{\hmmsprit}{0}
+\newcommand{\hmmgraze}{0}
 \newcommand{\hmmrace}{妖怪}
 \newcommand{\hmmplace}{G}
-\newcommand{\hmmtext}{}
-\newcommand{\hmmp}{-}
-\newcommand{\hmmt}{-}
+\newcommand{\hmmtext}{
+	（自分ターン）[1]: 〔あなたのデッキの上のカード 1 枚〕をスリープ状態で
+	ノードに加える。この効果は 1 ターンに 1 度しか使用できない。
+	
+	（自分ターン）[1]: 目標の〔あなたのノード 1 枚〕を手札に戻す。
+}
+\newcommand{\hmmp}{0}
+\newcommand{\hmmt}{1}
 \newcommand{\hmmflavor}{}
 \newcommand{\hmmnumtype}{Dr.}
 \newcommand{\hmmnum}{14}

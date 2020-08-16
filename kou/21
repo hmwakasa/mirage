@@ -2,13 +2,16 @@
 \newcommand{\hmmname}{霊符「夢想封印」}
 \newcommand{\hmmnamer}{むそうふういん}
 \newcommand{\hmmtype}{SC}
-\newcommand{\hmmnode}{3}
+\newcommand{\hmmnode}{4}
 \newcommand{\hmmcost}{2}
 \newcommand{\hmmspellist}{博麗霊夢}
 \newcommand{\hmmrangea}{t}
-\newcommand{\hmmranget}{i}
-\newcommand{\hmmplace}{}
-\newcommand{\hmmtext}{}
+\newcommand{\hmmranget}{m}
+\newcommand{\hmmplace}{A}
+\newcommand{\hmmtext}{
+	目標の〔キャラクター 1 枚〕に 3 ダメージを与える。このターン終了時に、
+	さらにそのキャラクターに 3 ダメージを与える。
+}
 \newcommand{\hmmp}{-}
 \newcommand{\hmmt}{-}
 \newcommand{\hmmflavor}{}
