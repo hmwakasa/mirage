@@ -8,7 +8,7 @@
 \newcommand{\hmmgraze}{0}
 \newcommand{\hmmrace}{妖怪}
 \newcommand{\hmmplace}{G}
-\newcommand{\hmmtext}{
+\newcommand{\hmmtext}{%
 	（自分ターン）[1]: 〔あなたのデッキの上のカード 1 枚〕をスリープ状態で
 	ノードに加える。この効果は 1 ターンに 1 度しか使用できない。
 	

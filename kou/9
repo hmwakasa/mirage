@@ -8,7 +8,7 @@
 \newcommand{\hmmgraze}{1}
 \newcommand{\hmmrace}{魔法使い}
 \newcommand{\hmmplace}{G}
-\newcommand{\hmmtext}{
+\newcommand{\hmmtext}{%
 	マナチャージ(2)
 	
 	（自動β）〔このキャラクター〕がプレイされて場に出た場合、〔あなたのデッキ〕

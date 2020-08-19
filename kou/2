@@ -8,12 +8,14 @@
 \newcommand{\hmmgraze}{1}
 \newcommand{\hmmrace}{人間}
 \newcommand{\hmmplace}{F}
-\newcommand{\hmmtext}{
-	（自分ターン）[2]: 〔あなたの手札 1 枚〕を破棄する。
-	その後〔全てのキャラクター〕に 2 ダメージを与える。
+\newcommand{\hmmtext}{%
+	マナチャージ(1) 先制
+	
+	（自分ターン）[1]: 〔あなたの手札 2 枚〕を破棄する。
+	その後〔全てのキャラクター〕に 3 ダメージを与える。
 }
-\newcommand{\hmmp}{3}
-\newcommand{\hmmt}{5}
+\newcommand{\hmmp}{5}
+\newcommand{\hmmt}{3}
 \newcommand{\hmmflavor}{}
 \newcommand{\hmmnumtype}{Dr.}
 \newcommand{\hmmnum}{02}

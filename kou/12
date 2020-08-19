@@ -8,7 +8,7 @@
 \newcommand{\hmmgraze}{3}
 \newcommand{\hmmrace}{吸血鬼}
 \newcommand{\hmmplace}{G}
-\newcommand{\hmmtext}{
+\newcommand{\hmmtext}{%
 	貫通
 	
 	（自動β）このカードが場に出た場合、〔あなたの手札〕1 枚を破棄する。

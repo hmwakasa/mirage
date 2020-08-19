@@ -8,9 +8,9 @@
 \newcommand{\hmmgraze}{3}
 \newcommand{\hmmrace}{人間}
 \newcommand{\hmmplace}{F}
-\newcommand{\hmmtext}{
+\newcommand{\hmmtext}{%
 	（常時）[0]: 〔このキャラクター〕と、〔あなたの場の「レーベルのあの子」〕を決死状態にする。
-	その後、目標の〔キャラクターでないカード 3 枚まで〕を破棄する。
+	その後、〔キャラクターでないカード 3 枚まで〕を選んで破棄する。
 }
 \newcommand{\hmmp}{5}
 \newcommand{\hmmt}{5}

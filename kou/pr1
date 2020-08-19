@@ -8,7 +8,7 @@
 \newcommand{\hmmgraze}{2}
 \newcommand{\hmmrace}{吸血鬼}
 \newcommand{\hmmplace}{G}
-\newcommand{\hmmtext}{
+\newcommand{\hmmtext}{%
 	先制
 	
 	（常時）[1]: 目標の〔キャラクター 1 枚〕に 5 ダメージを与える。
@@ -16,7 +16,9 @@
 }
 \newcommand{\hmmp}{7}
 \newcommand{\hmmt}{5}
-\newcommand{\hmmflavor}{}
+\newcommand{\hmmflavor}{
+	「こんなにも月が紅いから本気で殺すわよ」
+}
 \newcommand{\hmmnumtype}{D-PR.}
 \newcommand{\hmmnum}{1}
 \newcommand{\hmmexpantion}{<P>}

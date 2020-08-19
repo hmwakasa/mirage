@@ -8,7 +8,7 @@
 \newcommand{\hmmgraze}{1}
 \newcommand{\hmmrace}{妖精}
 \newcommand{\hmmplace}{G}
-\newcommand{\hmmtext}{
+\newcommand{\hmmtext}{%
 	マナチャージ(1)
 	
 	（自動γ）あなたの場に「チルノ」がいる場合、〔このキャラクター〕は
