@@ -1,0 +1,391 @@
+\documentclass[
+	jafontsize=6bp,
+	baselineskip=1.1zh,
+	cmyk,
+	paper={63mm,88mm},
+	gutter=0pt,
+	head_space=0pt,
+	foot_space=0pt,
+	open_blacket_pos=nibu_tentsuki,
+]{jlreq}
+\usepackage{luatexja,pdfrender,xparse,fontspec,bxokumacro,bxghost,ifthen}
+\ltjsetparameter{jacharrange={-3,-8}}
+\usepackage[no-math,match,deluxe]{luatexja-preset}
+\usepackage[x-1a]{pdfx}
+
+\usepackage[pdfbox]{gentombow}
+\settombowbleed{3mm}
+
+\usepackage{tikz}
+\usetikzlibrary{calc,fadings,patterns,arrows.meta}
+\setlength{\parskip}{0pt}
+\usepackage[export]{adjustbox}
+
+\NewDocumentCommand\hmfukuro{O{.2pt} +m O{white}}{\textpdfrender{
+	TextRenderingMode=FillStroke,
+	LineWidth=#1,
+	FillColor=#3,
+}{#2}}
+
+\newlength{\OrigWidth}
+%% \hminwidth[*]{«横幅»}{«テキスト»}
+% テキストを指定の横幅に"イイカンジに"出力する
+% *-> 均等割り付けしない
+\NewDocumentCommand\hminwidth{s m m}{{%
+	\settowidth{\OrigWidth}{#3}% \settowidth 便利
+	\ifthenelse{\lengthtest{\OrigWidth > #2}}{%
+		% 指定幅より大きい場合は横方向に縮小する
+		\resizebox{#2}{\height}{#3}% 横幅だけ変える
+	}{%else
+		\IfBooleanTF{#1}{%
+			% * 付きで指定幅以下ならそのまま出力
+			#3
+		}{%
+			% 指定幅以下の場合は均等割りを行う
+			\kintou{#2}{\jghostguarded{}#3\jghostguarded{}}%
+		}%
+	}%
+}}
+
+\newcommand{\©}{\jghostguarded{©}}
+\newcommand{\・}{\mbox{・}}
+\newcommand{\↓}{{\fontspec{nishiki-teki}⤸}}
+\catcode`　\active \newcommand{　}{\mbox{\　}}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+
+\setmainfont{FOT-MatissePro-M}\setmainjfont{FOT-MatissePro-M}
+\setsansfont{FOT-RodinNTLGPro-DB}\setsansjfont{FOT-RodinNTLGPro-DB}
+\newfontfamily\hmcfont[Scale=0.9]{NKD04_Playing_Cards_Index}
+\newfontfamily\hmtfont[Scale=1.2]{kawoszeh}
+\newfontfamily\hmgfont[Scale=0.9]{NKD04_Playing_Cards_Index}
+\newfontfamily\hmgcfont[Scale=1.2]{kawoszeh}
+\newjfontfamily\hmsjfont[Scale=1.0]{FOT-RodinNTLGPro-UB}
+\newfontfamily\hmsafont[Scale=1.0]{FOT-RodinNTLGPro-UB}
+\newcommand{\hmsfont}{\hmsafont\hmsjfont}
+\newfontfamily\hmpfont[Scale=1.2]{Hall Fetica Upper}
+\newfontfamily\hmnafont{FOT-TsukuOldGothicStd-B}
+\newjfontfamily\hmnjfont{FOT-TsukuOldGothicStd-B}
+\newcommand{\hmnfont}{\hmnafont\hmnjfont}
+% \newfontfamily\hmxafont{FOT-TsukuOldGothicStd-B}
+% \newjfontfamily\hmxjfont{FOT-TsukuOldGothicStd-B}
+% \newcommand{\hmxfont}{\hmxafont\hmxjfont}
+\newfontfamily\nishikiafont{nishiki-teki}
+\newjfontfamily\nishikijfont{nishiki-teki}
+\newcommand{\nishikifont}{\nishikiafont\nishikijfont}
+
+\colorlet{nodecolor}{violet!90!blue}
+\colorlet{costcolor}{olive!30!black}
+\colorlet{spiritcolor}{red!70!black}
+\colorlet{grazecolor}{yellow!70!black}
+\colorlet{collectcolor}{gray!90}
+\colorlet{rangebcolor}{black!90}
+\colorlet{rangecolor}{black!10}
+\colorlet{characolor}{teal!60}
+\colorlet{spellcolor}{orange!60}
+\colorlet{commandcolor}{gray!60}
+\colorlet{incidentcolor}{magenta!70!black}
+\colorlet{gridcolor}{cyan!60}
+\definecolor{richblack}{cmyk}{.2,.2,.2,1}
+
+\colorlet{Aicocolor}{violet}
+\colorlet{Bicocolor}{orange}
+\colorlet{Cicocolor}{magenta}
+\colorlet{Dicocolor}{olive}
+\colorlet{Eicocolor}{green}
+\colorlet{Ficocolor}{lime}
+\colorlet{Gicocolor}{red}
+\colorlet{Hicocolor}{teal}
+\colorlet{Iicocolor}{cyan}
+\colorlet{Licocolor}{yellow}
+\colorlet{Jicocolor}{gray}
+\colorlet{Licocolor}{darkgray}
+
+\newcommand{\Ahmico}{{\color{Aicocolor}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"0262F}}
+\newcommand{\Bhmico}{{\color{Bicocolor}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F3DA}}
+\newcommand{\Chmico}{{\color{Cicocolor}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F571}}
+\newcommand{\Dhmico}{{\color{Dicocolor}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"026F0}}
+\newcommand{\Ehmico}{{\color{Eicocolor}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F407}}
+\newcommand{\Fhmico}{{\color{Ficocolor}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F3A9}}
+\newcommand{\Ghmico}{{\color{Gicocolor}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F3F0}}
+\newcommand{\Hhmico}{{\color{Hicocolor}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F408}}
+\newcommand{\Ihmico}{{\color{Iicocolor}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F326}}
+\newcommand{\Jhmico}{{\color{Licocolor}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F318}}
+\newcommand{\Khmico}{{\color{Jicocolor}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F47B}}
+\newcommand{\Lhmico}{{\color{Licocolor}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F3E2}}
+\newcommand{\thmico}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F5E1}}
+\newcommand{\ohmico}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F300}}
+\newcommand{\ahmico}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"0272C}}
+\newcommand{\vhmico}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"0292D}}
+\newcommand{\ihmico}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"026C8}}
+\newcommand{\mhmico}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F570}}
+\newcommand{\chmico}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F3AD}}
+\newcommand{\ehmico}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"02694}}
+\newcommand{\whmico}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F342}}
+\newcommand{\shmico}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F54B}}
+\newcommand{\xhmico}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"0254D}}
+
+\newcommand{\hmmimg}{}
+\newcommand{\hmmname}{氷符「アイシクルフォール」}
+\newcommand{\hmmnamer}{あいしくるふぉーる}
+\newcommand{\hmmtype}{SC}
+\newcommand{\hmmnode}{3}
+\newcommand{\hmmcost}{2}
+\newcommand{\hmmspellist}{チルノ}
+\newcommand{\hmmrangea}{o}
+\newcommand{\hmmranget}{i}
+\newcommand{\hmmplace}{G}
+\newcommand{\hmmtext}{%
+	〔キャラクター 3 枚まで〕を選んで 3 ダメージを割り振る。
+}
+\newcommand{\hmmp}{-}
+\newcommand{\hmmt}{-}
+\newcommand{\hmmflavor}{}
+\newcommand{\hmmnumtype}{Dr.}
+\newcommand{\hmmnum}{27}
+\newcommand{\hmmexpantion}{<Sk>}
+\newcommand{\hmmill}{}
+
+\providecommand{\hmmimg}{}
+\providecommand{\hmmfullimg}{}
+\providecommand{\hmmname}{}
+\providecommand{\hmmnamer}{}
+\providecommand{\hmmtype}{}
+\providecommand{\hmmnode}{}
+\providecommand{\hmmcost}{}
+\providecommand{\hmmspellist}{}
+\providecommand{\hmmsprit}{}
+\providecommand{\hmmgraze}{}
+\providecommand{\hmmcollect}{}
+\providecommand{\hmmrangea}{}
+\providecommand{\hmmranget}{}
+\providecommand{\hmmrace}{}
+\providecommand{\hmmplace}{}
+\providecommand{\hmmtext}{}
+\providecommand{\hmmp}{-}
+\providecommand{\hmmt}{-}
+\providecommand{\hmmflavor}{}
+\providecommand{\hmmcname}{}
+\providecommand{\hmmcrace}{}
+\providecommand{\hmmcsprit}{}
+\providecommand{\hmmcgraze}{}
+\providecommand{\hmmcp}{}
+\providecommand{\hmmct}{}
+\providecommand{\hmmctext}{}
+\providecommand{\hmmnumtype}{}
+\providecommand{\hmmnum}{}
+\providecommand{\hmmexpantion}{}
+\providecommand{\hmmill}{}
+
+\ifthenelse{\equal{\hmmtype}{Ch}}{
+	\colorlet{hmmtypecol}{characolor}
+	\providecommand{\hmmback}{ch_back.pdf}
+}{\ifthenelse{\equal{\hmmtype}{SC}}{
+	\colorlet{hmmtypecol}{spellcolor}
+	\providecommand{\hmmback}{sc_back.pdf}
+}{\ifthenelse{\equal{\hmmtype}{Cm}}{
+	\colorlet{hmmtypecol}{commandcolor}
+	\providecommand{\hmmback}{cm_back.pdf}
+}{\ifthenelse{\equal{\hmmtype}{In}}{
+	\colorlet{hmmtypecol}{incidentcolor}
+	\providecommand{\hmmback}{in_back.pdf}
+}{}}}}
+
+\edef\hmmmplace{\expandafter\noexpand\expandafter\csname\hmmplace hmico\endcsname}
+\edef\hmmplacecol{\hmmplace icocolor}
+\colorlet{hmmplacecol}{\hmmplacecol}
+
+\edef\hmmmranget{\expandafter\noexpand\expandafter\csname\hmmrangea hmico\endcsname}
+\edef\hmmmrangea{\expandafter\noexpand\expandafter\csname\hmmranget hmico\endcsname}
+
+\newif\ifhmin
+\newif\ifhmfill
+\newif\ifhmgr
+\newif\ifhmctxt
+\ifthenelse{\NOT\equal{\hmmgraze}{}}{\hmgrtrue}{\hmgrfalse}
+\ifthenelse{\NOT\equal{\hmmcname}{}}{\hmctxttrue}{\hmctxtfalse}
+\ifthenelse{\NOT\equal{\hmmfullimg}{}}{\hmfilltrue\edef\hmmimg{\hmmfullimg}}{\hmfillfalse}
+\ifthenelse{\NOT\equal{\hmmimg}{}}{}{\def\hmmimg{uni.pdf}}
+\ifthenelse{\equal{\hmmtype}{In}}{\hmintrue}{\hminfalse}
+
+\begin{document}
+\begin{tikzpicture}[x=1mm,y=1mm]
+	% 座標
+	\coordinate(OL1)at(63,88);\coordinate(OL3)at(0,0);
+	\coordinate(OOL1)at($(OL1)+(3,3)-(0,.71pt)$);
+	\coordinate(OOL3)at($(OL3)-(3,3)-(0,.71pt)$);
+	\coordinate(N1)at(10,86);\coordinate(N3)at(2,78);
+	\coordinate(N2)at(N1-|N3);\coordinate(N4)at(N1|-N3);
+	\coordinate(C1)at(16,82);\coordinate(C3)at(8,74);
+	\coordinate(C2)at(C1-|C3);\coordinate(C4)at(C1|-C3);
+	\coordinate(TC)at(12,84);
+	\coordinate(SC)at(49,82);\coordinate(GC)at(56,81);
+	\coordinate(SC2)at(51,82);\coordinate(GC2)at(57,82);
+	\coordinate(B1)at(59,30);\coordinate(B3)at(4,6);
+	\coordinate(B3*)at($(B3)+(0,9)$);
+	\coordinate(I1)at(59,84);\coordinate(I3)at(10,32);
+	\coordinate(O1)at(61,86);\coordinate(O3)at(2,2);
+	\coordinate(MT)at(5,78);\coordinate(M1)at(10,78);\coordinate(M3)at(2,30);
+	\coordinate(RT)at(9,74);
+	% 枠
+	% 外枠
+	\useasboundingbox(OL1)rectangle(OL3);
+	\draw(O1)rectangle(O3);
+	\fill[richblack](OOL1)-|(OOL3)-|cycle (O1)|-(O3)|-cycle;
+	\draw[path picture={\node at (path picture bounding box.center)
+		{\includegraphics[height=88mm,clip]{../../ill/\hmmback}};}](O1)-|(O3)-|cycle;
+	\ifhmfill
+	%% フルアート
+	\draw[path picture={\node at (path picture bounding box.center)
+		{\includegraphics[width=66mm,height=94mm,min size={66mm}{94mm},{../../ill/\hmmimg}};}]
+		(OOL1)rectangle(OOL3);
+	\else
+	% イラスト
+	\draw[path picture={\node at (path picture bounding box.center)
+		{\includegraphics[width=49mm,height=52mm,keepaspectratio,min size={49mm}{52mm}]{../../ill/\hmmimg}};}]
+		(I1)rectangle(I3);
+	\fi
+	% カード名
+	\fill[black,path fading=west](M1)rectangle(M3);
+	\path(MT)node[below,inner sep=0,outer sep=0,font=\fontsize{6mm}{0}\hmnfont]
+		{\hbox{\tate\hminwidth{48mm}{\hmfukuro[.3pt]{\hmmname}}}};
+	\path(RT)node[below,white,inner sep=0,outer sep=0,font=\fontsize{2mm}{0}\hmnfont]
+		{\hbox{\tate\hminwidth*{44mm}{\hmmnamer}}};
+	% タイプ、術者
+	\filldraw[fill=hmmtypecol!50,draw=hmmtypecol](TC)circle[radius=1.9];
+	\draw(TC)node{\hmtfont{\hmmtype}};
+	\path(TC)--++(2,0)node[right]{\hmsfont\hmfukuro{\hmmspellist}};
+	% コスト
+	\filldraw[fill=costcolor!30,draw=costcolor,thick](C1)rectangle(C3);
+	\fill[fill=costcolor!70]
+		($(C1)!.5!(C2)$)--($(C2)!.5!(C3)$)--($(C3)!.5!(C4)$)--($(C4)!.5!(C1)$)--cycle
+		(C1)-|(C3)|-cycle;
+	\path(C1)|-(C3)node[near end,above,outer ysep=0,font=\hmcfont\small]{COST};
+	\path(C1)--(C3)node[midway,font=\hmcfont\Huge]{\hmfukuro{\strut\hmmcost}};
+	% ノード
+	\filldraw[fill=nodecolor!30,draw=nodecolor,thick](N1)rectangle(N3);
+	\fill[fill=nodecolor!70](N1)--(N3)--(N4)--(N2)--cycle;
+	\path(N1)-|(N3)node[near start,below,outer ysep=0,font=\hmcfont\small]{NODE};
+	\path(N1)--(N3)node[midway,font=\hmcfont\Huge]{\hmfukuro{\strut\hmmnode}};
+	\ifhmgr
+	% 霊力
+	\filldraw[fill=spiritcolor!40,draw=spiritcolor,thick](SC)circle[radius=3];
+	\fill[fill=spiritcolor!10](SC)circle[radius=2];
+	\path(SC)--++(0,2.5)node[font=\small\hmgcfont]{\hmfukuro{\strut Spirit}};
+	\path(SC)node[font=\LARGE\hmgfont]{\hmmsprit};
+	% グレイズ
+	\fill[fill=grazecolor!10](GC)circle[radius=4.5];
+	\fill[fill=grazecolor!40](GC)--++(-45:4.5)arc(315:135:4.5)--cycle;
+	\draw[draw=grazecolor,thick](GC)circle[radius=4.5];
+	\path(GC)--++(0,3.5)node[font=\small\hmgcfont]{\hmfukuro{\strut Graze}};
+	\path(GC)node[font=\Huge\hmgfont]{\hmmgraze};
+	\else
+	% 発動期間
+	\filldraw[fill=rangebcolor,draw=rangebcolor!80,thick](SC2)circle[radius=2.5];
+	\path(SC2)node[rangecolor,font=\LARGE]{\hmmmranget};
+	% 効果範囲
+	\filldraw[fill=rangebcolor,draw=rangebcolor!80,thick](GC2)circle[radius=2.5];
+	\path(GC2)node[rangecolor,font=\LARGE]{\hmmmrangea};
+	\fi
+	\ifhmin
+	% 収集条件
+	\fill[fill=collectcolor!70](GC)circle[radius=4.5];
+	\fill[fill=collectcolor!30]
+		($(GC)+(60:4.5)$)arc(60:120:4.5)--($(GC)+(-120:4.5)$)arc(-120:-60:4.5)--cycle;
+	\draw[draw=collectcolor,thick](GC)circle[radius=4.5];
+	\path(GC)--++(0,3.5)node{\small\hmgcfont\hmfukuro{\strut Collect}};
+	\path(GC)node[font=\Huge\hmgfont]{\hmmcollect};
+	\fi
+	% 種族
+	\path(I3)-|(I1)node[midway,above left,font=\large\hmsfont]{\hmfukuro{\hmmrace}};
+	% テキスト
+	\draw[fill=hmmplacecol!30,fill opacity=.85](B1)rectangle(B3);
+	%% 場所
+	\path(B1)--(B3)node[midway,text opacity=.3,font=\fontsize{20mm}{0}]{\hmmmplace};
+	\ifhmctxt
+	%% 変身用
+	%% テキスト
+	\path(B1)-|(B3*)node[
+		midway,below right,outer sep=0,inner sep=1mm,text width=53mm,text justified,font=\small\sffamily]{
+			\hmmtext
+		};
+	%% 戦闘力
+	\path($(B1)-(7,0)$)|-(B3*)node
+		[midway,above,outer sep=0,inner xsep=0,inner ysep=1mm,text width=14mm,text centered,font=\LARGE\hmpfont]
+		{\mbox{\makebox[4mm][r]{\hmmp}/\makebox[4mm][l]{\hmmt}}};
+	%% フレーバーテキスト
+	\path(B3*)node[above right,outer sep=0,inner sep=1mm,text width=39mm,text justified,font=\scriptsize]{
+			\hmmflavor
+		};
+	%% 変身状態
+	\draw(B3*)--(B1|-B3*)[thick];
+	\path(B3*)node[below right,inner sep=0,outer sep=0]{\rotatebox{180}{%
+		\begin{tikzpicture}[x=1mm,y=1mm]
+			\coordinate(Q1)at(55,9);\coordinate(Q3)at(0,0);
+			\useasboundingbox(Q1)rectangle(Q3);
+			%% 名称、種族
+			\path(Q1-|Q3)node[below right,inner sep=1,outer sep=1]
+				{\large\hmnfont\hmfukuro{\hmmcname}—\small\hmsfont\hmfukuro{\hmmcrace}};
+			%% 霊力、グレイズ
+			\path(Q1)node[below left,inner sep=1]{
+				\hmgcfont\scriptsize Sp:%
+				\begin{tikzpicture}[baseline=(T.base),x=1mm,y=1mm,inner sep=0,outer sep=0,anchor=center]
+					\coordinate(T)at(0,0);
+					\filldraw[fill=spiritcolor!40,draw=spiritcolor,thick](T)circle[radius=1.5];
+					\fill[fill=spiritcolor!10](T)circle[radius=1];
+					\path(T)node[font=\large\hmgfont]{\hmmcsprit};
+				\end{tikzpicture}
+				Gr:%
+				\begin{tikzpicture}[baseline=(T.base),x=1mm,y=1mm,inner sep=0,outer sep=0,anchor=center]
+					\coordinate(T)at(0,0);
+					\fill[fill=grazecolor!10](T)circle[radius=1.8];
+					\fill[fill=grazecolor!40](T)--++(-45:1.8)arc(315:135:1.8)--cycle;
+					\draw[draw=grazecolor,thick](T)circle[radius=1.8];
+					\path(T)node[font=\Large\hmgfont]{\hmmcgraze};
+				\end{tikzpicture}
+			};
+			%% 戦闘力
+			\path($(Q1)-(7,0)$)|-(Q3)node
+				[midway,above,outer sep=0,inner xsep=0,inner ysep=1,text width=14mm,text centered,font=\LARGE\hmpfont]
+				{\mbox{\makebox[4mm][r]{\hmmcp}/\makebox[4mm][l]{\hmmct}}};
+			%% テキスト
+			\path(Q3)node[above right,outer sep=1,inner sep=1,text width=39mm,text justified,font=\small\sffamily]{
+				\hmmctext
+			};
+		\end{tikzpicture}%
+	}};
+	\else
+	%% テキスト
+	\path(B1)-|(B3)node
+		[midway,below right,outer sep=0,inner sep=1mm,text width=53mm,text justified,font=\small\sffamily]{
+			\hmmtext
+		};
+	%% 戦闘力
+	\path($(B1)-(7,0)$)|-(B3)node
+		[midway,above,outer sep=0,inner xsep=0,inner ysep=1mm,text width=14mm,text centered,font=\LARGE\hmpfont]
+		{\mbox{\makebox[4mm][r]{\hmmp}/\makebox[4mm][l]{\hmmt}}};
+	%% フレーバーテキスト
+	\path(B3)node[above right,outer sep=0,inner sep=1mm,text width=39mm,text justified,font=\scriptsize]{
+			\hmmflavor
+		};
+	\fi
+	% フッター
+	\path(O3)node[above right,text width=25\zw,align=left,inner ysep=0,outer ysep=0]
+		{\hmsfont\setlength{\baselineskip}{1.2mm}\fontsize{1.2mm}{0pt}\selectfont%
+			\hmfukuro{{\©}上海アリス幻樂団\\
+			{\©}さーくる⑨, 2020, 2020\\[-1mm]
+			CC-BY-NC 4.0}};
+	\path(O1)|-(O3)node[pos=.75,above left,inner xsep=0,outer xsep=0,font=\hmsfont\small]
+		{\hmfukuro{\hmmnumtype~}};
+	\path(O1)|-(O3)node[pos=.75,above right,inner xsep=0,outer xsep=0,font=\hmsfont\small]
+		{\hmfukuro{\hmmnum}};
+	\path(O1)|-(O3)node[pos=.68,above,font=\hmsfont\small]{\hmfukuro{\hmmexpantion}};
+	\path(O1)|-(O3)node[midway,above left,font=\hmsfont\small]{\hmfukuro{Ill. \hmmill}};
+	% % 方眼
+	% \draw[very thin,gridcolor,nearly transparent](OL1)grid[step=1](OL3);
+	% \draw[gridcolor,nearly transparent]($(OL1)-(2,2)$)rectangle($(OL3)+(2,2)$);
+	% \draw[thin,gridcolor,nearly transparent](OL1)grid[step=10](OL3);
+	% \draw[thin,gridcolor,nearly transparent](OL1)rectangle(OL3);
+\end{tikzpicture}%
+\end{document}

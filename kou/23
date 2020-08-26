@@ -5,14 +5,16 @@
 \newcommand{\hmmnode}{3}
 \newcommand{\hmmcost}{2}
 \newcommand{\hmmspellist}{霧雨魔理沙}
-\newcommand{\hmmrangea}{t}
-\newcommand{\hmmranget}{i}
+\newcommand{\hmmrangea}{o}
+\newcommand{\hmmranget}{m}
 \newcommand{\hmmplace}{F}
-\newcommand{\hmmtext}{}
+\newcommand{\hmmtext}{%
+	〔全てのキャラクター〕はターン終了時まで「戦闘修正 -1/-1」を得る。
+}
 \newcommand{\hmmp}{-}
 \newcommand{\hmmt}{-}
 \newcommand{\hmmflavor}{}
 \newcommand{\hmmnumtype}{Dr.}
-\newcommand{\hmmnum}{21}
+\newcommand{\hmmnum}{23}
 \newcommand{\hmmexpantion}{<Sk>}
 \newcommand{\hmmill}{}

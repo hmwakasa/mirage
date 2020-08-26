@@ -1,18 +1,21 @@
 \newcommand{\hmmimg}{}
-\newcommand{\hmmname}{霊符「夢想封印」}
-\newcommand{\hmmnamer}{むそうふういん}
+\newcommand{\hmmname}{恋符「マスタースパーク」}
+\newcommand{\hmmnamer}{ますたーすぱーく}
 \newcommand{\hmmtype}{SC}
-\newcommand{\hmmnode}{3}
-\newcommand{\hmmcost}{2}
-\newcommand{\hmmspellist}{博麗霊夢}
-\newcommand{\hmmrangea}{t}
+\newcommand{\hmmnode}{5}
+\newcommand{\hmmcost}{3}
+\newcommand{\hmmspellist}{霧雨魔理沙}
+\newcommand{\hmmrangea}{o}
 \newcommand{\hmmranget}{i}
-\newcommand{\hmmplace}{}
-\newcommand{\hmmtext}{}
+\newcommand{\hmmplace}{F}
+\newcommand{\hmmtext}{%
+	〔あなたの手札 2 枚まで〕を可能な限り破棄する。その後、〔全てのキャラクター〕
+	を破棄する。
+}
 \newcommand{\hmmp}{-}
 \newcommand{\hmmt}{-}
 \newcommand{\hmmflavor}{}
 \newcommand{\hmmnumtype}{Dr.}
-\newcommand{\hmmnum}{21}
+\newcommand{\hmmnum}{24}
 \newcommand{\hmmexpantion}{<Sk>}
 \newcommand{\hmmill}{}

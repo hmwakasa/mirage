@@ -1,18 +1,21 @@
 \newcommand{\hmmimg}{}
-\newcommand{\hmmname}{霊符「夢想封印」}
-\newcommand{\hmmnamer}{むそうふういん}
+\newcommand{\hmmname}{闇符「ディマーケイション」}
+\newcommand{\hmmnamer}{でぃまーけいしょん}
 \newcommand{\hmmtype}{SC}
 \newcommand{\hmmnode}{3}
 \newcommand{\hmmcost}{2}
-\newcommand{\hmmspellist}{博麗霊夢}
-\newcommand{\hmmrangea}{t}
+\newcommand{\hmmspellist}{ルーミア}
+\newcommand{\hmmrangea}{a}
 \newcommand{\hmmranget}{i}
-\newcommand{\hmmplace}{}
-\newcommand{\hmmtext}{}
+\newcommand{\hmmplace}{F}
+\newcommand{\hmmtext}{%
+	目標の〔プレイヤー 1 人〕は自分の場のキャラクター 1 枚を決死状態にする。
+	できない場合、そのプレイヤーは 3 ダメージを受ける。
+}
 \newcommand{\hmmp}{-}
 \newcommand{\hmmt}{-}
 \newcommand{\hmmflavor}{}
 \newcommand{\hmmnumtype}{Dr.}
-\newcommand{\hmmnum}{21}
+\newcommand{\hmmnum}{26}
 \newcommand{\hmmexpantion}{<Sk>}
 \newcommand{\hmmill}{}

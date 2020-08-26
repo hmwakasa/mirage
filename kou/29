@@ -1,18 +1,26 @@
 \newcommand{\hmmimg}{}
-\newcommand{\hmmname}{霊符「夢想封印」}
-\newcommand{\hmmnamer}{むそうふういん}
+\newcommand{\hmmname}{華符「芳華絢爛」}
+\newcommand{\hmmnamer}{ほうかけんらん}
 \newcommand{\hmmtype}{SC}
-\newcommand{\hmmnode}{3}
+\newcommand{\hmmnode}{5}
 \newcommand{\hmmcost}{2}
-\newcommand{\hmmspellist}{博麗霊夢}
-\newcommand{\hmmrangea}{t}
-\newcommand{\hmmranget}{i}
-\newcommand{\hmmplace}{}
-\newcommand{\hmmtext}{}
+\newcommand{\hmmspellist}{紅美鈴}
+\newcommand{\hmmrangea}{x}
+\newcommand{\hmmranget}{w}
+\newcommand{\hmmplace}{G}
+\newcommand{\hmmtext}{%
+	【世界呪符】 維持コスト(1)
+	
+	（自動α）〔あなたの場の全てのキャラクター〕は「戦闘修正 ±0/+1」と
+	「警戒」を得る。
+	
+	（相手ターン）[1]\↓: 目標の〔キャラクター 1 枚〕はターン終了時まで
+	「戦闘修正 +2/±0」と「先制」を得る。
+	}
 \newcommand{\hmmp}{-}
 \newcommand{\hmmt}{-}
 \newcommand{\hmmflavor}{}
 \newcommand{\hmmnumtype}{Dr.}
-\newcommand{\hmmnum}{21}
+\newcommand{\hmmnum}{29}
 \newcommand{\hmmexpantion}{<Sk>}
 \newcommand{\hmmill}{}

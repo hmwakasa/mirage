@@ -1,18 +1,24 @@
 \newcommand{\hmmimg}{}
-\newcommand{\hmmname}{霊符「夢想封印」}
-\newcommand{\hmmnamer}{むそうふういん}
+\newcommand{\hmmname}{彩符「極彩颱風」}
+\newcommand{\hmmnamer}{ごくさいたいふう}
 \newcommand{\hmmtype}{SC}
-\newcommand{\hmmnode}{3}
-\newcommand{\hmmcost}{2}
-\newcommand{\hmmspellist}{博麗霊夢}
-\newcommand{\hmmrangea}{t}
+\newcommand{\hmmnode}{4}
+\newcommand{\hmmcost}{4}
+\newcommand{\hmmspellist}{ほんめいりん}
+\newcommand{\hmmrangea}{o}
 \newcommand{\hmmranget}{i}
-\newcommand{\hmmplace}{}
-\newcommand{\hmmtext}{}
+\newcommand{\hmmplace}{G}
+\newcommand{\hmmtext}{
+	目標の〔あなたの場のキャラクター 1 枚〕をスリープ状態にする。
+	その後、〔全てのキャラクター〕に X ダメージを与え、〔あなた〕
+	は X ドローする。この干渉終了時に現在のフェイズを終了する。
+	X は目標のキャラクターの耐久力の 3 分の 1 （波数切り上げ）
+	に等しい。
+}
 \newcommand{\hmmp}{-}
 \newcommand{\hmmt}{-}
 \newcommand{\hmmflavor}{}
 \newcommand{\hmmnumtype}{Dr.}
-\newcommand{\hmmnum}{21}
+\newcommand{\hmmnum}{30}
 \newcommand{\hmmexpantion}{<Sk>}
 \newcommand{\hmmill}{}
