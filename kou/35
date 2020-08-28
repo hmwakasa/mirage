@@ -1,18 +1,26 @@
 \newcommand{\hmmimg}{}
-\newcommand{\hmmname}{霊符「夢想封印」}
-\newcommand{\hmmnamer}{むそうふういん}
+\newcommand{\hmmname}{幻象「ルナクロック」}
+\newcommand{\hmmnamer}{るなくろっく}
 \newcommand{\hmmtype}{SC}
-\newcommand{\hmmnode}{3}
-\newcommand{\hmmcost}{2}
-\newcommand{\hmmspellist}{博麗霊夢}
+\newcommand{\hmmnode}{1}
+\newcommand{\hmmcost}{1}
+\newcommand{\hmmspellist}{十六夜咲夜}
 \newcommand{\hmmrangea}{t}
-\newcommand{\hmmranget}{i}
-\newcommand{\hmmplace}{}
-\newcommand{\hmmtext}{}
+\newcommand{\hmmranget}{c}
+\newcommand{\hmmplace}{G}
+\newcommand{\hmmtext}{
+	【呪符】
+	
+	（自動α）〔このキャラクター〕はアクティブ状態にならない。
+	
+	（自分ターン）[1]: 〔このカードにセットされている「ルナクロック」1 枚〕
+	を破棄する。その後、〔あなた〕は 2 ダメージを受ける。この効果はディスカード
+	フェイズでしか使用できない。
+}
 \newcommand{\hmmp}{-}
 \newcommand{\hmmt}{-}
 \newcommand{\hmmflavor}{}
 \newcommand{\hmmnumtype}{Dr.}
-\newcommand{\hmmnum}{21}
+\newcommand{\hmmnum}{35}
 \newcommand{\hmmexpantion}{<Sk>}
 \newcommand{\hmmill}{}

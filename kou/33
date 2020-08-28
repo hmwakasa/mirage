@@ -1,18 +1,22 @@
 \newcommand{\hmmimg}{}
-\newcommand{\hmmname}{霊符「夢想封印」}
-\newcommand{\hmmnamer}{むそうふういん}
+\newcommand{\hmmname}{水符「プリンセスウンディネ」}
+\newcommand{\hmmnamer}{ぷりんせすうんでぃね}
 \newcommand{\hmmtype}{SC}
 \newcommand{\hmmnode}{3}
 \newcommand{\hmmcost}{2}
-\newcommand{\hmmspellist}{博麗霊夢}
-\newcommand{\hmmrangea}{t}
-\newcommand{\hmmranget}{i}
-\newcommand{\hmmplace}{}
-\newcommand{\hmmtext}{}
-\newcommand{\hmmp}{-}
-\newcommand{\hmmt}{-}
+\newcommand{\hmmspellist}{パチュリー・ノーレッジ}
+\newcommand{\hmmgraze}{2}
+\newcommand{\hmmsprit}{0}
+\newcommand{\hmmplace}{G}
+\newcommand{\hmmtext}{%
+	【幻想生物】 維持コスト(1)
+	
+	（自動α）〔あなたの場のキャラクター全て〕は「戦闘修正: +1/+1」を得る。
+	}
+\newcommand{\hmmp}{3}
+\newcommand{\hmmt}{3}
 \newcommand{\hmmflavor}{}
 \newcommand{\hmmnumtype}{Dr.}
-\newcommand{\hmmnum}{21}
+\newcommand{\hmmnum}{33}
 \newcommand{\hmmexpantion}{<Sk>}
 \newcommand{\hmmill}{}

@@ -1,18 +1,29 @@
 \newcommand{\hmmimg}{}
-\newcommand{\hmmname}{霊符「夢想封印」}
-\newcommand{\hmmnamer}{むそうふういん}
+\newcommand{\hmmname}{木符「シルフィホルン」}
+\newcommand{\hmmnamer}{しるふぃほるん}
 \newcommand{\hmmtype}{SC}
-\newcommand{\hmmnode}{3}
+\newcommand{\hmmnode}{6}
 \newcommand{\hmmcost}{2}
-\newcommand{\hmmspellist}{博麗霊夢}
-\newcommand{\hmmrangea}{t}
-\newcommand{\hmmranget}{i}
-\newcommand{\hmmplace}{}
-\newcommand{\hmmtext}{}
-\newcommand{\hmmp}{-}
-\newcommand{\hmmt}{-}
+\newcommand{\hmmspellist}{パチュリー・ノーレッジ}
+\newcommand{\hmmgraze}{3}
+\newcommand{\hmmsprit}{0}
+\newcommand{\hmmplace}{G}
+\newcommand{\hmmtext}{%
+	【幻想生物】 維持コスト(1)
+	
+	（自動α）〔このキャラクター〕が防御を行う場合、スリープ状態にならない。
+	
+	（自動γ）〔このキャラクター〕がダメージを受けた場合、そのダメージを
+	無効とし、〔あなたのデッキの上のカード X 枚〕を裏向きにしてこのキャラクターに
+	セットする。以後そのカードは以下の効果を持つ呪符カードとして扱う。\\
+	「戦闘修正: -1/-1\\
+	（自動γ）ターン終了時に〔このキャラクターにセットされているカード全て〕を
+	破棄する」
+}
+\newcommand{\hmmp}{5}
+\newcommand{\hmmt}{7}
 \newcommand{\hmmflavor}{}
 \newcommand{\hmmnumtype}{Dr.}
-\newcommand{\hmmnum}{21}
+\newcommand{\hmmnum}{31}
 \newcommand{\hmmexpantion}{<Sk>}
 \newcommand{\hmmill}{}

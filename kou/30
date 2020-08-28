@@ -4,7 +4,7 @@
 \newcommand{\hmmtype}{SC}
 \newcommand{\hmmnode}{4}
 \newcommand{\hmmcost}{4}
-\newcommand{\hmmspellist}{ほんめいりん}
+\newcommand{\hmmspellist}{紅美鈴}
 \newcommand{\hmmrangea}{o}
 \newcommand{\hmmranget}{i}
 \newcommand{\hmmplace}{G}

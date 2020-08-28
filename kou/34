@@ -1,18 +1,26 @@
 \newcommand{\hmmimg}{}
-\newcommand{\hmmname}{霊符「夢想封印」}
-\newcommand{\hmmnamer}{むそうふういん}
+\newcommand{\hmmname}{奇術「ミスディレクション」}
+\newcommand{\hmmnamer}{みすでぃれくしょん}
 \newcommand{\hmmtype}{SC}
-\newcommand{\hmmnode}{3}
+\newcommand{\hmmnode}{4}
 \newcommand{\hmmcost}{2}
-\newcommand{\hmmspellist}{博麗霊夢}
-\newcommand{\hmmrangea}{t}
-\newcommand{\hmmranget}{i}
-\newcommand{\hmmplace}{}
-\newcommand{\hmmtext}{}
+\newcommand{\hmmspellist}{十六夜咲夜}
+\newcommand{\hmmrangea}{x}
+\newcommand{\hmmranget}{w}
+\newcommand{\hmmplace}{G}
+\newcommand{\hmmtext}{%
+	【世界呪符】
+	
+	（常時）\↓: この干渉終了時まで、目標の〔カード 1 枚〕は相手プレイヤーのカードの
+	効果の目標にならない。
+	
+	（常時）[1]: 〔アクティブ状態のあなたの場のカード 1 枚〕を選んでスリープ状態に
+	する。その後、〔このカード〕をアクティブ状態にする。
+}
 \newcommand{\hmmp}{-}
 \newcommand{\hmmt}{-}
 \newcommand{\hmmflavor}{}
 \newcommand{\hmmnumtype}{Dr.}
-\newcommand{\hmmnum}{21}
+\newcommand{\hmmnum}{34}
 \newcommand{\hmmexpantion}{<Sk>}
 \newcommand{\hmmill}{}

@@ -1,18 +1,30 @@
 \newcommand{\hmmimg}{}
-\newcommand{\hmmname}{霊符「夢想封印」}
-\newcommand{\hmmnamer}{むそうふういん}
+\newcommand{\hmmname}{QED「495 年の波紋」}
+\newcommand{\hmmnamer}{495 ねんのはもん}
 \newcommand{\hmmtype}{SC}
-\newcommand{\hmmnode}{3}
-\newcommand{\hmmcost}{2}
-\newcommand{\hmmspellist}{博麗霊夢}
+\newcommand{\hmmnode}{5}
+\newcommand{\hmmcost}{3}
+\newcommand{\hmmspellist}{フランドール・スカーレット}
 \newcommand{\hmmrangea}{t}
-\newcommand{\hmmranget}{i}
-\newcommand{\hmmplace}{}
-\newcommand{\hmmtext}{}
-\newcommand{\hmmp}{-}
-\newcommand{\hmmt}{-}
+\newcommand{\hmmranget}{e}
+\newcommand{\hmmplace}{G}
+\newcommand{\hmmtext}{%
+	【装備】
+	
+	（自動α）このキャラクターにカードが 5 枚以上セットされている場合、
+	〔このキャラクター〕を破棄する。
+	
+	（自動α）〔このキャラクター〕はセットされているカード 2 枚につき
+	「戦闘修正: +3/+3」を得る。
+	
+	（自動γ）このキャラクターが戦闘によって〔相手キャラクター〕を
+	決死状態にした場合、その決死状態を無効として、その相手キャラクター
+	を〔このキャラクター〕に裏向きでセットする。
+}
+\newcommand{\hmmp}{+1}
+\newcommand{\hmmt}{+1}
 \newcommand{\hmmflavor}{}
 \newcommand{\hmmnumtype}{Dr.}
-\newcommand{\hmmnum}{21}
+\newcommand{\hmmnum}{40}
 \newcommand{\hmmexpantion}{<Sk>}
 \newcommand{\hmmill}{}

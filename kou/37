@@ -1,18 +1,21 @@
 \newcommand{\hmmimg}{}
-\newcommand{\hmmname}{霊符「夢想封印」}
-\newcommand{\hmmnamer}{むそうふういん}
+\newcommand{\hmmname}{天罰「スターオブダビデ」}
+\newcommand{\hmmnamer}{すたーおぶだびで}
 \newcommand{\hmmtype}{SC}
-\newcommand{\hmmnode}{3}
+\newcommand{\hmmnode}{4}
 \newcommand{\hmmcost}{2}
-\newcommand{\hmmspellist}{博麗霊夢}
+\newcommand{\hmmspellist}{レミリア・スカーレット}
 \newcommand{\hmmrangea}{t}
 \newcommand{\hmmranget}{i}
-\newcommand{\hmmplace}{}
-\newcommand{\hmmtext}{}
+\newcommand{\hmmplace}{G}
+\newcommand{\hmmtext}{%
+	〔あなた〕は種族を 1 つ宣言する。〔宣言した種族をもつキャラクター全て〕
+	に 5 ダメージを与える。
+}
 \newcommand{\hmmp}{-}
 \newcommand{\hmmt}{-}
 \newcommand{\hmmflavor}{}
 \newcommand{\hmmnumtype}{Dr.}
-\newcommand{\hmmnum}{21}
+\newcommand{\hmmnum}{37}
 \newcommand{\hmmexpantion}{<Sk>}
 \newcommand{\hmmill}{}

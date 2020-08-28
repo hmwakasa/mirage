@@ -1,14 +1,20 @@
 \newcommand{\hmmimg}{}
-\newcommand{\hmmname}{霊符「夢想封印」}
-\newcommand{\hmmnamer}{むそうふういん}
+\newcommand{\hmmname}{秘弾「そして誰もいなくなるか?」}
+\newcommand{\hmmnamer}{そしてだれもいなくなるか}
 \newcommand{\hmmtype}{SC}
-\newcommand{\hmmnode}{3}
+\newcommand{\hmmnode}{4}
 \newcommand{\hmmcost}{2}
-\newcommand{\hmmspellist}{博麗霊夢}
-\newcommand{\hmmrangea}{t}
-\newcommand{\hmmranget}{i}
-\newcommand{\hmmplace}{}
-\newcommand{\hmmtext}{}
+\newcommand{\hmmspellist}{フランドール・スカーレット}
+\newcommand{\hmmrangea}{-}
+\newcommand{\hmmranget}{w}
+\newcommand{\hmmplace}{G}
+\newcommand{\hmmtext}{%
+	【世界呪符】
+	
+	（常時）\↓: 〔全てのキャラクター〕を除外する。この干渉終了時に、この効果
+	で除外したキャラクター全てをスリープ状態で場に戻す。その後、〔相手プレイヤー〕
+	は〔ターンプレイヤーの場のキャラクター 1 枚〕を選んでアクティブ状態にする。
+}
 \newcommand{\hmmp}{-}
 \newcommand{\hmmt}{-}
 \newcommand{\hmmflavor}{}
