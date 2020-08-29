@@ -106,10 +106,19 @@
 			{常時\rule[-.1\zh]{.5pt}{1\zh}#2}
 	};
 }
-
+\NewDocumentCommand\収集{s}{%
+	\tikz[baseline=(T.base)]
+	\IfBooleanTF{#1}{
+		\node[inner sep=0pt,outer sep=0pt,signal,color=black,draw,black](T)
+			{収集}
+	}{
+		\node[inner sep=0pt,outer sep=0pt,signal,color=white,draw=black,fill=darkgray](T)
+			{収集}
+	};
+}
 
 \pagestyle{empty}
-\setlength{\parindent}{1\zw}
+\setlength{\parindent}{0\zw}
 
 \setmainfont{FOT-MatissePro-M}\setmainjfont{FOT-MatissePro-M}
 \setsansfont{FOT-RodinNTLGPro-DB}\setsansjfont{FOT-RodinNTLGPro-DB}
@@ -185,27 +194,28 @@
 \newcommand{\hmmimg}{}
 \newcommand{\hmmname}{幻世「ザ・ワールド」}
 \newcommand{\hmmnamer}{ざわーるど}
-\newcommand{\hmmtype}{SC}
-\newcommand{\hmmnode}{5}
-\newcommand{\hmmcost}{3}
-\newcommand{\hmmspellist}{十六夜咲夜}
-\newcommand{\hmmgraze}{3}
-\newcommand{\hmmspirit}{4}
+\newcommand{\hmmtype}{In}
+\newcommand{\hmmnode}{-}
+\newcommand{\hmmcost}{-}
+\newcommand{\hmmcollect}{7}
 \newcommand{\hmmplace}{G}
 \newcommand{\hmmtext}{%
-	【世界呪符】 維持コスト(3)
+	\α 〔全てのキャラクター〕は「変身」を持ち、このカードの変身状態を変身状態として持つ。
 	
-	\自分{\↓} 〔このカード〕がアクティブ状態である場合、〔全てのプレイヤー〕
-	はカードのプレイ、起動効果の使用、戦闘のいずれも行うことができない。
-	
-	\α メンテナンスフェイズ開始時に〔全てのプレイヤー〕は [3] 支払うことが
-	できる。いずれかのプレイヤーが支払った場合、〔このカード〕をスリープ状態にする。
-	このコストは「十六夜咲夜」の霊力によって軽減できる。
-	
-	\γ ターン開始時に〔このカード〕はアクティブ状態になる。
+	\収集 〔全てのキャラクター〕は、決死状態になった場合収集される。
 }
 \newcommand{\hmmp}{-}
 \newcommand{\hmmt}{-}
+\newcommand{\hmfravor}{「は、オカルトボール?」}
+\newcommand{\hmmcname}{オカルト強化}
+\newcommand{\hmmcrace}{種族なし}
+\newcommand{\hmmcspirit}{5}
+\newcommand{\hmmcgraze}{5}
+\newcommand{\hmmcp}{10}
+\newcommand{\hmmct}{10}
+\newcommand{\hmmctext}{%
+	\γ 〔このキャラクター〕が戦闘を行った場合、戦闘終了時に決死状態になる。
+}
 \newcommand{\hmmnumtype}{Dr.}
 \newcommand{\hmmnum}{36}
 \newcommand{\hmmexpantion}{<Sk>}
@@ -320,8 +330,8 @@
 		{\hbox{\tate\hminwidth*{44mm}{\hmmnamer}}};
 	% タイプ、術者
 	\filldraw[fill=hmmtypecol!50,draw=hmmtypecol](TC)circle[radius=1.9];
-	\draw(TC)node{\hmtfont{\hmmtype}};
-	\path(TC)--++(2,0)node[right,font=\large\hmsfont]{\hmfukuro{\hmmspellist}};
+	\draw(TC)node{\fontsize{2mm}{0}\hmtfont{\hmmtype}};
+	\path(TC)--++(2,0)node[right,font=\large\hmsfont]{\fontsize{2.3mm}{0}\hmfukuro{\hmmspellist}};
 	% コスト
 	\filldraw[fill=costcolor!30,draw=costcolor,thick](C1)rectangle(C3);
 	\fill[fill=costcolor!70]
@@ -346,15 +356,7 @@
 	\draw[draw=grazecolor,thick](GC)circle[radius=4.5];
 	\path(GC)--++(0,3.5)node[font=\fontsize{1.7mm}{0}\hmgcfont]{\hmfukuro{\strut Graze}};
 	\path(GC)node[font=\fontsize{5.7mm}{0}\hmgfont]{\hmmgraze};
-	\else
-	% 発動期間
-	\filldraw[fill=rangebcolor,draw=rangebcolor!80,thick](SC2)circle[radius=2.5];
-	\path(SC2)node[rangecolor,font=\fontsize{4mm}{0}]{\strut\hmmmranget};
-	% 効果範囲
-	\filldraw[fill=rangebcolor,draw=rangebcolor!80,thick](GC2)circle[radius=2.5];
-	\path(GC2)node[rangecolor,font=\fontsize{4mm}{0}]{\strut\hmmmrangea};
-	\fi
-	\ifhmin
+	\else\ifhmin
 	% 収集条件
 	\fill[fill=collectcolor!70](GC)circle[radius=4.5];
 	\fill[fill=collectcolor!30]
@@ -362,7 +364,14 @@
 	\draw[draw=collectcolor,thick](GC)circle[radius=4.5];
 	\path(GC)--++(0,3.5)node[font=\fontsize{1.7mm}{0}\hmgcfont]{\hmfukuro{\strut Collect}};
 	\path(GC)node[font=\fontsize{5.7mm}{0}\hmgfont]{\hmmcollect};
-	\fi
+	\else
+	% 発動期間
+	\filldraw[fill=rangebcolor,draw=rangebcolor!80,thick](SC2)circle[radius=2.5];
+	\path(SC2)node[rangecolor,font=\fontsize{4mm}{0}]{\strut\hmmmranget};
+	% 効果範囲
+	\filldraw[fill=rangebcolor,draw=rangebcolor!80,thick](GC2)circle[radius=2.5];
+	\path(GC2)node[rangecolor,font=\fontsize{4mm}{0}]{\strut\hmmmrangea};
+	\fi\fi
 	% 種族
 	\path(I3)-|(I1)node[midway,above left,font=\large\hmsfont]{\hmfukuro{\hmmrace}};
 	% テキスト
@@ -373,12 +382,12 @@
 	%% 変身用
 	%% テキスト
 	\path(B1)-|(B3*)node[
-		midway,below right,outer sep=0,inner sep=1mm,text width=54mm,text justified,font=\small\sffamily]{
+		midway,below right,outer sep=0,inner sep=1mm,text width=54mm,text justified,font=\sffamily]{
 			\hmmtext
 		};
 	%% 戦闘力
 	\path($(B1)-(7,0)$)|-(B3*)node
-		[midway,above,outer sep=0,inner xsep=0,inner ysep=1mm,text width=14mm,text centered,font=\LARGE\hmpfont]
+		[midway,above,outer sep=0,inner xsep=0,inner ysep=1mm,text width=14mm,text centered,font=\fontsize{4mm}{0}\hmpfont]
 		{\mbox{\makebox[4mm][r]{\hmmp}/\makebox[4mm][l]{\hmmt}}};
 	%% フレーバーテキスト
 	\path(B3*)node[above right,outer sep=0,inner sep=1mm,text width=39mm,text justified,font=\fontsize{1.3mm}{1.43mm}]{
@@ -392,10 +401,10 @@
 			\useasboundingbox(Q1)rectangle(Q3);
 			%% 名称、種族
 			\path(Q1-|Q3)node[below right,inner sep=1,outer sep=1]
-				{\large\hmnfont\hmfukuro{\hmmcname}—\small\hmsfont\hmfukuro{\hmmcrace}};
+				{\Large\hmnfont\hmmcname—\small\hmsfont\hmmcrace};
 			%% 霊力、グレイズ
 			\path(Q1)node[below left,inner sep=1]{
-				\hmgcfont\scriptsize Sp:%
+				\hmgcfont Sp:%
 				\begin{tikzpicture}[baseline=(T.base),x=1mm,y=1mm,inner sep=0,outer sep=0,anchor=center]
 					\coordinate(T)at(0,0);
 					\filldraw[fill=spiritcolor!40,draw=spiritcolor,thick](T)circle[radius=1.5];

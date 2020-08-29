@@ -106,10 +106,19 @@
 			{常時\rule[-.1\zh]{.5pt}{1\zh}#2}
 	};
 }
-
+\NewDocumentCommand\収集{s}{%
+	\tikz[baseline=(T.base)]
+	\IfBooleanTF{#1}{
+		\node[inner sep=0pt,outer sep=0pt,signal,color=black,draw,black](T)
+			{収集}
+	}{
+		\node[inner sep=0pt,outer sep=0pt,signal,color=white,draw=black,fill=darkgray](T)
+			{収集}
+	};
+}
 
 \pagestyle{empty}
-\setlength{\parindent}{1\zw}
+\setlength{\parindent}{0\zw}
 
 \setmainfont{FOT-MatissePro-M}\setmainjfont{FOT-MatissePro-M}
 \setsansfont{FOT-RodinNTLGPro-DB}\setsansjfont{FOT-RodinNTLGPro-DB}
