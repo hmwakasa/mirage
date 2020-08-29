@@ -13,7 +13,7 @@
 	3 ダメージを与える。
 }
 \newcommand{\hmmp}{4}
-\newcommand{\hmmt}{3}
+\newcommand{\hmmt}{5}
 \newcommand{\hmmflavor}{}
 \newcommand{\hmmnumtype}{Dr.}
 \newcommand{\hmmnum}{01}
