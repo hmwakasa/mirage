@@ -5,13 +5,13 @@
 \newcommand{\hmmnode}{4}
 \newcommand{\hmmcost}{3}
 \newcommand{\hmmspellist}{パチュリー・ノーレッジ}
-\newcommand{\hmmgraze}{0}
+\newcommand{\hmmgraze}{1}
 \newcommand{\hmmspirit}{0}
 \newcommand{\hmmplace}{G}
 \newcommand{\hmmtext}{%
-	【幻想生物】 維持コスト(1)
+	【幻想生物】　維持コスト(1)
 	
-	（自動α）〔このキャラクター〕が〔相手プレイヤー〕に戦闘ダメージを
+	\α 〔このキャラクター〕が〔相手プレイヤー〕に戦闘ダメージを
 	与えた場合、〔任意の枚数の相手キャラクター〕に 5 ダメージを割り振る。
 }
 \newcommand{\hmmp}{5}

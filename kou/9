@@ -11,10 +11,10 @@
 \newcommand{\hmmtext}{%
 	マナチャージ(2)
 	
-	（自動β）〔このキャラクター〕がプレイされて場に出た場合、〔あなたのデッキ〕
+	\β 〔このキャラクター〕がプレイされて場に出た場合、〔あなたのデッキ〕
 	をすべて見て、「小悪魔」1 枚を抜き出し、スリープ状態で場に出しても良い。
 }
-\newcommand{\hmmp}{2}
+\newcommand{\hmmp}{4}
 \newcommand{\hmmt}{5}
 \newcommand{\hmmflavor}{}
 \newcommand{\hmmnumtype}{Dr.}

@@ -5,11 +5,11 @@
 \newcommand{\hmmnode}{4}
 \newcommand{\hmmcost}{2}
 \newcommand{\hmmspirit}{0}
-\newcommand{\hmmgraze}{2}
+\newcommand{\hmmgraze}{1}
 \newcommand{\hmmrace}{人間}
 \newcommand{\hmmplace}{F}
 \newcommand{\hmmtext}{%
-	（常時）[0]: 〔このキャラクター〕を手札に戻す。
+	\常時{0} 〔このキャラクター〕を手札に戻す。
 }
 \newcommand{\hmmp}{5}
 \newcommand{\hmmt}{4}

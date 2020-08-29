@@ -1,12 +1,12 @@
 \documentclass[
-	jafontsize=1.892857142857143mm,
+	jafontsize=1.8mm,
 	baselineskip=1.1zh,
 	cmyk,
 	paper={63mm,88mm},
 	gutter=0pt,
 	head_space=0pt,
 	foot_space=0pt,
-	open_bracket_pos=zenkaku_tentsuki,
+	open_bracket_pos=zenkakunibu_nibu,
 ]{jlreq}
 \usepackage{luatexja,pdfrender,xparse,fontspec,bxokumacro,bxghost,ifthen}
 \ltjsetparameter{jacharrange={-3,-8}}
@@ -17,7 +17,7 @@
 \settombowbleed{3mm}
 
 \usepackage{tikz}
-\usetikzlibrary{calc,fadings,patterns,arrows.meta}
+\usetikzlibrary{calc,fadings,patterns,arrows.meta,shapes.symbols}
 \setlength{\parskip}{0pt}
 \usepackage[export]{adjustbox}
 
@@ -52,8 +52,73 @@
 \newcommand{\↓}{{\fontspec{nishiki-teki}⤸}}
 \catcode`　\active \newcommand{　}{\mbox{\　}}
 
+\NewDocumentCommand\α{s}{%
+	\tikz[baseline=(T.base)]
+	\IfBooleanTF{#1}{
+		\node[inner sep=0pt,outer sep=0pt,signal,color=black,draw,black](T){自動α}
+	}{
+		\node[inner sep=0pt,outer sep=0pt,signal,color=white,fill=black](T){自動α}
+	};%
+}
+\NewDocumentCommand\β{s}{%
+	\tikz[baseline=(T.base)]
+	\IfBooleanTF{#1}{
+		\node[inner sep=0pt,outer sep=0pt,signal,color=black,draw,black](T){自動β}
+	}{
+		\node[inner sep=0pt,outer sep=0pt,signal,color=white,fill=black](T){自動β}
+	};%
+}
+\NewDocumentCommand\γ{s}{%
+	\tikz[baseline=(T.base)]
+	\IfBooleanTF{#1}{
+		\node[inner sep=0pt,outer sep=0pt,signal,color=black,draw,black](T){自動γ}
+	}{
+		\node[inner sep=0pt,outer sep=0pt,signal,color=white,fill=black](T){自動γ}
+	};%
+}
+\NewDocumentCommand\自分{s m}{%
+	\tikz[baseline=(T.base)]
+	\IfBooleanTF{#1}{
+		\node[inner sep=0pt,outer sep=0pt,signal,color=black,draw,black](T)
+			{自分T\rule[-.1\zh]{.5pt}{1\zh}\ #2}
+	}{
+		\node[inner sep=0pt,outer sep=0pt,signal,color=black,draw,black,fill=white](T)
+			{自分T\rule[-.1\zh]{.5pt}{1\zh}\ #2}
+	};%
+}
+\NewDocumentCommand\相手{s m}{%
+	\tikz[baseline=(T.base)]
+	\IfBooleanTF{#1}{
+		\node[inner sep=0pt,outer sep=0pt,signal,color=black,draw,black](T)
+			{相手T\rule[-.1\zh]{.5pt}{1\zh}\ #2}
+	}{
+		\node[inner sep=0pt,outer sep=0pt,signal,color=black,draw,black,fill=white](T)
+			{相手T\rule[-.1\zh]{.5pt}{1\zh}\ #2}
+	};%
+}
+\NewDocumentCommand\常時{s m}{%
+	\tikz[baseline=(T.base)]
+	\IfBooleanTF{#1}{
+		\node[inner sep=0pt,outer sep=0pt,signal,color=black,draw,black](T)
+			{常時\rule[-.1\zh]{.5pt}{1\zh}\ #2}
+	}{
+		\node[inner sep=0pt,outer sep=0pt,signal,color=black,draw,black,fill=white](T)
+			{常時\rule[-.1\zh]{.5pt}{1\zh}\ #2}
+	};%
+}
+\NewDocumentCommand\収集{s}{%
+	\tikz[baseline=(T.base)]
+	\IfBooleanTF{#1}{
+		\node[inner sep=0pt,outer sep=0pt,signal,color=black,draw,black](T)
+			{収集}
+	}{
+		\node[inner sep=0pt,outer sep=0pt,signal,color=white,draw=black,fill=darkgray](T)
+			{収集}
+	};%
+}
+
 \pagestyle{empty}
-\setlength{\parindent}{0pt}
+\setlength{\parindent}{0\zw}
 
 \setmainfont{FOT-MatissePro-M}\setmainjfont{FOT-MatissePro-M}
 \setsansfont{FOT-RodinNTLGPro-DB}\setsansjfont{FOT-RodinNTLGPro-DB}
@@ -211,7 +276,9 @@
 \ifthenelse{\equal{\hmmtype}{In}}{\hmintrue}{\hminfalse}
 
 \begin{document}
+\noindent
 \begin{tikzpicture}[x=1mm,y=1mm]
+	\setlength{\parindent}{1\zw}
 	% 座標
 	\coordinate(OL1)at(63,88);\coordinate(OL3)at(0,0);
 	\coordinate(OOL1)at($(OL1)+(3,3)-(0,.71pt)$);
@@ -223,7 +290,7 @@
 	\coordinate(TC)at(12,84);
 	\coordinate(SC)at(49,82);\coordinate(GC)at(56,81);
 	\coordinate(SC2)at(51,82);\coordinate(GC2)at(57,82);
-	\coordinate(B1)at(59,30);\coordinate(B3)at(4,6);
+	\coordinate(B1)at(59.5,30);\coordinate(B3)at(3.5,6);
 	\coordinate(B3*)at($(B3)+(0,9)$);
 	\coordinate(I1)at(59,84);\coordinate(I3)at(10,32);
 	\coordinate(O1)at(61,86);\coordinate(O3)at(2,2);
@@ -255,8 +322,8 @@
 		{\hbox{\tate\hminwidth*{44mm}{\hmmnamer}}};
 	% タイプ、術者
 	\filldraw[fill=hmmtypecol!50,draw=hmmtypecol](TC)circle[radius=1.9];
-	\draw(TC)node{\hmtfont{\hmmtype}};
-	\path(TC)--++(2,0)node[right,font=\large\hmsfont]{\hmfukuro{\hmmspellist}};
+	\draw(TC)node{\fontsize{2mm}{0}\hmtfont{\hmmtype}};
+	\path(TC)--++(2,0)node[right,font=\large\hmsfont]{\fontsize{2.3mm}{0}\hmfukuro{\hmmspellist}};
 	% コスト
 	\filldraw[fill=costcolor!30,draw=costcolor,thick](C1)rectangle(C3);
 	\fill[fill=costcolor!70]
@@ -281,15 +348,7 @@
 	\draw[draw=grazecolor,thick](GC)circle[radius=4.5];
 	\path(GC)--++(0,3.5)node[font=\fontsize{1.7mm}{0}\hmgcfont]{\hmfukuro{\strut Graze}};
 	\path(GC)node[font=\fontsize{5.7mm}{0}\hmgfont]{\hmmgraze};
-	\else
-	% 発動期間
-	\filldraw[fill=rangebcolor,draw=rangebcolor!80,thick](SC2)circle[radius=2.5];
-	\path(SC2)node[rangecolor,font=\fontsize{4mm}{0}]{\strut\hmmmranget};
-	% 効果範囲
-	\filldraw[fill=rangebcolor,draw=rangebcolor!80,thick](GC2)circle[radius=2.5];
-	\path(GC2)node[rangecolor,font=\fontsize{4mm}{0}]{\strut\hmmmrangea};
-	\fi
-	\ifhmin
+	\else\ifhmin
 	% 収集条件
 	\fill[fill=collectcolor!70](GC)circle[radius=4.5];
 	\fill[fill=collectcolor!30]
@@ -297,7 +356,14 @@
 	\draw[draw=collectcolor,thick](GC)circle[radius=4.5];
 	\path(GC)--++(0,3.5)node[font=\fontsize{1.7mm}{0}\hmgcfont]{\hmfukuro{\strut Collect}};
 	\path(GC)node[font=\fontsize{5.7mm}{0}\hmgfont]{\hmmcollect};
-	\fi
+	\else
+	% 発動期間
+	\filldraw[fill=rangebcolor,draw=rangebcolor!80,thick](SC2)circle[radius=2.5];
+	\path(SC2)node[rangecolor,font=\fontsize{4mm}{0}]{\strut\hmmmranget};
+	% 効果範囲
+	\filldraw[fill=rangebcolor,draw=rangebcolor!80,thick](GC2)circle[radius=2.5];
+	\path(GC2)node[rangecolor,font=\fontsize{4mm}{0}]{\strut\hmmmrangea};
+	\fi\fi
 	% 種族
 	\path(I3)-|(I1)node[midway,above left,font=\large\hmsfont]{\hmfukuro{\hmmrace}};
 	% テキスト
@@ -308,15 +374,15 @@
 	%% 変身用
 	%% テキスト
 	\path(B1)-|(B3*)node[
-		midway,below right,outer sep=0,inner sep=1mm,text width=53mm,text justified,font=\small\sffamily]{
+		midway,below right,outer sep=0,inner sep=1mm,text width=54mm,text justified,font=\sffamily]{
 			\hmmtext
 		};
 	%% 戦闘力
 	\path($(B1)-(7,0)$)|-(B3*)node
-		[midway,above,outer sep=0,inner xsep=0,inner ysep=1mm,text width=14mm,text centered,font=\LARGE\hmpfont]
+		[midway,above,outer sep=0,inner xsep=0,inner ysep=1mm,text width=14mm,text centered,font=\fontsize{4mm}{0}\hmpfont]
 		{\mbox{\makebox[4mm][r]{\hmmp}/\makebox[4mm][l]{\hmmt}}};
 	%% フレーバーテキスト
-	\path(B3*)node[above right,outer sep=0,inner sep=1mm,text width=39mm,text justified,font=\scriptsize]{
+	\path(B3*)node[above right,outer sep=0,inner sep=1mm,text width=39mm,text justified,font=\fontsize{1.3mm}{1.43mm}]{
 			\hmmflavor
 		};
 	%% 変身状態
@@ -327,10 +393,10 @@
 			\useasboundingbox(Q1)rectangle(Q3);
 			%% 名称、種族
 			\path(Q1-|Q3)node[below right,inner sep=1,outer sep=1]
-				{\large\hmnfont\hmfukuro{\hmmcname}—\small\hmsfont\hmfukuro{\hmmcrace}};
+				{\Large\hmnfont\hmmcname—\small\hmsfont\hmmcrace};
 			%% 霊力、グレイズ
 			\path(Q1)node[below left,inner sep=1]{
-				\hmgcfont\scriptsize Sp:%
+				\hmgcfont Sp:%
 				\begin{tikzpicture}[baseline=(T.base),x=1mm,y=1mm,inner sep=0,outer sep=0,anchor=center]
 					\coordinate(T)at(0,0);
 					\filldraw[fill=spiritcolor!40,draw=spiritcolor,thick](T)circle[radius=1.5];
@@ -348,10 +414,10 @@
 			};
 			%% 戦闘力
 			\path($(Q1)-(7,0)$)|-(Q3)node
-				[midway,above,outer sep=0,inner xsep=0,inner ysep=1,text width=14mm,text centered,font=\LARGE\hmpfont]
+				[midway,above,outer sep=0,inner xsep=0,inner ysep=1,text width=14mm,text centered,font=\fontsize{4mm}{0}\hmpfont]
 				{\mbox{\makebox[4mm][r]{\hmmcp}/\makebox[4mm][l]{\hmmct}}};
 			%% テキスト
-			\path(Q3)node[above right,outer sep=1,inner sep=1,text width=39mm,text justified,font=\small\sffamily]{
+			\path(Q3)node[above right,outer sep=1,inner sep=1,text width=39.6mm,text justified,font=\sffamily]{
 				\hmmctext
 			};
 		\end{tikzpicture}%
@@ -359,12 +425,12 @@
 	\else
 	%% テキスト
 	\path(B1)-|(B3)node
-		[midway,below right,outer sep=0,inner sep=1mm,text width=53mm,text justified,font=\small\sffamily]{
+		[midway,below right,outer sep=0,inner sep=1mm,text width=54mm,text justified,font=\sffamily]{
 			\hmmtext
 		};
 	%% 戦闘力
 	\path($(B1)-(7,0)$)|-(B3)node
-		[midway,above,outer sep=0,inner xsep=0,inner ysep=1mm,text width=14mm,text centered,font=\LARGE\hmpfont]
+		[midway,above,outer sep=0,inner xsep=0,inner ysep=1mm,text width=14mm,text centered,font=\fontsize{4mm}{0}\hmpfont]
 		{\mbox{\makebox[4mm][r]{\hmmp}/\makebox[4mm][l]{\hmmt}}};
 	%% フレーバーテキスト
 	\path(B3)node[above right,outer sep=0,inner sep=1mm,text width=39mm,text justified,font=\fontsize{1.3mm}{1.43mm}\selectfont,]{
@@ -376,12 +442,12 @@
 		{\hmsfont\fontsize{1.2mm}{1}\selectfont%
 			\hmfukuro{{\©}上海アリス幻樂団\\
 			{\©}2020-2020 さーくる⑨ CC-BY-NC 4.0}};
-	\path(O1)|-(O3)node[pos=.75,above left,inner xsep=0,outer xsep=0,font=\hmsfont\small]
+	\path(O1)|-(O3)node[pos=.75,above left,inner xsep=0,outer xsep=0,font=\hmsfont\fontsize{1.8mm}{0}\hmsfont]
 		{\hmfukuro{\hmmnumtype~}};
-	\path(O1)|-(O3)node[pos=.75,above right,inner xsep=0,outer xsep=0,font=\hmsfont\small]
+	\path(O1)|-(O3)node[pos=.75,above right,inner xsep=0,outer xsep=0,font=\hmsfont\fontsize{1.8mm}{0}\hmsfont]
 		{\hmfukuro{\hmmnum}};
-	\path(O1)|-(O3)node[pos=.68,above,font=\hmsfont\small]{\hmfukuro{\hmmexpantion}};
-	\path(O1)|-(O3)node[midway,above left,font=\hmsfont\small]{\hmfukuro{Ill. \hmmill}};
+	\path(O1)|-(O3)node[pos=.68,above,font=\hmsfont\fontsize{1.8mm}{0}\hmsfont]{\hmfukuro{\hmmexpantion}};
+	\path(O1)|-(O3)node[midway,above left,font=\hmsfont\fontsize{1.8mm}{0}\hmsfont]{\hmfukuro{Ill. \hmmill}};
 	% % 方眼
 	% \draw[very thin,gridcolor,nearly transparent](OL1)grid[step=1](OL3);
 	% \draw[gridcolor,nearly transparent]($(OL1)-(2,2)$)rectangle($(OL3)+(2,2)$);

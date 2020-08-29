@@ -1,32 +1,28 @@
 \newcommand{\hmmimg}{}
-\newcommand{\hmmfullimg}{}
-\newcommand{\hmmname}{}
-\newcommand{\hmmnamer}{}
-\newcommand{\hmmtype}{}
-\newcommand{\hmmback}{}
-\newcommand{\hmmnode}{}
-\newcommand{\hmmcost}{}
-\newcommand{\hmmspellist}{}
+\newcommand{\hmmname}{霧の湖}
+\newcommand{\hmmnamer}{きりのみずうみ}
+\newcommand{\hmmtype}{Cm}
+\newcommand{\hmmnode}{3}
+\newcommand{\hmmcost}{2}
 \newcommand{\hmmspirit}{}
 \newcommand{\hmmgraze}{}
-\newcommand{\hmmcollect}{}
-\newcommand{\hmmrangea}{}
-\newcommand{\hmmranget}{}
-\newcommand{\hmmrace}{}
-\newcommand{\hmmplace}{}
-\newcommand{\hmmtext}{
+\newcommand{\hmmrangea}{v}
+\newcommand{\hmmranget}{i}
+\newcommand{\hmmplace}{G}
+\newcommand{\hmmtext}{%
+	以下の効果から 1 つ選んで解決する。
+	\begin{enumerate}
+		\item 目標の〔「種族: 妖精」を持つキャラクター 1 枚〕は
+			ターン終了時まで「戦闘修正: +3/+1」を得る。
+		\item 目標の〔「種族: 妖精」を持たないキャラクター 1 枚〕に
+			X ダメージを与える。X は場の「種族: 妖精」を持つキャラクター
+			の枚数に等しい。
+	\end{enumerate}
 }
 \newcommand{\hmmp}{-}
 \newcommand{\hmmt}{-}
 \newcommand{\hmmflavor}{}
-\newcommand{\hmmcname}{}
-\newcommand{\hmmcrace}{}
-\newcommand{\hmmcspirit}{}
-\newcommand{\hmmcgraze}{}
-\newcommand{\hmmcp}{}
-\newcommand{\hmmct}{}
-\newcommand{\hmmctext}{}
-\newcommand{\hmmnumtype}{}
-\newcommand{\hmmnum}{}
+\newcommand{\hmmnumtype}{Dr}
+\newcommand{\hmmnum}{48}
 \newcommand{\hmmexpantion}{}
 \newcommand{\hmmill}{}

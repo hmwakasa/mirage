@@ -9,7 +9,7 @@
 \newcommand{\hmmrace}{妖怪}
 \newcommand{\hmmplace}{G}
 \newcommand{\hmmtext}{}
-\newcommand{\hmmp}{4}
+\newcommand{\hmmp}{5}
 \newcommand{\hmmt}{5}
 \newcommand{\hmmflavor}{}
 \newcommand{\hmmnumtype}{Dr.}

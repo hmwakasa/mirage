@@ -3,7 +3,7 @@
 \newcommand{\hmmnamer}{ばいりんのようせい}
 \newcommand{\hmmtype}{Ch}
 \newcommand{\hmmnode}{2}
-\newcommand{\hmmcost}{1}
+\newcommand{\hmmcost}{0}
 \newcommand{\hmmspirit}{0}
 \newcommand{\hmmgraze}{1}
 \newcommand{\hmmrace}{妖精}

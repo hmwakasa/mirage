@@ -3,15 +3,15 @@
 \newcommand{\hmmnamer}{そしてだれもいなくなるか}
 \newcommand{\hmmtype}{SC}
 \newcommand{\hmmnode}{4}
-\newcommand{\hmmcost}{2}
+\newcommand{\hmmcost}{1}
 \newcommand{\hmmspellist}{フランドール・スカーレット}
-\newcommand{\hmmrangea}{-}
+\newcommand{\hmmrangea}{x}
 \newcommand{\hmmranget}{w}
 \newcommand{\hmmplace}{G}
 \newcommand{\hmmtext}{%
 	【世界呪符】
 	
-	（常時）\↓: 〔全てのキャラクター〕を除外する。この干渉終了時に、この効果
+	\常時{\↓} 〔全てのキャラクター〕を除外する。この干渉終了時に、この効果
 	で除外したキャラクター全てをスリープ状態で場に戻す。その後、〔相手プレイヤー〕
 	は〔ターンプレイヤーの場のキャラクター 1 枚〕を選んでアクティブ状態にする。
 }

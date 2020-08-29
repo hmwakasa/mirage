@@ -9,7 +9,7 @@
 \newcommand{\hmmspirit}{0}
 \newcommand{\hmmplace}{F}
 \newcommand{\hmmtext}{%
-	【幻想生物】 維持コスト(1) 隠密
+	【幻想生物】　維持コスト(1)　隠密
 }
 \newcommand{\hmmp}{2}
 \newcommand{\hmmt}{2}

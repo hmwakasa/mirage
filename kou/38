@@ -3,18 +3,19 @@
 \newcommand{\hmmnamer}{あかいろのげんそうきょう}
 \newcommand{\hmmtype}{SC}
 \newcommand{\hmmnode}{5}
-\newcommand{\hmmcost}{2}
+\newcommand{\hmmcost}{3}
 \newcommand{\hmmspellist}{レミリア・スカーレット}
 \newcommand{\hmmrangea}{x}
 \newcommand{\hmmranget}{w}
 \newcommand{\hmmplace}{G}
 \newcommand{\hmmtext}{%
-	【世界呪符】 維持コスト(2)
+	【世界呪符】　維持コスト(2)
 	
-	（自動α）〔「種族: 妖怪」または「種族: 吸血鬼」を持つあなたの場のキャラクター全て〕
-	は「戦闘修正: +3/+3」を得る。
+	\α 〔「種族: 妖怪」または「種族: 吸血鬼」を持つあなたの場のキャラクター全て〕
+	は「戦闘修正: +3/+3」を得る。この効果は重複しない。
 	
-	（自動α）〔「種族: 人間」を持つ相手キャラクター全て〕は「戦闘修正: -3/-3」を得る。
+	\α 〔「種族: 人間」を持つ相手キャラクター全て〕は「戦闘修正: -3/-3」を得る。
+	この効果は重複しない。
 }
 \newcommand{\hmmp}{-}
 \newcommand{\hmmt}{-}

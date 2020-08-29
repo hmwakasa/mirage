@@ -1,32 +1,24 @@
 \newcommand{\hmmimg}{}
-\newcommand{\hmmfullimg}{}
-\newcommand{\hmmname}{}
-\newcommand{\hmmnamer}{}
-\newcommand{\hmmtype}{}
-\newcommand{\hmmback}{}
-\newcommand{\hmmnode}{}
-\newcommand{\hmmcost}{}
-\newcommand{\hmmspellist}{}
+\newcommand{\hmmname}{博麗神社}
+\newcommand{\hmmnamer}{はくれいじんじゃ}
+\newcommand{\hmmtype}{Cm}
+\newcommand{\hmmnode}{4}
+\newcommand{\hmmcost}{2}
 \newcommand{\hmmspirit}{}
 \newcommand{\hmmgraze}{}
-\newcommand{\hmmcollect}{}
-\newcommand{\hmmrangea}{}
-\newcommand{\hmmranget}{}
-\newcommand{\hmmrace}{}
-\newcommand{\hmmplace}{}
-\newcommand{\hmmtext}{
+\newcommand{\hmmrangea}{x}
+\newcommand{\hmmranget}{s}
+\newcommand{\hmmplace}{A}
+\newcommand{\hmmtext}{%
+	【装備/場】　維持コスト(1)
+	
+	\α あなたの場に「博麗霊夢」がいる場合、〔あなた〕は「種族: 妖怪」を
+	持つキャラクターから戦闘ダメージを受けない。
 }
 \newcommand{\hmmp}{-}
 \newcommand{\hmmt}{-}
 \newcommand{\hmmflavor}{}
-\newcommand{\hmmcname}{}
-\newcommand{\hmmcrace}{}
-\newcommand{\hmmcspirit}{}
-\newcommand{\hmmcgraze}{}
-\newcommand{\hmmcp}{}
-\newcommand{\hmmct}{}
-\newcommand{\hmmctext}{}
-\newcommand{\hmmnumtype}{}
-\newcommand{\hmmnum}{}
+\newcommand{\hmmnumtype}{Dr}
+\newcommand{\hmmnum}{47}
 \newcommand{\hmmexpantion}{}
 \newcommand{\hmmill}{}

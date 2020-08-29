@@ -1,32 +1,24 @@
 \newcommand{\hmmimg}{}
-\newcommand{\hmmfullimg}{}
-\newcommand{\hmmname}{}
-\newcommand{\hmmnamer}{}
-\newcommand{\hmmtype}{}
-\newcommand{\hmmback}{}
-\newcommand{\hmmnode}{}
-\newcommand{\hmmcost}{}
-\newcommand{\hmmspellist}{}
+\newcommand{\hmmname}{紅魔館}
+\newcommand{\hmmnamer}{こうまかん}
+\newcommand{\hmmtype}{Cm}
+\newcommand{\hmmnode}{5}
+\newcommand{\hmmcost}{3}
 \newcommand{\hmmspirit}{}
 \newcommand{\hmmgraze}{}
-\newcommand{\hmmcollect}{}
-\newcommand{\hmmrangea}{}
-\newcommand{\hmmranget}{}
-\newcommand{\hmmrace}{}
-\newcommand{\hmmplace}{}
-\newcommand{\hmmtext}{
+\newcommand{\hmmrangea}{x}
+\newcommand{\hmmranget}{s}
+\newcommand{\hmmplace}{G}
+\newcommand{\hmmtext}{%
+	【装備/場】
+	
+	\α 〔名称に「スカーレット」を含むあなたの場のキャラクター全て〕は
+	「先制」「貫通」を得る。
 }
 \newcommand{\hmmp}{-}
 \newcommand{\hmmt}{-}
 \newcommand{\hmmflavor}{}
-\newcommand{\hmmcname}{}
-\newcommand{\hmmcrace}{}
-\newcommand{\hmmcspirit}{}
-\newcommand{\hmmcgraze}{}
-\newcommand{\hmmcp}{}
-\newcommand{\hmmct}{}
-\newcommand{\hmmctext}{}
-\newcommand{\hmmnumtype}{}
-\newcommand{\hmmnum}{}
+\newcommand{\hmmnumtype}{Dr}
+\newcommand{\hmmnum}{46}
 \newcommand{\hmmexpantion}{}
 \newcommand{\hmmill}{}

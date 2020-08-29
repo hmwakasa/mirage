@@ -3,7 +3,7 @@
 \newcommand{\hmmnamer}{すたーだすとれゔぁりえ}
 \newcommand{\hmmtype}{SC}
 \newcommand{\hmmnode}{3}
-\newcommand{\hmmcost}{2}
+\newcommand{\hmmcost}{1}
 \newcommand{\hmmspellist}{霧雨魔理沙}
 \newcommand{\hmmrangea}{o}
 \newcommand{\hmmranget}{m}

@@ -2,8 +2,8 @@
 \newcommand{\hmmname}{天罰「スターオブダビデ」}
 \newcommand{\hmmnamer}{すたーおぶだびで}
 \newcommand{\hmmtype}{SC}
-\newcommand{\hmmnode}{4}
-\newcommand{\hmmcost}{2}
+\newcommand{\hmmnode}{5}
+\newcommand{\hmmcost}{3}
 \newcommand{\hmmspellist}{レミリア・スカーレット}
 \newcommand{\hmmrangea}{t}
 \newcommand{\hmmranget}{i}

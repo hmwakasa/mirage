@@ -171,10 +171,10 @@
 		{\hmfukuro{\hmmnum}};
 	\path(O1)|-(O3)node[pos=.68,above,font=\hmsfont\fontsize{1.8mm}{0}\hmsfont]{\hmfukuro{\hmmexpantion}};
 	\path(O1)|-(O3)node[midway,above left,font=\hmsfont\fontsize{1.8mm}{0}\hmsfont]{\hmfukuro{Ill. \hmmill}};
-	% 方眼
-	\draw[very thin,gridcolor,nearly transparent](OL1)grid[step=1](OL3);
-	\draw[gridcolor,nearly transparent]($(OL1)-(2,2)$)rectangle($(OL3)+(2,2)$);
-	\draw[thin,gridcolor,nearly transparent](OL1)grid[step=10](OL3);
-	\draw[thin,gridcolor,nearly transparent](OL1)rectangle(OL3);
+	% % 方眼
+	% \draw[very thin,gridcolor,nearly transparent](OL1)grid[step=1](OL3);
+	% \draw[gridcolor,nearly transparent]($(OL1)-(2,2)$)rectangle($(OL3)+(2,2)$);
+	% \draw[thin,gridcolor,nearly transparent](OL1)grid[step=10](OL3);
+	% \draw[thin,gridcolor,nearly transparent](OL1)rectangle(OL3);
 \end{tikzpicture}%
 \end{document}

@@ -3,7 +3,7 @@
 \newcommand{\hmmnamer}{るなくろっく}
 \newcommand{\hmmtype}{SC}
 \newcommand{\hmmnode}{1}
-\newcommand{\hmmcost}{1}
+\newcommand{\hmmcost}{0}
 \newcommand{\hmmspellist}{十六夜咲夜}
 \newcommand{\hmmrangea}{t}
 \newcommand{\hmmranget}{c}
@@ -11,9 +11,9 @@
 \newcommand{\hmmtext}{
 	【呪符】
 	
-	（自動α）〔このキャラクター〕はアクティブ状態にならない。
+	\α 〔このキャラクター〕はアクティブ状態にならない。
 	
-	（自分ターン）[1]: 〔このカードにセットされている「ルナクロック」1 枚〕
+	\自分{1} 〔このカードにセットされている「ルナクロック」1 枚〕
 	を破棄する。その後、〔あなた〕は 2 ダメージを受ける。この効果はディスカード
 	フェイズでしか使用できない。
 }

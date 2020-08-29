@@ -1,32 +1,26 @@
 \newcommand{\hmmimg}{}
-\newcommand{\hmmfullimg}{}
-\newcommand{\hmmname}{}
-\newcommand{\hmmnamer}{}
-\newcommand{\hmmtype}{}
-\newcommand{\hmmback}{}
-\newcommand{\hmmnode}{}
-\newcommand{\hmmcost}{}
-\newcommand{\hmmspellist}{}
+\newcommand{\hmmname}{ミニ八卦炉}
+\newcommand{\hmmnamer}{みにはっけろ}
+\newcommand{\hmmtype}{Cm}
+\newcommand{\hmmnode}{4}
+\newcommand{\hmmcost}{2}
 \newcommand{\hmmspirit}{}
 \newcommand{\hmmgraze}{}
-\newcommand{\hmmcollect}{}
-\newcommand{\hmmrangea}{}
-\newcommand{\hmmranget}{}
-\newcommand{\hmmrace}{}
-\newcommand{\hmmplace}{}
-\newcommand{\hmmtext}{
+\newcommand{\hmmrangea}{t}
+\newcommand{\hmmranget}{e}
+\newcommand{\hmmplace}{F}
+\newcommand{\hmmtext}{%
+	【装備】　先制
+	
+	\自分{1} 〔あなたの手札全て〕を破棄する。その後、目標の
+	〔プレイヤー 1 人かキャラクター 1 枚〕に X ダメージを与える。
+	X はこの効果で破棄した手札の枚数の 1.5 倍（端数切り上げ）に
+	等しい。ただし、X の上限は 10 とする。
 }
-\newcommand{\hmmp}{-}
-\newcommand{\hmmt}{-}
+\newcommand{\hmmp}{+2}
+\newcommand{\hmmt}{-1}
 \newcommand{\hmmflavor}{}
-\newcommand{\hmmcname}{}
-\newcommand{\hmmcrace}{}
-\newcommand{\hmmcspirit}{}
-\newcommand{\hmmcgraze}{}
-\newcommand{\hmmcp}{}
-\newcommand{\hmmct}{}
-\newcommand{\hmmctext}{}
-\newcommand{\hmmnumtype}{}
-\newcommand{\hmmnum}{}
+\newcommand{\hmmnumtype}{Dr}
+\newcommand{\hmmnum}{44}
 \newcommand{\hmmexpantion}{}
 \newcommand{\hmmill}{}

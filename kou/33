@@ -5,13 +5,13 @@
 \newcommand{\hmmnode}{3}
 \newcommand{\hmmcost}{2}
 \newcommand{\hmmspellist}{パチュリー・ノーレッジ}
-\newcommand{\hmmgraze}{2}
+\newcommand{\hmmgraze}{1}
 \newcommand{\hmmspirit}{0}
 \newcommand{\hmmplace}{G}
 \newcommand{\hmmtext}{%
-	【幻想生物】 維持コスト(1)
+	【幻想生物】　維持コスト(1)
 	
-	（自動α）〔あなたの場のキャラクター全て〕は「戦闘修正: +1/+1」を得る。
+	\α 〔あなたの場のキャラクター全て〕は「戦闘修正: +1/+1」を得る。
 	}
 \newcommand{\hmmp}{3}
 \newcommand{\hmmt}{3}

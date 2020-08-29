@@ -9,7 +9,7 @@
 \newcommand{\hmmranget}{i}
 \newcommand{\hmmplace}{A}
 \newcommand{\hmmtext}{%
-	目標の〔「種族: 妖怪」を持つキャラクターカード 2 枚〕を決死状態にする。
+	目標の〔「種族: 妖怪」を持つキャラクターカード 2 枚まで〕を決死状態にする。
 }
 \newcommand{\hmmp}{-}
 \newcommand{\hmmt}{-}

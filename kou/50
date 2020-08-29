@@ -1,32 +1,23 @@
 \newcommand{\hmmimg}{}
-\newcommand{\hmmfullimg}{}
-\newcommand{\hmmname}{}
-\newcommand{\hmmnamer}{}
-\newcommand{\hmmtype}{}
-\newcommand{\hmmback}{}
-\newcommand{\hmmnode}{}
-\newcommand{\hmmcost}{}
-\newcommand{\hmmspellist}{}
+\newcommand{\hmmname}{蓬莱伝説}
+\newcommand{\hmmnamer}{ほうらいでんせつ}
+\newcommand{\hmmtype}{Cm}
+\newcommand{\hmmnode}{4}
+\newcommand{\hmmcost}{3}
 \newcommand{\hmmspirit}{}
 \newcommand{\hmmgraze}{}
-\newcommand{\hmmcollect}{}
-\newcommand{\hmmrangea}{}
-\newcommand{\hmmranget}{}
-\newcommand{\hmmrace}{}
-\newcommand{\hmmplace}{}
-\newcommand{\hmmtext}{
+\newcommand{\hmmrangea}{t}
+\newcommand{\hmmranget}{i}
+\newcommand{\hmmplace}{F}
+\newcommand{\hmmtext}{%
+	この干渉終了時まで、目標の〔キャラクター 1 枚〕が決死状態になった場合、
+	それを無効とする。この干渉終了時に〔あなた〕は〔あなたの手札 1 枚〕を
+	破棄しても良い。そうした場合、〔冥界にあるこのカード〕を手札に戻す。
 }
 \newcommand{\hmmp}{-}
 \newcommand{\hmmt}{-}
 \newcommand{\hmmflavor}{}
-\newcommand{\hmmcname}{}
-\newcommand{\hmmcrace}{}
-\newcommand{\hmmcspirit}{}
-\newcommand{\hmmcgraze}{}
-\newcommand{\hmmcp}{}
-\newcommand{\hmmct}{}
-\newcommand{\hmmctext}{}
-\newcommand{\hmmnumtype}{}
-\newcommand{\hmmnum}{}
+\newcommand{\hmmnumtype}{Dr}
+\newcommand{\hmmnum}{50}
 \newcommand{\hmmexpantion}{}
 \newcommand{\hmmill}{}
