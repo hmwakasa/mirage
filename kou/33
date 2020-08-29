@@ -6,7 +6,7 @@
 \newcommand{\hmmcost}{2}
 \newcommand{\hmmspellist}{パチュリー・ノーレッジ}
 \newcommand{\hmmgraze}{2}
-\newcommand{\hmmsprit}{0}
+\newcommand{\hmmspirit}{0}
 \newcommand{\hmmplace}{G}
 \newcommand{\hmmtext}{%
 	【幻想生物】 維持コスト(1)

@@ -1,5 +1,7 @@
 \begin{document}
+\noindent
 \begin{tikzpicture}[x=1mm,y=1mm]
+	\setlength{\parindent}{1\zw}
 	% 座標
 	\coordinate(OL1)at(63,88);\coordinate(OL3)at(0,0);
 	\coordinate(OOL1)at($(OL1)+(3,3)-(0,.71pt)$);
@@ -11,7 +13,7 @@
 	\coordinate(TC)at(12,84);
 	\coordinate(SC)at(49,82);\coordinate(GC)at(56,81);
 	\coordinate(SC2)at(51,82);\coordinate(GC2)at(57,82);
-	\coordinate(B1)at(59,30);\coordinate(B3)at(4,6);
+	\coordinate(B1)at(59.5,30);\coordinate(B3)at(3.5,6);
 	\coordinate(B3*)at($(B3)+(0,9)$);
 	\coordinate(I1)at(59,84);\coordinate(I3)at(10,32);
 	\coordinate(O1)at(61,86);\coordinate(O3)at(2,2);
@@ -44,38 +46,38 @@
 	% タイプ、術者
 	\filldraw[fill=hmmtypecol!50,draw=hmmtypecol](TC)circle[radius=1.9];
 	\draw(TC)node{\hmtfont{\hmmtype}};
-	\path(TC)--++(2,0)node[right]{\hmsfont\hmfukuro{\hmmspellist}};
+	\path(TC)--++(2,0)node[right,font=\large\hmsfont]{\hmfukuro{\hmmspellist}};
 	% コスト
 	\filldraw[fill=costcolor!30,draw=costcolor,thick](C1)rectangle(C3);
 	\fill[fill=costcolor!70]
 		($(C1)!.5!(C2)$)--($(C2)!.5!(C3)$)--($(C3)!.5!(C4)$)--($(C4)!.5!(C1)$)--cycle
 		(C1)-|(C3)|-cycle;
-	\path(C1)|-(C3)node[near end,above,outer ysep=0,font=\hmcfont\small]{COST};
-	\path(C1)--(C3)node[midway,font=\hmcfont\Huge]{\hmfukuro{\strut\hmmcost}};
+	\path(C1)|-(C3)node[near end,above,outer ysep=0,font=\fontsize{1.7mm}{0}\hmgcfont]{COST};
+	\path(C1)--(C3)node[midway,font=\fontsize{5.8mm}{0}\hmcfont]{\hmfukuro{\strut\hmmcost}};
 	% ノード
 	\filldraw[fill=nodecolor!30,draw=nodecolor,thick](N1)rectangle(N3);
 	\fill[fill=nodecolor!70](N1)--(N3)--(N4)--(N2)--cycle;
-	\path(N1)-|(N3)node[near start,below,outer ysep=0,font=\hmcfont\small]{NODE};
-	\path(N1)--(N3)node[midway,font=\hmcfont\Huge]{\hmfukuro{\strut\hmmnode}};
+	\path(N1)-|(N3)node[near start,below,outer ysep=0,font=\fontsize{1.7mm}{0}\hmgcfont]{NODE};
+	\path(N1)--(N3)node[midway,font=\fontsize{5.8mm}{0}\hmcfont]{\hmfukuro{\strut\hmmnode}};
 	\ifhmgr
 	% 霊力
 	\filldraw[fill=spiritcolor!40,draw=spiritcolor,thick](SC)circle[radius=3];
 	\fill[fill=spiritcolor!10](SC)circle[radius=2];
-	\path(SC)--++(0,2.5)node[font=\small\hmgcfont]{\hmfukuro{\strut Spirit}};
-	\path(SC)node[font=\LARGE\hmgfont]{\hmmsprit};
+	\path(SC)--++(0,2.5)node[font=\fontsize{1.7mm}{0}\hmgcfont]{\hmfukuro{\strut Spirit}};
+	\path(SC)node[font=\fontsize{4mm}{0}\hmgfont]{\hmmspirit};
 	% グレイズ
 	\fill[fill=grazecolor!10](GC)circle[radius=4.5];
 	\fill[fill=grazecolor!40](GC)--++(-45:4.5)arc(315:135:4.5)--cycle;
 	\draw[draw=grazecolor,thick](GC)circle[radius=4.5];
-	\path(GC)--++(0,3.5)node[font=\small\hmgcfont]{\hmfukuro{\strut Graze}};
-	\path(GC)node[font=\Huge\hmgfont]{\hmmgraze};
+	\path(GC)--++(0,3.5)node[font=\fontsize{1.7mm}{0}\hmgcfont]{\hmfukuro{\strut Graze}};
+	\path(GC)node[font=\fontsize{5.7mm}{0}\hmgfont]{\hmmgraze};
 	\else
 	% 発動期間
 	\filldraw[fill=rangebcolor,draw=rangebcolor!80,thick](SC2)circle[radius=2.5];
-	\path(SC2)node[rangecolor,font=\LARGE]{\hmmmranget};
+	\path(SC2)node[rangecolor,font=\fontsize{4mm}{0}]{\strut\hmmmranget};
 	% 効果範囲
 	\filldraw[fill=rangebcolor,draw=rangebcolor!80,thick](GC2)circle[radius=2.5];
-	\path(GC2)node[rangecolor,font=\LARGE]{\hmmmrangea};
+	\path(GC2)node[rangecolor,font=\fontsize{4mm}{0}]{\strut\hmmmrangea};
 	\fi
 	\ifhmin
 	% 収集条件
@@ -83,8 +85,8 @@
 	\fill[fill=collectcolor!30]
 		($(GC)+(60:4.5)$)arc(60:120:4.5)--($(GC)+(-120:4.5)$)arc(-120:-60:4.5)--cycle;
 	\draw[draw=collectcolor,thick](GC)circle[radius=4.5];
-	\path(GC)--++(0,3.5)node{\small\hmgcfont\hmfukuro{\strut Collect}};
-	\path(GC)node[font=\Huge\hmgfont]{\hmmcollect};
+	\path(GC)--++(0,3.5)node[font=\fontsize{1.7mm}{0}\hmgcfont]{\hmfukuro{\strut Collect}};
+	\path(GC)node[font=\fontsize{5.7mm}{0}\hmgfont]{\hmmcollect};
 	\fi
 	% 種族
 	\path(I3)-|(I1)node[midway,above left,font=\large\hmsfont]{\hmfukuro{\hmmrace}};
@@ -96,7 +98,7 @@
 	%% 変身用
 	%% テキスト
 	\path(B1)-|(B3*)node[
-		midway,below right,outer sep=0,inner sep=1mm,text width=53mm,text justified,font=\small\sffamily]{
+		midway,below right,outer sep=0,inner sep=1mm,text width=54mm,text justified,font=\small\sffamily]{
 			\hmmtext
 		};
 	%% 戦闘力
@@ -104,7 +106,7 @@
 		[midway,above,outer sep=0,inner xsep=0,inner ysep=1mm,text width=14mm,text centered,font=\LARGE\hmpfont]
 		{\mbox{\makebox[4mm][r]{\hmmp}/\makebox[4mm][l]{\hmmt}}};
 	%% フレーバーテキスト
-	\path(B3*)node[above right,outer sep=0,inner sep=1mm,text width=39mm,text justified,font=\scriptsize]{
+	\path(B3*)node[above right,outer sep=0,inner sep=1mm,text width=39mm,text justified,font=\fontsize{1.3mm}{1.43mm}]{
 			\hmmflavor
 		};
 	%% 変身状態
@@ -123,7 +125,7 @@
 					\coordinate(T)at(0,0);
 					\filldraw[fill=spiritcolor!40,draw=spiritcolor,thick](T)circle[radius=1.5];
 					\fill[fill=spiritcolor!10](T)circle[radius=1];
-					\path(T)node[font=\large\hmgfont]{\hmmcsprit};
+					\path(T)node[font=\large\hmgfont]{\hmmcspirit};
 				\end{tikzpicture}
 				Gr:%
 				\begin{tikzpicture}[baseline=(T.base),x=1mm,y=1mm,inner sep=0,outer sep=0,anchor=center]
@@ -136,10 +138,10 @@
 			};
 			%% 戦闘力
 			\path($(Q1)-(7,0)$)|-(Q3)node
-				[midway,above,outer sep=0,inner xsep=0,inner ysep=1,text width=14mm,text centered,font=\LARGE\hmpfont]
+				[midway,above,outer sep=0,inner xsep=0,inner ysep=1,text width=14mm,text centered,font=\fontsize{4mm}{0}\hmpfont]
 				{\mbox{\makebox[4mm][r]{\hmmcp}/\makebox[4mm][l]{\hmmct}}};
 			%% テキスト
-			\path(Q3)node[above right,outer sep=1,inner sep=1,text width=39mm,text justified,font=\small\sffamily]{
+			\path(Q3)node[above right,outer sep=1,inner sep=1,text width=39.6mm,text justified,font=\sffamily]{
 				\hmmctext
 			};
 		\end{tikzpicture}%
@@ -147,34 +149,33 @@
 	\else
 	%% テキスト
 	\path(B1)-|(B3)node
-		[midway,below right,outer sep=0,inner sep=1mm,text width=53mm,text justified,font=\small\sffamily]{
+		[midway,below right,outer sep=0,inner sep=1mm,text width=54mm,text justified,font=\sffamily]{
 			\hmmtext
 		};
 	%% 戦闘力
 	\path($(B1)-(7,0)$)|-(B3)node
-		[midway,above,outer sep=0,inner xsep=0,inner ysep=1mm,text width=14mm,text centered,font=\LARGE\hmpfont]
+		[midway,above,outer sep=0,inner xsep=0,inner ysep=1mm,text width=14mm,text centered,font=\fontsize{4mm}{0}\hmpfont]
 		{\mbox{\makebox[4mm][r]{\hmmp}/\makebox[4mm][l]{\hmmt}}};
 	%% フレーバーテキスト
-	\path(B3)node[above right,outer sep=0,inner sep=1mm,text width=39mm,text justified,font=\scriptsize]{
+	\path(B3)node[above right,outer sep=0,inner sep=1mm,text width=39mm,text justified,font=\fontsize{1.3mm}{1.43mm}\selectfont,]{
 			\hmmflavor
 		};
 	\fi
 	% フッター
 	\path(O3)node[above right,text width=25\zw,align=left,inner ysep=0,outer ysep=0]
-		{\hmsfont\setlength{\baselineskip}{1.2mm}\fontsize{1.2mm}{0pt}\selectfont%
+		{\hmsfont\fontsize{1.2mm}{1}\selectfont%
 			\hmfukuro{{\©}上海アリス幻樂団\\
-			{\©}さーくる⑨, 2020, 2020\\[-1mm]
-			CC-BY-NC 4.0}};
-	\path(O1)|-(O3)node[pos=.75,above left,inner xsep=0,outer xsep=0,font=\hmsfont\small]
+			{\©}2020-2020 さーくる⑨ CC-BY-NC 4.0}};
+	\path(O1)|-(O3)node[pos=.75,above left,inner xsep=0,outer xsep=0,font=\hmsfont\fontsize{1.8mm}{0}\hmsfont]
 		{\hmfukuro{\hmmnumtype~}};
-	\path(O1)|-(O3)node[pos=.75,above right,inner xsep=0,outer xsep=0,font=\hmsfont\small]
+	\path(O1)|-(O3)node[pos=.75,above right,inner xsep=0,outer xsep=0,font=\hmsfont\fontsize{1.8mm}{0}\hmsfont]
 		{\hmfukuro{\hmmnum}};
-	\path(O1)|-(O3)node[pos=.68,above,font=\hmsfont\small]{\hmfukuro{\hmmexpantion}};
-	\path(O1)|-(O3)node[midway,above left,font=\hmsfont\small]{\hmfukuro{Ill. \hmmill}};
-	% % 方眼
-	% \draw[very thin,gridcolor,nearly transparent](OL1)grid[step=1](OL3);
-	% \draw[gridcolor,nearly transparent]($(OL1)-(2,2)$)rectangle($(OL3)+(2,2)$);
-	% \draw[thin,gridcolor,nearly transparent](OL1)grid[step=10](OL3);
-	% \draw[thin,gridcolor,nearly transparent](OL1)rectangle(OL3);
+	\path(O1)|-(O3)node[pos=.68,above,font=\hmsfont\fontsize{1.8mm}{0}\hmsfont]{\hmfukuro{\hmmexpantion}};
+	\path(O1)|-(O3)node[midway,above left,font=\hmsfont\fontsize{1.8mm}{0}\hmsfont]{\hmfukuro{Ill. \hmmill}};
+	% 方眼
+	\draw[very thin,gridcolor,nearly transparent](OL1)grid[step=1](OL3);
+	\draw[gridcolor,nearly transparent]($(OL1)-(2,2)$)rectangle($(OL3)+(2,2)$);
+	\draw[thin,gridcolor,nearly transparent](OL1)grid[step=10](OL3);
+	\draw[thin,gridcolor,nearly transparent](OL1)rectangle(OL3);
 \end{tikzpicture}%
 \end{document}

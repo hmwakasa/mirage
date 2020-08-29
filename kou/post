@@ -6,7 +6,7 @@
 \providecommand{\hmmnode}{}
 \providecommand{\hmmcost}{}
 \providecommand{\hmmspellist}{}
-\providecommand{\hmmsprit}{}
+\providecommand{\hmmspirit}{}
 \providecommand{\hmmgraze}{}
 \providecommand{\hmmcollect}{}
 \providecommand{\hmmrangea}{}
@@ -19,7 +19,7 @@
 \providecommand{\hmmflavor}{}
 \providecommand{\hmmcname}{}
 \providecommand{\hmmcrace}{}
-\providecommand{\hmmcsprit}{}
+\providecommand{\hmmcspirit}{}
 \providecommand{\hmmcgraze}{}
 \providecommand{\hmmcp}{}
 \providecommand{\hmmct}{}

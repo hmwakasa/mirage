@@ -4,7 +4,7 @@
 \newcommand{\hmmtype}{Ch}
 \newcommand{\hmmnode}{6}
 \newcommand{\hmmcost}{3}
-\newcommand{\hmmsprit}{3}
+\newcommand{\hmmspirit}{3}
 \newcommand{\hmmgraze}{2}
 \newcommand{\hmmrace}{吸血鬼}
 \newcommand{\hmmplace}{G}
