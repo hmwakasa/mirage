@@ -3,7 +3,7 @@
 \newcommand{\hmmnamer}{ごくさいたいふう}
 \newcommand{\hmmtype}{SC}
 \newcommand{\hmmnode}{4}
-\newcommand{\hmmcost}{4}
+\newcommand{\hmmcost}{3}
 \newcommand{\hmmspellist}{紅美鈴}
 \newcommand{\hmmrangea}{o}
 \newcommand{\hmmranget}{i}
@@ -11,7 +11,7 @@
 \newcommand{\hmmtext}{
 	目標の〔あなたの場のアクティブ状態のキャラクター 1 枚〕をスリープ状態にする。
 	その後、〔全てのキャラクター〕に X ダメージを与え、〔あなた〕
-	は X ドローする。この干渉終了時に現在のフェイズを終了する。
+	は X ドローする。
 	X は目標のキャラクターの耐久力の 3 分の 1 （端数切り上げ）
 	に等しい。
 }

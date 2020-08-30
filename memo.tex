@@ -19,12 +19,12 @@
 \usepackage[euler-digits]{eulervm}
 \mleftright
 \setmainfont{Hall Fetica Decompose}[
-	BoldFont=Hall Fetica,
+	BoldFont=Hall Fetica Wide,
 	ItalicFont=Hall Fetica Decompose Italic,
 	BoldItalicFont=Hall Fetica Italic
 ]
 \setsansfont{Hall Fetica Decompose}[
-	BoldFont=Hall Fetica,
+	BoldFont=Hall Fetica Wide,
 	ItalicFont=Hall Fetica Decompose Italic,
 	BoldItalicFont=Hall Fetica Italic
 ]
@@ -109,6 +109,23 @@
 \allowdisplaybreaks[4]
 \ltjenableadjust[lineend=extended,priority=true,profile=true,linestep=true]
 
+\usepackage{luacode}
+%% \PUACHAR{«num»}
+% コードポイントが num である文字を出力する
+\begin{luacode*}
+	my = my or {}
+	function my.pua(n)
+		local t, c = font.getfont(font.current()), 0
+		if t and t.shared and t.shared.rawdata and t.shared.rawdata.descriptions then
+			for i,v in pairs(t.shared.rawdata.descriptions) do
+				if not v.name and v.unicode==n then c=i; break end
+			end
+		end
+		tex.sprint(tostring(c))
+	end
+\end{luacode*}
+\def\PUACHAR#1{\char\directlua{my.pua(\the\numexpr#1)}}
+
 \colorlet{nodecolor}{violet!90!blue}
 \colorlet{costcolor}{olive!30!black}
 \colorlet{spiritcolor}{red!70!black}
@@ -135,29 +152,29 @@
 \colorlet{Jicocolor}{gray}
 \colorlet{Licocolor}{darkgray}
 
-\newcommand{\Ahmico}{{\color{Aicocolor}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"0262F}}
-\newcommand{\Bhmico}{{\color{Bicocolor}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F3DA}}
-\newcommand{\Chmico}{{\color{Cicocolor}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F571}}
-\newcommand{\Dhmico}{{\color{Dicocolor}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"026F0}}
-\newcommand{\Ehmico}{{\color{Eicocolor}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F407}}
-\newcommand{\Fhmico}{{\color{Ficocolor}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F3A9}}
-\newcommand{\Ghmico}{{\color{Gicocolor}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F3F0}}
-\newcommand{\Hhmico}{{\color{Hicocolor}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F408}}
-\newcommand{\Ihmico}{{\color{Iicocolor}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F326}}
-\newcommand{\Jhmico}{{\color{Licocolor}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F318}}
-\newcommand{\Khmico}{{\color{Jicocolor}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F47B}}
-\newcommand{\Lhmico}{{\color{Licocolor}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F3E2}}
-\newcommand{\thmico}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F5E1}}
-\newcommand{\ohmico}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F300}}
-\newcommand{\ahmico}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"0272C}}
-\newcommand{\vhmico}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"0292D}}
-\newcommand{\ihmico}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"026C8}}
-\newcommand{\mhmico}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F570}}
-\newcommand{\chmico}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F3AD}}
-\newcommand{\ehmico}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"02694}}
-\newcommand{\whmico}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F342}}
-\newcommand{\shmico}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F54B}}
-\newcommand{\xhmico}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"0254D}}
+\newcommand{\Ahmico}{{\color{Aicocolor}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\PUACHAR{"0262F}}}
+\newcommand{\Bhmico}{{\color{Bicocolor}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\PUACHAR{"1F3DA}}}
+\newcommand{\Chmico}{{\color{Cicocolor}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\PUACHAR{"1F571}}}
+\newcommand{\Dhmico}{{\color{Dicocolor}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\PUACHAR{"026F0}}}
+\newcommand{\Ehmico}{{\color{Eicocolor}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\PUACHAR{"1F407}}}
+\newcommand{\Fhmico}{{\color{Ficocolor}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\PUACHAR{"1F3A9}}}
+\newcommand{\Ghmico}{{\color{Gicocolor}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\PUACHAR{"1F3F0}}}
+\newcommand{\Hhmico}{{\color{Hicocolor}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\PUACHAR{"1F408}}}
+\newcommand{\Ihmico}{{\color{Iicocolor}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\PUACHAR{"1F326}}}
+\newcommand{\Jhmico}{{\color{Licocolor}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\PUACHAR{"1F318}}}
+\newcommand{\Khmico}{{\color{Jicocolor}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\PUACHAR{"1F47B}}}
+\newcommand{\Lhmico}{{\color{Licocolor}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\PUACHAR{"1F3E2}}}
+\newcommand{\thmico}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\PUACHAR{"F015C}}}
+\newcommand{\ohmico}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\PUACHAR{"1F300}}}
+\newcommand{\ahmico}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\PUACHAR{"0F5C0}}}
+\newcommand{\vhmico}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\PUACHAR{"0292D}}}
+\newcommand{\ihmico}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\PUACHAR{"F00F1}}}
+\newcommand{\mhmico}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\PUACHAR{"F01CF}}}
+\newcommand{\chmico}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\PUACHAR{"1F3AD}}}
+\newcommand{\ehmico}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\PUACHAR{"02694}}}
+\newcommand{\whmico}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\PUACHAR{"1F342}}}
+\newcommand{\shmico}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\PUACHAR{"1F54B}}}
+\newcommand{\xhmico}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\PUACHAR{"1F7B3}}}
 
 \newcommand{\hmemph}[1]{\textbf{#1}}
 
@@ -232,6 +249,8 @@
 	\item \texttt{./make.sh fillname} を実行する
 	\item PDF が自動で生成される
 \end{enumerate}
+
+試しに、紅魔スターターでは \texttt{make all.pdf} で作れるようにしてみた。
 
 \subsection{\jruby[g]{制御綴}{コントロールシークエンス}一覧}
 \begin{tabbing}
@@ -319,6 +338,14 @@
 \begin{itemize}
 	\item 紅魔スターターのββ版が完成
 	\item 紅魔スターターのコマンドカード「蓬莱伝説」は蓬莱人形からです
+\end{itemize}
+
+\subsection{2020-08-30}
+\begin{itemize}
+	\item 様々なアイコンを一部変更。
+	\item 自分ターン、相手ターンを「自手番」「相手番」に表記変更。
+		起動効果の記号も変更。
+	\item Makefile を書いてみた。
 \end{itemize}
 
 \section{スターターセットの内容}
@@ -1094,7 +1121,7 @@ Ch: 25, SC: 10, Cm: 15
 \onecolumn
 \section{クレジット}
 \begin{tabbing}
-	\hspace{15\zw}\=\hspace{15\zw}\=\kill\\
+	\hspace{15\zw}\=\hspace{15\zw}\=\kill
 	Total Design\>さーくる⑨\\
 	Planning\>ひとみさん（さーくる⑨）\\
 	Game Design\>ひとみさん（さーくる⑨）\\
@@ -1109,20 +1136,24 @@ Ch: 25, SC: 10, Cm: 15
 	\>Ocean@海P\\
 	\>kalna\\
 	\>NEO\\
-	\hmemph{Illustrator}\>\hmemph{募集中}\\
-	湯島\\
+	\hmemph{Illustrator} \hmemph{（募集中）}\\
+	\hspace{8\zw}\=\hspace{15\zw}\=\hspace{8\zw}\=\hspace{15\zw}\=\kill
+	ひとみさん\>HP: \href{http://www.circle9.work}{みすてりーさーくる⑨}\>
+	湯島\>Tw: \href{https://twitter.com/50lifekiri}{@50Lifekiri}\\
+	うにたぷ\\
+	\hspace{15\zw}\=\hspace{15\zw}\=\kill
 	\hmemph{Fonts}\\
 	{\fontspec[Scale=.85]{NKD04_Playing_Cards_Index}NKD04 Playing Card's Index}\>
 		\url{http://hwm3.gyao.ne.jp/shiroi-niwatori/nishiki-teki.htm}\\
-	{\jfontspec{nishiki-teki}にしき的フォント（絵文字）}\>
-		〃\\
-	{\fontspec{FOT-RodinNTLGPro-M}LETS Fonts}\>
-		\url{https://lets-site.jp/}\\
+	{\jfontspec{nishiki-teki}にしき的フォント（絵文字）}\>〃\\
+	{\fontspec{FOT-RodinNTLGPro-M}LETS Fonts}\>\url{https://lets-site.jp/}\\
+	\>{\jfontspec{FOT-MatissePro-M}\fontspec{FOT-MatissePro-M}マティス Pro}\quad
+		{\jfontspec{FOT-RodinNTLGPro-DB}\fontspec{FOT-RodinNTLGPro-DB}ロダン NTLG Pro}\quad
+		{\jfontspec{FOT-TsukuOldGothicStd-B}\fontspec{FOT-TsukuOldGothicStd-B}筑紫オールドゴシック B}\\
 	{\fontspec{kawoszeh}kawoszeh}\>
 		\url{http://www.glukfonts.pl/font.php?font=Kawoszeh}\\
 	Hall Fetica Familly\>
 		\url{http://moorstation.org/typoasis/designers/gemnew/home.htm}\\
-		
 \end{tabbing}
 
 \doclicenseThis

@@ -9,7 +9,7 @@
 \newcommand{\hmmrace}{人間}
 \newcommand{\hmmplace}{A}
 \newcommand{\hmmtext}{%
-	\自分{\↓} 目標の〔「種族: 人間」を持たないキャラクター 1 枚〕に
+	\自分{\↓}目標の〔「種族: 人間」を持たないキャラクター 1 枚〕に
 	3 ダメージを与える。
 }
 \newcommand{\hmmp}{4}

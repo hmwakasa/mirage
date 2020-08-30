@@ -8,7 +8,7 @@
 	foot_space=0pt,
 	open_bracket_pos=zenkakunibu_nibu,
 ]{jlreq}
-\usepackage{luatexja,pdfrender,xparse,fontspec,bxokumacro,bxghost,ifthen}
+\usepackage{luatexja,xparse,fontspec,bxokumacro,bxghost,ifthen}
 \ltjsetparameter{jacharrange={-3,-8}}
 \usepackage[no-math,match,deluxe]{luatexja-preset}
 \usepackage[x-1a]{pdfx}
@@ -21,6 +21,24 @@
 \setlength{\parskip}{0pt}
 \usepackage[export]{adjustbox}
 
+\usepackage{luacode}
+%% \PUACHAR{«num»}
+% コードポイントが num である文字を出力する
+\begin{luacode*}
+	my = my or {}
+	function my.pua(n)
+		local t, c = font.getfont(font.current()), 0
+		if t and t.shared and t.shared.rawdata and t.shared.rawdata.descriptions then
+			for i,v in pairs(t.shared.rawdata.descriptions) do
+				if not v.name and v.unicode==n then c=i; break end
+			end
+		end
+		tex.sprint(tostring(c))
+	end
+\end{luacode*}
+\def\PUACHAR#1{\char\directlua{my.pua(\the\numexpr#1)}}
+
+\usepackage{pdfrender}
 \NewDocumentCommand\hmfukuro{O{.2pt} +m O{white}}{\textpdfrender{
 	TextRenderingMode=FillStroke,
 	LineWidth=#1,
@@ -49,8 +67,9 @@
 
 \newcommand{\©}{\jghostguarded{©}}
 \newcommand{\・}{\mbox{・}}
-\newcommand{\↓}{{\fontspec{nishiki-teki}⤸}}
+\newcommand{\↓}{{\fontspec[Scale=0.86]{nishiki-teki}\rotatebox[origin=c]{90}{\PUACHAR{"293E}}}}
 \catcode`　\active \newcommand{　}{\mbox{\　}}
+\newcommand{\hmzr}{\vphantom{あ}}
 
 \NewDocumentCommand\α{s}{%
 	\tikz[baseline=(T.base)]
@@ -79,31 +98,31 @@
 \NewDocumentCommand\自分{s m}{%
 	\tikz[baseline=(T.base)]
 	\IfBooleanTF{#1}{
-		\node[inner sep=0pt,outer sep=0pt,signal,color=black,draw,black](T)
-			{自分T\rule[-.1\zh]{.5pt}{1\zh}\ #2}
+		\draw node[inner sep=0pt,outer sep=0pt,left,color=black,draw,black](T){自手番\hmzr}
+		node[inner sep=0pt,outer sep=0pt,right,signal,color=black,draw,black](T){\ #2\hmzr}
 	}{
-		\node[inner sep=0pt,outer sep=0pt,signal,color=black,draw,black,fill=white](T)
-			{自分T\rule[-.1\zh]{.5pt}{1\zh}\ #2}
+		\draw node[inner sep=0pt,outer sep=0pt,left,color=black,draw,black,fill=cyan](T){自手番\hmzr}
+		node[inner sep=0pt,outer sep=0pt,right,signal,color=black,draw,black,fill=white](T){\ #2\hmzr}
 	};%
 }
 \NewDocumentCommand\相手{s m}{%
 	\tikz[baseline=(T.base)]
 	\IfBooleanTF{#1}{
-		\node[inner sep=0pt,outer sep=0pt,signal,color=black,draw,black](T)
-			{相手T\rule[-.1\zh]{.5pt}{1\zh}\ #2}
+		\draw node[inner sep=0pt,outer sep=0pt,left,color=black,draw,black](T){相手番\hmzr}
+		node[inner sep=0pt,outer sep=0pt,right,signal,color=black,draw,black](T){\ #2\hmzr}
 	}{
-		\node[inner sep=0pt,outer sep=0pt,signal,color=black,draw,black,fill=white](T)
-			{相手T\rule[-.1\zh]{.5pt}{1\zh}\ #2}
+		\draw node[inner sep=0pt,outer sep=0pt,left,color=black,draw,black,fill=pink](T){相手番\hmzr}
+		node[inner sep=0pt,outer sep=0pt,right,signal,color=black,draw,black,fill=white](T){\ #2\hmzr}
 	};%
 }
 \NewDocumentCommand\常時{s m}{%
 	\tikz[baseline=(T.base)]
 	\IfBooleanTF{#1}{
-		\node[inner sep=0pt,outer sep=0pt,signal,color=black,draw,black](T)
-			{常時\rule[-.1\zh]{.5pt}{1\zh}\ #2}
+		\draw node[inner sep=0pt,outer sep=0pt,left,color=black,draw,black](T){常時\hmzr}
+		node[inner sep=0pt,outer sep=0pt,right,signal,color=black,draw,black](T){\ #2\hmzr}
 	}{
-		\node[inner sep=0pt,outer sep=0pt,signal,color=black,draw,black,fill=white](T)
-			{常時\rule[-.1\zh]{.5pt}{1\zh}\ #2}
+		\draw node[inner sep=0pt,outer sep=0pt,left,color=black,draw,black,fill=yellow](T){常時\hmzr}
+		node[inner sep=0pt,outer sep=0pt,right,signal,color=black,draw,black,fill=white](T){\ #2\hmzr}
 	};%
 }
 \NewDocumentCommand\収集{s}{%
@@ -167,29 +186,29 @@
 \colorlet{Jicocolor}{gray}
 \colorlet{Licocolor}{darkgray}
 
-\newcommand{\Ahmico}{{\color{Aicocolor}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"0262F}}
-\newcommand{\Bhmico}{{\color{Bicocolor}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F3DA}}
-\newcommand{\Chmico}{{\color{Cicocolor}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F571}}
-\newcommand{\Dhmico}{{\color{Dicocolor}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"026F0}}
-\newcommand{\Ehmico}{{\color{Eicocolor}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F407}}
-\newcommand{\Fhmico}{{\color{Ficocolor}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F3A9}}
-\newcommand{\Ghmico}{{\color{Gicocolor}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F3F0}}
-\newcommand{\Hhmico}{{\color{Hicocolor}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F408}}
-\newcommand{\Ihmico}{{\color{Iicocolor}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F326}}
-\newcommand{\Jhmico}{{\color{Licocolor}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F318}}
-\newcommand{\Khmico}{{\color{Jicocolor}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F47B}}
-\newcommand{\Lhmico}{{\color{Licocolor}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F3E2}}
-\newcommand{\thmico}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F5E1}}
-\newcommand{\ohmico}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F300}}
-\newcommand{\ahmico}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"0272C}}
-\newcommand{\vhmico}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"0292D}}
-\newcommand{\ihmico}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"026C8}}
-\newcommand{\mhmico}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F570}}
-\newcommand{\chmico}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F3AD}}
-\newcommand{\ehmico}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"02694}}
-\newcommand{\whmico}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F342}}
-\newcommand{\shmico}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"1F54B}}
-\newcommand{\xhmico}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\char"0254D}}
+\newcommand{\Ahmico}{{\color{Aicocolor}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\PUACHAR{"0262F}}}
+\newcommand{\Bhmico}{{\color{Bicocolor}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\PUACHAR{"1F3DA}}}
+\newcommand{\Chmico}{{\color{Cicocolor}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\PUACHAR{"1F571}}}
+\newcommand{\Dhmico}{{\color{Dicocolor}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\PUACHAR{"026F0}}}
+\newcommand{\Ehmico}{{\color{Eicocolor}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\PUACHAR{"1F407}}}
+\newcommand{\Fhmico}{{\color{Ficocolor}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\PUACHAR{"1F3A9}}}
+\newcommand{\Ghmico}{{\color{Gicocolor}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\PUACHAR{"1F3F0}}}
+\newcommand{\Hhmico}{{\color{Hicocolor}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\PUACHAR{"1F408}}}
+\newcommand{\Ihmico}{{\color{Iicocolor}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\PUACHAR{"1F326}}}
+\newcommand{\Jhmico}{{\color{Licocolor}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\PUACHAR{"1F318}}}
+\newcommand{\Khmico}{{\color{Jicocolor}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\PUACHAR{"1F47B}}}
+\newcommand{\Lhmico}{{\color{Licocolor}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\PUACHAR{"1F3E2}}}
+\newcommand{\thmico}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\PUACHAR{"F015C}}}
+\newcommand{\ohmico}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\PUACHAR{"1F300}}}
+\newcommand{\ahmico}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\PUACHAR{"0F5C0}}}
+\newcommand{\vhmico}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\PUACHAR{"0292D}}}
+\newcommand{\ihmico}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\PUACHAR{"F00F1}}}
+\newcommand{\mhmico}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\PUACHAR{"F01CF}}}
+\newcommand{\chmico}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\PUACHAR{"1F3AD}}}
+\newcommand{\ehmico}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\PUACHAR{"02694}}}
+\newcommand{\whmico}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\PUACHAR{"1F342}}}
+\newcommand{\shmico}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\PUACHAR{"1F54B}}}
+\newcommand{\xhmico}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\PUACHAR{"1F7B0}}}
 
 \newcommand{\hmmimg}{}
 \newcommand{\hmmname}{強引な取引}
@@ -361,10 +380,10 @@
 	\else
 	% 発動期間
 	\filldraw[fill=rangebcolor,draw=rangebcolor!80,thick](SC2)circle[radius=2.5];
-	\path(SC2)node[rangecolor,font=\fontsize{4mm}{0}]{\strut\hmmmranget};
+	\path(SC2)node[rangecolor,font=\fontsize{3.9mm}{0}]{\strut\hmmmranget};
 	% 効果範囲
 	\filldraw[fill=rangebcolor,draw=rangebcolor!80,thick](GC2)circle[radius=2.5];
-	\path(GC2)node[rangecolor,font=\fontsize{4mm}{0}]{\strut\hmmmrangea};
+	\path(GC2)node[rangecolor,font=\fontsize{3.9mm}{0}]{\strut\hmmmrangea};
 	\fi\fi
 	% 種族
 	\path(I3)-|(I1)node[midway,above left,font=\large\hmsfont]{\hmfukuro{\hmmrace}};
