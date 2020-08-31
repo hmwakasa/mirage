@@ -10,7 +10,7 @@
 \newcommand{\hmmranget}{i}
 \newcommand{\hmmplace}{A}
 \newcommand{\hmmtext}{%
-	目標の〔プレイされたスペルカード 1 枚〕のプレイを無効とし、破棄する。
+	\プレイ 目標の〔プレイされたスペルカード 1 枚〕のプレイを無効とし、破棄する。
 }
 \newcommand{\hmmp}{-}
 \newcommand{\hmmt}{-}

@@ -10,7 +10,7 @@
 \newcommand{\hmmranget}{i}
 \newcommand{\hmmplace}{G}
 \newcommand{\hmmtext}{%
-	以下の効果から 1 つ選んで解決する。
+	\プレイ 以下の効果から 1 つ選んで解決する。
 	\begin{enumerate}
 		\item 目標の〔「種族: 妖精」を持つキャラクター 1 枚〕は
 			ターン終了時まで「戦闘修正: +3/+1」を得る。

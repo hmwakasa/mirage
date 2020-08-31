@@ -9,7 +9,7 @@
 \newcommand{\hmmranget}{m}
 \newcommand{\hmmplace}{A}
 \newcommand{\hmmtext}{%
-	目標の〔キャラクター 1 枚〕に 3 ダメージを与える。このターン終了時に、
+	\プレイ 目標の〔キャラクター 1 枚〕に 3 ダメージを与える。このターン終了時に、
 	さらにそのキャラクターに 3 ダメージを与える。
 }
 \newcommand{\hmmp}{-}

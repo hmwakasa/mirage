@@ -6,7 +6,7 @@
 	gutter=0pt,
 	head_space=0pt,
 	foot_space=0pt,
-	open_bracket_pos=zenkakunibu_nibu,
+	open_bracket_pos=nibu_tentsuki,
 ]{jlreq}
 \usepackage{luatexja,xparse,fontspec,bxokumacro,bxghost,ifthen}
 \ltjsetparameter{jacharrange={-3,-8}}
@@ -71,68 +71,61 @@
 \catcode`　\active \newcommand{　}{\mbox{\　}}
 \newcommand{\hmzr}{\vphantom{あ}}
 
-\NewDocumentCommand\α{s}{%
+\NewDocumentCommand\自動{s m}{%
 	\tikz[baseline=(T.base)]
 	\IfBooleanTF{#1}{
-		\node[inner sep=0pt,outer sep=0pt,signal,color=black,draw,black](T){自動α}
+		\draw node[inner sep=0pt,outer sep=0pt,left,color=black,draw=black](T){自動\hmzr}
+		node[inner sep=0pt,outer sep=0pt,right,signal,color=black,draw=black](T){#2\hmzr}
 	}{
-		\node[inner sep=0pt,outer sep=0pt,signal,color=white,fill=black](T){自動α}
-	};%
-}
-\NewDocumentCommand\β{s}{%
-	\tikz[baseline=(T.base)]
-	\IfBooleanTF{#1}{
-		\node[inner sep=0pt,outer sep=0pt,signal,color=black,draw,black](T){自動β}
-	}{
-		\node[inner sep=0pt,outer sep=0pt,signal,color=white,fill=black](T){自動β}
-	};%
-}
-\NewDocumentCommand\γ{s}{%
-	\tikz[baseline=(T.base)]
-	\IfBooleanTF{#1}{
-		\node[inner sep=0pt,outer sep=0pt,signal,color=black,draw,black](T){自動γ}
-	}{
-		\node[inner sep=0pt,outer sep=0pt,signal,color=white,fill=black](T){自動γ}
+		\draw node[inner sep=0pt,outer sep=0pt,left,color=white,draw=black,fill=black](T){自動\hmzr}
+		node[inner sep=0pt,outer sep=0pt,right,signal,color=black,draw=black,fill=white](T){#2\hmzr}
 	};%
 }
 \NewDocumentCommand\自分{s m}{%
 	\tikz[baseline=(T.base)]
 	\IfBooleanTF{#1}{
-		\draw node[inner sep=0pt,outer sep=0pt,left,color=black,draw,black](T){自手番\hmzr}
-		node[inner sep=0pt,outer sep=0pt,right,signal,color=black,draw,black](T){\ #2\hmzr}
+		\draw node[inner sep=0pt,outer sep=0pt,left,color=black,draw=black](T){自手番\hmzr}
+		node[inner sep=0pt,outer sep=0pt,right,signal,color=black,draw=black](T){\ #2\hmzr}
 	}{
-		\draw node[inner sep=0pt,outer sep=0pt,left,color=black,draw,black,fill=cyan](T){自手番\hmzr}
-		node[inner sep=0pt,outer sep=0pt,right,signal,color=black,draw,black,fill=white](T){\ #2\hmzr}
+		\draw node[inner sep=0pt,outer sep=0pt,left,color=teal,draw=black,fill=white](T){自手番\hmzr}
+		node[inner sep=0pt,outer sep=0pt,right,signal,color=black,draw=black,fill=white](T){\ #2\hmzr}
 	};%
 }
 \NewDocumentCommand\相手{s m}{%
 	\tikz[baseline=(T.base)]
 	\IfBooleanTF{#1}{
-		\draw node[inner sep=0pt,outer sep=0pt,left,color=black,draw,black](T){相手番\hmzr}
-		node[inner sep=0pt,outer sep=0pt,right,signal,color=black,draw,black](T){\ #2\hmzr}
+		\draw node[inner sep=0pt,outer sep=0pt,left,color=black,draw=black](T){相手番\hmzr}
+		node[inner sep=0pt,outer sep=0pt,right,signal,color=black,draw=black](T){\ #2\hmzr}
 	}{
-		\draw node[inner sep=0pt,outer sep=0pt,left,color=black,draw,black,fill=pink](T){相手番\hmzr}
-		node[inner sep=0pt,outer sep=0pt,right,signal,color=black,draw,black,fill=white](T){\ #2\hmzr}
+		\draw node[inner sep=0pt,outer sep=0pt,left,color=magenta,draw=black,fill=white](T){相手番\hmzr}
+		node[inner sep=0pt,outer sep=0pt,right,signal,color=black,draw=black,fill=white](T){\ #2\hmzr}
 	};%
 }
 \NewDocumentCommand\常時{s m}{%
 	\tikz[baseline=(T.base)]
 	\IfBooleanTF{#1}{
-		\draw node[inner sep=0pt,outer sep=0pt,left,color=black,draw,black](T){常時\hmzr}
-		node[inner sep=0pt,outer sep=0pt,right,signal,color=black,draw,black](T){\ #2\hmzr}
+		\draw node[inner sep=0pt,outer sep=0pt,left,color=black,draw=black](T){常時\hmzr}
+		node[inner sep=0pt,outer sep=0pt,right,signal,color=black,draw=black](T){\ #2\hmzr}
 	}{
-		\draw node[inner sep=0pt,outer sep=0pt,left,color=black,draw,black,fill=yellow](T){常時\hmzr}
-		node[inner sep=0pt,outer sep=0pt,right,signal,color=black,draw,black,fill=white](T){\ #2\hmzr}
+		\draw node[inner sep=0pt,outer sep=0pt,left,color=olive,draw=black,fill=white](T){常時\hmzr}
+		node[inner sep=0pt,outer sep=0pt,right,signal,color=black,draw=black,fill=white](T){\ #2\hmzr}
 	};%
 }
+\NewDocumentCommand\プレイ{s}{%
+	\tikz[baseline=(T.base)]
+	\IfBooleanTF{#1}{
+		\node[inner sep=0pt,outer sep=0pt,signal,color=black,draw=black](T){プレイ}
+	}{
+		\node[inner sep=0pt,outer sep=0pt,signal,color=white,draw=black,fill=violet](T){プレイ}
+	};%
+}
+
 \NewDocumentCommand\収集{s}{%
 	\tikz[baseline=(T.base)]
 	\IfBooleanTF{#1}{
-		\node[inner sep=0pt,outer sep=0pt,signal,color=black,draw,black](T)
-			{収集}
+		\node[inner sep=0pt,outer sep=0pt,signal,color=black,draw=black](T){収集}
 	}{
-		\node[inner sep=0pt,outer sep=0pt,signal,color=white,draw=black,fill=darkgray](T)
-			{収集}
+		\node[inner sep=0pt,outer sep=0pt,signal,color=white,draw=black,fill=red](T){収集}
 	};%
 }
 
@@ -222,7 +215,7 @@
 \newcommand{\hmmranget}{i}
 \newcommand{\hmmplace}{A}
 \newcommand{\hmmtext}{%
-	目標の〔プレイされたスペルカード 1 枚〕のプレイを無効とし、破棄する。
+	\プレイ 目標の〔プレイされたスペルカード 1 枚〕のプレイを無効とし、破棄する。
 }
 \newcommand{\hmmp}{-}
 \newcommand{\hmmt}{-}

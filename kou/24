@@ -9,7 +9,7 @@
 \newcommand{\hmmranget}{i}
 \newcommand{\hmmplace}{F}
 \newcommand{\hmmtext}{%
-	〔あなたの手札 2 枚まで〕を可能な限り破棄する。その後、〔全てのキャラクター〕
+	\プレイ 〔あなたの手札 2 枚まで〕を可能な限り破棄する。その後、〔全てのキャラクター〕
 	を決死状態にする。
 }
 \newcommand{\hmmp}{-}

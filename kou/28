@@ -9,7 +9,7 @@
 \newcommand{\hmmranget}{i}
 \newcommand{\hmmplace}{G}
 \newcommand{\hmmtext}{%
-	〔全てのキャラクター〕をスリープ状態にする。その後、〔あなた〕は 1 ドローする。
+	\プレイ 〔全てのキャラクター〕をスリープ状態にする。その後、〔あなた〕は 1 ドローする。
 }
 \newcommand{\hmmp}{-}
 \newcommand{\hmmt}{-}

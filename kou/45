@@ -10,7 +10,7 @@
 \newcommand{\hmmranget}{i}
 \newcommand{\hmmplace}{A}
 \newcommand{\hmmtext}{%
-	〔全てのプレイヤー〕は手札を公開する。その後、〔あなた〕は 1 ドローする。
+	\プレイ 〔全てのプレイヤー〕は手札を公開する。その後、〔あなた〕は 1 ドローする。
 }
 \newcommand{\hmmp}{-}
 \newcommand{\hmmt}{-}

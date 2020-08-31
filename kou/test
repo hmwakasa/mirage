@@ -1,0 +1,37 @@
+\newcommand{\hmmimg}{}
+\newcommand{\hmmname}{博麗　霊夢}
+\newcommand{\hmmnamer}{はくれい れいむ}
+\newcommand{\hmmtype}{Ch}
+\newcommand{\hmmnode}{3}
+\newcommand{\hmmcost}{2}
+\newcommand{\hmmspirit}{2}
+\newcommand{\hmmgraze}{1}
+\newcommand{\hmmrace}{人間}
+\newcommand{\hmmplace}{A}
+\newcommand{\hmmtext}{%
+	【幻想生物】
+	
+	\自分{\↓}\\
+	「」
+	
+	\相手{0}
+	
+	\常時{1\↓}
+	
+	\自動{α}
+	
+	\自動{β}
+	
+	\自動{γ}
+	
+	\収集
+	
+	\プレイ
+}
+\newcommand{\hmmp}{4}
+\newcommand{\hmmt}{5}
+\newcommand{\hmmflavor}{}
+\newcommand{\hmmnumtype}{Dr.}
+\newcommand{\hmmnum}{01}
+\newcommand{\hmmexpantion}{<Sk>}
+\newcommand{\hmmill}{}

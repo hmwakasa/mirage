@@ -9,7 +9,7 @@
 \newcommand{\hmmranget}{i}
 \newcommand{\hmmplace}{F}
 \newcommand{\hmmtext}{%
-	目標の〔プレイヤー 1 人〕は自分の場のキャラクター 1 枚を決死状態にする。
+	\プレイ 目標の〔プレイヤー 1 人〕は自分の場のキャラクター 1 枚を決死状態にする。
 	できない場合、そのプレイヤーは 3 ダメージを受ける。
 }
 \newcommand{\hmmp}{-}

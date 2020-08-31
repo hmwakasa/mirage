@@ -9,7 +9,7 @@
 \newcommand{\hmmranget}{i}
 \newcommand{\hmmplace}{G}
 \newcommand{\hmmtext}{%
-	〔あなた〕は種族を 1 つ宣言する。〔宣言した種族をもつキャラクター全て〕
+	\プレイ 〔あなた〕は種族を 1 つ宣言する。〔宣言した種族をもつキャラクター全て〕
 	に 5 ダメージを与える。
 }
 \newcommand{\hmmp}{-}

@@ -12,7 +12,7 @@
 \newcommand{\hmmtext}{%
 	【ターン 1 枚制限】
 	
-	目標の〔プレイヤー 1 人〕は 2 ドローする。
+	\プレイ 目標の〔プレイヤー 1 人〕は 2 ドローする。
 }
 \newcommand{\hmmp}{-}
 \newcommand{\hmmt}{-}

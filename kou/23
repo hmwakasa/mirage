@@ -9,7 +9,7 @@
 \newcommand{\hmmranget}{m}
 \newcommand{\hmmplace}{F}
 \newcommand{\hmmtext}{%
-	〔全てのキャラクター〕はターン終了時まで「戦闘修正 -1/-1」を得る。
+	\プレイ 〔全てのキャラクター〕はターン終了時まで「戦闘修正 -1/-1」を得る。
 }
 \newcommand{\hmmp}{-}
 \newcommand{\hmmt}{-}
