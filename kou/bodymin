@@ -85,9 +85,9 @@
 		{\hmsfont\fontsize{1.2mm}{1}\selectfont%
 			\hmfukuro{{\©}上海アリス幻樂団\\
 			{\©}2020-2020 さーくる⑨ CC-BY-NC 4.0}};
-	\path(I3)|-(I1)node[pos=.75,below left,inner xsep=0,outer xsep=0,font=\hmsfont\fontsize{1.8mm}{0}\hmsfont]
+	\path(I3)|-(I1)node[pos=.55,below left,inner xsep=0,outer xsep=0,font=\hmsfont\fontsize{1.8mm}{0}\hmsfont]
 		{\hmfukuro{\hmmnumtype~}};
-	\path(I3)|-(I1)node[pos=.75,below right,inner xsep=0,outer xsep=0,font=\hmsfont\fontsize{1.8mm}{0}\hmsfont]
+	\path(I3)|-(I1)node[pos=.55,below right,inner xsep=0,outer xsep=0,font=\hmsfont\fontsize{1.8mm}{0}\hmsfont]
 		{\hmfukuro{\hmmnum}};
 	\path(O1)|-(O3)node[pos=.68,above,font=\hmsfont\fontsize{1.8mm}{0}\hmsfont]{\hmfukuro{\hmmexpantion}};
 	\path(B1)|-(B3)node[midway,below left,font=\hmsfont\fontsize{1.8mm}{0}\hmsfont]{\hmfukuro{Ill. \hmmill}};

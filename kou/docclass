@@ -1,0 +1,10 @@
+\documentclass[
+	jafontsize=1.8mm,
+	baselineskip=1.1zh,
+	cmyk,
+	paper={63mm,88mm},
+	gutter=0pt,
+	head_space=0pt,
+	foot_space=0pt,
+	open_bracket_pos=nibu_tentsuki,
+]{jlreq}

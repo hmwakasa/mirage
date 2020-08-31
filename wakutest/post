@@ -41,7 +41,10 @@
 }{\ifthenelse{\equal{\hmmtype}{In}}{
 	\colorlet{hmmtypecol}{incidentcolor}
 	\providecommand{\hmmback}{in_back.pdf}
-}{}}}}
+}{
+	\colorlet{hmmtypecol}{tokencolor}
+	\providecommand{\hmmback}{tk_back.pdf}
+}}}}
 
 \edef\hmmmplace{\expandafter\noexpand\expandafter\csname\hmmplace hmico\endcsname}
 \edef\hmmplacecol{\hmmplace icocolor}

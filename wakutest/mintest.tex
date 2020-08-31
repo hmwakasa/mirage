@@ -8,6 +8,7 @@
 	foot_space=0pt,
 	open_bracket_pos=nibu_tentsuki,
 ]{jlreq}
+
 \usepackage{luatexja,xparse,fontspec,bxokumacro,bxghost,ifthen}
 \ltjsetparameter{jacharrange={-3,-8}}
 \usepackage[no-math,match,deluxe]{luatexja-preset}
@@ -163,6 +164,7 @@
 \colorlet{spellcolor}{orange!60}
 \colorlet{commandcolor}{gray!60}
 \colorlet{incidentcolor}{magenta!70!black}
+\colorlet{tokencolor}{white}
 \colorlet{gridcolor}{cyan!60}
 \definecolor{richblack}{cmyk}{.2,.2,.2,1}
 
@@ -178,6 +180,7 @@
 \colorlet{Licocolor}{yellow}
 \colorlet{Jicocolor}{gray}
 \colorlet{Licocolor}{darkgray}
+\colorlet{icocolor}{white}
 
 \newcommand{\Ahmico}{{\color{Aicocolor}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\PUACHAR{"0262F}}}
 \newcommand{\Bhmico}{{\color{Bicocolor}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\PUACHAR{"1F3DA}}}
@@ -191,6 +194,7 @@
 \newcommand{\Jhmico}{{\color{Licocolor}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\PUACHAR{"1F318}}}
 \newcommand{\Khmico}{{\color{Jicocolor}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\PUACHAR{"1F47B}}}
 \newcommand{\Lhmico}{{\color{Licocolor}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\PUACHAR{"1F3E2}}}
+\newcommand{\hmico}{{\color{icocolor}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}}}
 \newcommand{\thmico}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\PUACHAR{"F015C}}}
 \newcommand{\ohmico}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\PUACHAR{"1F300}}}
 \newcommand{\ahmico}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\PUACHAR{"0F5C0}}}
@@ -285,10 +289,10 @@
 }{\ifthenelse{\equal{\hmmtype}{In}}{
 	\colorlet{hmmtypecol}{incidentcolor}
 	\providecommand{\hmmback}{in_back.pdf}
-}{}}}}
-
-\providecommand{\hmmback}{tk_back.pdf}
-
+}{
+	\colorlet{hmmtypecol}{tokencolor}
+	\providecommand{\hmmback}{tk_back.pdf}
+}}}}
 
 \edef\hmmmplace{\expandafter\noexpand\expandafter\csname\hmmplace hmico\endcsname}
 \edef\hmmplacecol{\hmmplace icocolor}
@@ -394,16 +398,16 @@
 		{\hmsfont\fontsize{1.2mm}{1}\selectfont%
 			\hmfukuro{{\©}上海アリス幻樂団\\
 			{\©}2020-2020 さーくる⑨ CC-BY-NC 4.0}};
-	\path(I3)|-(I1)node[pos=.75,below left,inner xsep=0,outer xsep=0,font=\hmsfont\fontsize{1.8mm}{0}\hmsfont]
+	\path(I3)|-(I1)node[pos=.55,below left,inner xsep=0,outer xsep=0,font=\hmsfont\fontsize{1.8mm}{0}\hmsfont]
 		{\hmfukuro{\hmmnumtype~}};
-	\path(I3)|-(I1)node[pos=.75,below right,inner xsep=0,outer xsep=0,font=\hmsfont\fontsize{1.8mm}{0}\hmsfont]
+	\path(I3)|-(I1)node[pos=.55,below right,inner xsep=0,outer xsep=0,font=\hmsfont\fontsize{1.8mm}{0}\hmsfont]
 		{\hmfukuro{\hmmnum}};
 	\path(O1)|-(O3)node[pos=.68,above,font=\hmsfont\fontsize{1.8mm}{0}\hmsfont]{\hmfukuro{\hmmexpantion}};
 	\path(B1)|-(B3)node[midway,below left,font=\hmsfont\fontsize{1.8mm}{0}\hmsfont]{\hmfukuro{Ill. \hmmill}};
-	% 方眼
-	\draw[very thin,gridcolor,nearly transparent](OL1)grid[step=1](OL3);
-	\draw[gridcolor,nearly transparent]($(OL1)-(2,2)$)rectangle($(OL3)+(2,2)$);
-	\draw[thin,gridcolor,nearly transparent](OL1)grid[step=10](OL3);
-	\draw[thin,gridcolor,nearly transparent](OL1)rectangle(OL3);
+	% % 方眼
+	% \draw[very thin,gridcolor,nearly transparent](OL1)grid[step=1](OL3);
+	% \draw[gridcolor,nearly transparent]($(OL1)-(2,2)$)rectangle($(OL3)+(2,2)$);
+	% \draw[thin,gridcolor,nearly transparent](OL1)grid[step=10](OL3);
+	% \draw[thin,gridcolor,nearly transparent](OL1)rectangle(OL3);
 \end{tikzpicture}%
 \end{document}

@@ -1,5 +1,7 @@
 #! /usr/local/bin/zsh
-cat pre > $1.tex
+cat docclass > $1.tex
+echo >> $1.tex
+cat pre >> $1.tex
 echo >> $1.tex
 cat $1 >> $1.tex
 echo >> $1.tex

@@ -8,6 +8,7 @@
 	foot_space=0pt,
 	open_bracket_pos=nibu_tentsuki,
 ]{jlreq}
+
 \usepackage{luatexja,xparse,fontspec,bxokumacro,bxghost,ifthen}
 \ltjsetparameter{jacharrange={-3,-8}}
 \usepackage[no-math,match,deluxe]{luatexja-preset}
@@ -87,7 +88,7 @@
 		\draw node[inner sep=0pt,outer sep=0pt,left,color=black,draw=black](T){自手番\hmzr}
 		node[inner sep=0pt,outer sep=0pt,right,signal,color=black,draw=black](T){\ #2\hmzr}
 	}{
-		\draw node[inner sep=0pt,outer sep=0pt,left,color=teal,draw=black,fill=white](T){自手番\hmzr}
+		\draw node[inner sep=0pt,outer sep=0pt,left,color=blue,draw=black,fill=white](T){自手番\hmzr}
 		node[inner sep=0pt,outer sep=0pt,right,signal,color=black,draw=black,fill=white](T){\ #2\hmzr}
 	};%
 }
@@ -97,7 +98,7 @@
 		\draw node[inner sep=0pt,outer sep=0pt,left,color=black,draw=black](T){相手番\hmzr}
 		node[inner sep=0pt,outer sep=0pt,right,signal,color=black,draw=black](T){\ #2\hmzr}
 	}{
-		\draw node[inner sep=0pt,outer sep=0pt,left,color=magenta,draw=black,fill=white](T){相手番\hmzr}
+		\draw node[inner sep=0pt,outer sep=0pt,left,color=red,draw=black,fill=white](T){相手番\hmzr}
 		node[inner sep=0pt,outer sep=0pt,right,signal,color=black,draw=black,fill=white](T){\ #2\hmzr}
 	};%
 }
@@ -107,7 +108,7 @@
 		\draw node[inner sep=0pt,outer sep=0pt,left,color=black,draw=black](T){常時\hmzr}
 		node[inner sep=0pt,outer sep=0pt,right,signal,color=black,draw=black](T){\ #2\hmzr}
 	}{
-		\draw node[inner sep=0pt,outer sep=0pt,left,color=olive,draw=black,fill=white](T){常時\hmzr}
+		\draw node[inner sep=0pt,outer sep=0pt,left,color=black,draw=black,fill=white](T){常時\hmzr}
 		node[inner sep=0pt,outer sep=0pt,right,signal,color=black,draw=black,fill=white](T){\ #2\hmzr}
 	};%
 }
@@ -116,7 +117,7 @@
 	\IfBooleanTF{#1}{
 		\node[inner sep=0pt,outer sep=0pt,signal,color=black,draw=black](T){プレイ}
 	}{
-		\node[inner sep=0pt,outer sep=0pt,signal,color=white,draw=black,fill=violet](T){プレイ}
+		\node[inner sep=0pt,outer sep=0pt,signal,color=black,draw=black,fill=lime](T){プレイ}
 	};%
 }
 
@@ -125,7 +126,7 @@
 	\IfBooleanTF{#1}{
 		\node[inner sep=0pt,outer sep=0pt,signal,color=black,draw=black](T){収集}
 	}{
-		\node[inner sep=0pt,outer sep=0pt,signal,color=white,draw=black,fill=red](T){収集}
+		\node[inner sep=0pt,outer sep=0pt,signal,color=white,draw=black,fill=magenta](T){収集}
 	};%
 }
 
@@ -163,6 +164,7 @@
 \colorlet{spellcolor}{orange!60}
 \colorlet{commandcolor}{gray!60}
 \colorlet{incidentcolor}{magenta!70!black}
+\colorlet{tokencolor}{white}
 \colorlet{gridcolor}{cyan!60}
 \definecolor{richblack}{cmyk}{.2,.2,.2,1}
 
@@ -178,6 +180,7 @@
 \colorlet{Licocolor}{yellow}
 \colorlet{Jicocolor}{gray}
 \colorlet{Licocolor}{darkgray}
+\colorlet{icocolor}{white}
 
 \newcommand{\Ahmico}{{\color{Aicocolor}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\PUACHAR{"0262F}}}
 \newcommand{\Bhmico}{{\color{Bicocolor}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\PUACHAR{"1F3DA}}}
@@ -191,6 +194,7 @@
 \newcommand{\Jhmico}{{\color{Licocolor}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\PUACHAR{"1F318}}}
 \newcommand{\Khmico}{{\color{Jicocolor}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\PUACHAR{"1F47B}}}
 \newcommand{\Lhmico}{{\color{Licocolor}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\PUACHAR{"1F3E2}}}
+\newcommand{\hmico}{{\color{icocolor}\jfontspec{nishiki-teki}\fontspec{nishiki-teki}}}
 \newcommand{\thmico}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\PUACHAR{"F015C}}}
 \newcommand{\ohmico}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\PUACHAR{"1F300}}}
 \newcommand{\ahmico}{{\jfontspec{nishiki-teki}\fontspec{nishiki-teki}\PUACHAR{"0F5C0}}}
@@ -269,7 +273,10 @@
 }{\ifthenelse{\equal{\hmmtype}{In}}{
 	\colorlet{hmmtypecol}{incidentcolor}
 	\providecommand{\hmmback}{in_back.pdf}
-}{}}}}
+}{
+	\colorlet{hmmtypecol}{tokencolor}
+	\providecommand{\hmmback}{tk_back.pdf}
+}}}}
 
 \edef\hmmmplace{\expandafter\noexpand\expandafter\csname\hmmplace hmico\endcsname}
 \edef\hmmplacecol{\hmmplace icocolor}
