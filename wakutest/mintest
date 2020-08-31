@@ -1,0 +1,38 @@
+\newcommand{\hmmimg}{}
+\newcommand{\hmmfullimg}{}
+\newcommand{\hmmname}{サーヴァントフライヤー}
+\newcommand{\hmmnamer}{くらやみ}
+\newcommand{\hmmtype}{}
+\newcommand{\hmmnode}{}
+\newcommand{\hmmcost}{}
+\newcommand{\hmmspellist}{}
+\newcommand{\hmmspirit}{}
+\newcommand{\hmmgraze}{}
+\newcommand{\hmmcollect}{}
+\newcommand{\hmmrangea}{t}
+\newcommand{\hmmranget}{e}
+\newcommand{\hmmrace}{種族なし}
+\newcommand{\hmmplace}{A}
+\newcommand{\hmmtext}{%
+	\常時{2}〔このキャラクター〕を表向きにする。
+	
+	あああああああああああああああああああああああああ
+	あああああああああああああああああああああああ
+}
+\newcommand{\hmmp}{-8}
+\newcommand{\hmmt}{-8}
+\newcommand{\hmmflavor}{%
+	あああああああああああああああああああああああああ
+	あああああああああああああああああああああああ
+}
+\newcommand{\hmmcname}{}
+\newcommand{\hmmcrace}{}
+\newcommand{\hmmcspirit}{}
+\newcommand{\hmmcgraze}{}
+\newcommand{\hmmcp}{}
+\newcommand{\hmmct}{}
+\newcommand{\hmmctext}{}
+\newcommand{\hmmnumtype}{U-}
+\newcommand{\hmmnum}{01}
+\newcommand{\hmmexpantion}{}
+\newcommand{\hmmill}{湯島 \& ひとみさん}

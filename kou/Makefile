@@ -2,10 +2,11 @@ NUM := 1.pdf 2.pdf 3.pdf 4.pdf 5.pdf 6.pdf 7.pdf 8.pdf 9.pdf 10.pdf \
 	11.pdf 12.pdf 13.pdf 14.pdf 15.pdf 16.pdf 17.pdf 18.pdf 19.pdf 20.pdf\
 	21.pdf 22.pdf 23.pdf 24.pdf 25.pdf 26.pdf 27.pdf 28.pdf 29.pdf 30.pdf\
 	31.pdf 32.pdf 33.pdf 34.pdf 35.pdf 36.pdf 37.pdf 38.pdf 39.pdf 40.pdf\
-	41.pdf 42.pdf 43.pdf 44.pdf 45.pdf 46.pdf 47.pdf 48.pdf 49.pdf 50.pdf
+	41.pdf 42.pdf 43.pdf 44.pdf 45.pdf 46.pdf 47.pdf 48.pdf 49.pdf 50.pdf\
+	u1.pdf 
 
 all.pdf: $(NUM)
-	pdftk {1..50}.pdf cat output all.pdf
+	pdftk {1..50}.pdf u1.pdf cat output all.pdf
 
 1.pdf: 1 pre post body
 	./make.sh 1
@@ -157,3 +158,5 @@ all.pdf: $(NUM)
 50.pdf: 50 pre post body
 	./make.sh 50
 
+u1.pdf: u1 pre post body
+	./makemin.sh u1

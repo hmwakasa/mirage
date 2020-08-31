@@ -29,7 +29,7 @@
 	\ifhmfill
 	%% フルアート
 	\draw[path picture={\node at (path picture bounding box.center)
-		{\includegraphics[width=66mm,height=94mm,min size={66mm}{94mm},{../../ill/\hmmimg}};}]
+		{\includegraphics[width=66mm,height=94mm,keepaspectratio,min size={66mm}{94mm},{../../ill/\hmmimg}};}]
 		(OOL1)rectangle(OOL3);
 	\else
 	% イラスト
@@ -82,10 +82,10 @@
 	\else
 	% 発動期間
 	\filldraw[fill=rangebcolor,draw=rangebcolor!80,thick](SC2)circle[radius=2.5];
-	\path(SC2)node[rangecolor,font=\fontsize{4mm}{0}]{\strut\hmmmranget};
+	\path(SC2)node[rangecolor,font=\fontsize{3.9mm}{0}]{\strut\hmmmranget};
 	% 効果範囲
 	\filldraw[fill=rangebcolor,draw=rangebcolor!80,thick](GC2)circle[radius=2.5];
-	\path(GC2)node[rangecolor,font=\fontsize{4mm}{0}]{\strut\hmmmrangea};
+	\path(GC2)node[rangecolor,font=\fontsize{3.9mm}{0}]{\strut\hmmmrangea};
 	\fi\fi
 	% 種族
 	\path(I3)-|(I1)node[midway,above left,font=\large\hmsfont]{\hmfukuro{\hmmrace}};

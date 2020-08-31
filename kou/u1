@@ -1,0 +1,25 @@
+\newcommand{\hmmimg}{}
+\newcommand{\hmmfullimg}{}
+\newcommand{\hmmname}{暗闇}
+\newcommand{\hmmnamer}{くらやみ}
+\newcommand{\hmmtype}{}
+\newcommand{\hmmspellist}{}
+\newcommand{\hmmspirit}{0}
+\newcommand{\hmmgraze}{0}
+\newcommand{\hmmcollect}{}
+\newcommand{\hmmrangea}{}
+\newcommand{\hmmranget}{}
+\newcommand{\hmmrace}{種族なし}
+\newcommand{\hmmtext}{%
+	\常時{2}〔このキャラクター〕を表向きにする。
+}
+\newcommand{\hmmp}{0}
+\newcommand{\hmmt}{1}
+\newcommand{\hmmflavor}{%
+	あああああああああああああああああああああああああ
+	あああああああああああああああああああああああ
+}
+\newcommand{\hmmnumtype}{U-}
+\newcommand{\hmmnum}{01}
+\newcommand{\hmmexpantion}{}
+\newcommand{\hmmill}{}
